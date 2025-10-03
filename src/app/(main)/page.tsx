@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Star, Heart, Scissors as ScissorsIcon, Sparkles, MapPin, Phone, MessageCircle } from 'lucide-react';
+import { ArrowRight, Star, Heart, Scissors as ScissorsIcon, Sparkles, MapPin, Phone, MessageCircle, Award } from 'lucide-react';
 
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
@@ -58,7 +58,7 @@ function Hero() {
 function TrustSection() {
     const stats = [
         { icon: Star, text: "4.8/5 rating from 68+ clients", filled: true },
-        { icon: Sparkles, text: "15+ Years Combined Experience", filled: false },
+        { icon: Award, text: "15+ Years Combined Experience", filled: false },
         { icon: ScissorsIcon, text: "1,000+ Hair Transformations", filled: false },
         { icon: MapPin, text: "Located in Casa Tropicana, PJ", filled: false },
     ];
