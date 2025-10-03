@@ -248,6 +248,7 @@ function GalleryPreview() {
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
                                 {galleryImages
                                     .filter((img) => img.category === category)
+                                    .slice(0,6)
                                     .map((galleryImage) => {
                                         const image = PlaceHolderImages.find(p => p.id === galleryImage.image);
                                         return (
