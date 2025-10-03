@@ -1,3 +1,5 @@
+import { LucideIcon } from "lucide-react";
+
 export type ServiceCategory = 'Cuts' | 'Treatments' | 'Coloring' | 'Packages';
 
 export interface Service {
@@ -47,4 +49,10 @@ export interface FAQ {
   id: string;
   question: string;
   answer: string;
+}
+
+export interface ValueProposition {
+    icon: LucideIcon;
+    title: string;
+    description: string;
 }

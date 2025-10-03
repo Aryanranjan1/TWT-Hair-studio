@@ -1,4 +1,5 @@
-import type { Service, Stylist, Review, GalleryImage, BlogPost, FAQ } from './types';
+import type { Service, Stylist, Review, GalleryImage, BlogPost, FAQ, ValueProposition } from './types';
+import { Heart, Scissors, Smile, Calendar, Award } from 'lucide-react';
 
 export const services: Service[] = [
   {
@@ -31,7 +32,7 @@ export const services: Service[] = [
     description: 'Classic or modern haircut and style for men, includes a wash and scalp massage.',
     price: 'RM 70+',
     category: 'Cuts',
-    image: 'service-cut',
+    image: 'service-cut-men',
   },
   {
     id: 'color-2',
@@ -39,7 +40,7 @@ export const services: Service[] = [
     description: 'A hand-painted coloring technique for a natural, sun-kissed look with softer, less noticeable regrowth lines.',
     price: 'RM 450+',
     category: 'Coloring',
-    image: 'service-coloring',
+    image: 'service-balayage',
   },
   {
     id: 'treatment-2',
@@ -47,39 +48,53 @@ export const services: Service[] = [
     description: 'A treatment that smooths frizz, reduces curl, and adds shine for more manageable hair.',
     price: 'RM 600+',
     category: 'Treatments',
-    image: 'service-treatment',
+    image: 'service-keratin',
   },
   {
     id: 'package-1',
-    name: 'Cut & Color Package',
+    name: 'Straightening & Packages',
     description: 'Combine a stylish haircut with a full head of color for a complete transformation at a special package price.',
     price: 'RM 320+',
     category: 'Packages',
-    image: 'service-cut',
+    image: 'service-package',
   },
 ];
 
 export const stylists: Stylist[] = [
   {
     id: 'stylist-1',
-    name: 'Alex Chen',
-    specialty: 'Creative Coloring & Balayage',
-    instagram: 'https://instagram.com/alexpj',
-    image: 'stylist-1',
+    name: 'Kin',
+    specialty: 'Creative Coloring',
+    instagram: 'https://instagram.com/kin',
+    image: 'stylist-kin',
   },
   {
     id: 'stylist-2',
-    name: 'Michelle Lim',
-    specialty: 'Precision Cuts & Styling',
-    instagram: 'https://instagram.com/michelletropicana',
-    image: 'stylist-2',
+    name: 'Wiwie',
+    specialty: 'Precision Cuts',
+    instagram: 'https://instagram.com/wiwie',
+    image: 'stylist-wiwie',
   },
   {
     id: 'stylist-3',
-    name: 'Sarah Tan',
+    name: 'Jun',
     specialty: 'Scalp & Hair Treatments',
-    instagram: 'https://instagram.com/sarahselangor',
-    image: 'stylist-3',
+    instagram: 'https://instagram.com/jun',
+    image: 'stylist-jun',
+  },
+  {
+    id: 'stylist-4',
+    name: 'Wei Tai',
+    specialty: 'Director',
+    instagram: 'https://instagram.com/weitai',
+    image: 'stylist-weitai',
+  },
+  {
+    id: 'stylist-5',
+    name: 'Danny',
+    specialty: 'Men\'s Style',
+    instagram: 'https://instagram.com/danny',
+    image: 'stylist-danny',
   },
 ];
 
@@ -108,6 +123,12 @@ export const reviews: Review[] = [
     rating: 4,
     text: 'Good service and friendly staff. The booking process was easy and the place is easy to find. A bit pricey but the quality is there.',
   },
+  {
+    id: 'review-5',
+    name: 'Chloe K.',
+    rating: 5,
+    text: 'The best balayage I\'ve ever had. The stylists are true artists and they make you feel so comfortable. 10/10 would recommend!',
+  },
 ];
 
 export const galleryImages: GalleryImage[] = [
@@ -117,6 +138,8 @@ export const galleryImages: GalleryImage[] = [
   { id: 'g4', category: 'Cuts', image: 'gallery-cut-2', description: 'Men\'s layered cut' },
   { id: 'g5', category: 'Coloring', image: 'gallery-color-2', description: 'Pastel pink fantasy' },
   { id: 'g6', category: 'Treatments', image: 'gallery-treatment-2', description: 'Healthy scalp results' },
+  { id: 'g7', category: 'Coloring', image: 'gallery-color-3', description: 'Vibrant copper tones' },
+  { id: 'g8', category: 'Cuts', image: 'gallery-cut-3', description: 'Long layers with curtain bangs' },
 ];
 
 export const blogPosts: BlogPost[] = [
@@ -140,8 +163,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 'blog-3',
-    slug: 'balayage-vs-ombre-whats-the-difference',
-    title: 'Balayage vs. Ombré: What\'s the Difference?',
+    slug: 'top-hair-coloring-trends-2025',
+    title: 'Top Hair Coloring Trends in 2025',
     excerpt: 'Thinking about a dimensional hair color but confused by the terms? We break down the key differences between Balayage and Ombré.',
     content: '<p>Balayage and Ombré are two of the most popular coloring techniques, but they create very different looks. Here’s a simple breakdown to help you decide which is right for you:</p><h3>Ombré</h3><p>Ombré is a French word meaning "shadow," and it\'s a dramatic, two-toned hair color effect that is typically darker at the roots and gradually lightens to the ends. The transition is usually quite distinct.</p><ul><li><strong>Look:</strong> More dramatic, defined transition from dark to light.</li><li><strong>Maintenance:</strong> Lower maintenance as there are no harsh root lines.</li></ul><h3>Balayage</h3><p>Balayage is another French word meaning "to sweep." It\'s a technique where the stylist hand-paints highlights onto the hair, creating a soft, natural, sun-kissed look. The highlights are more sporadic and blended throughout the hair.</p><ul><li><strong>Look:</strong> More natural, blended, and subtle. Mimics natural sun lightening.</li><li><strong>Maintenance:</strong> Very low maintenance, as the grow-out is extremely soft and diffused.</li></ul><h3>Which one to choose?</h3><p>If you want a bold, statement-making look, Ombré might be for you. If you prefer a natural, low-maintenance color that grows out beautifully, Balayage is an excellent choice. Our stylists at TWT Hair Studio are experts in both techniques. Book a consultation and we can help you achieve your dream hair!</p>',
     date: '2024-06-10',
@@ -174,5 +197,28 @@ export const faqs: FAQ[] = [
         id: 'faq-5',
         question: 'Can I have a consultation before booking a service?',
         answer: 'Absolutely! We encourage consultations, especially for major color changes. You can book a "Consultation" service for free on our booking page to discuss your hair goals with a stylist.'
+    }
+];
+
+export const valuePropositions: ValueProposition[] = [
+    {
+        icon: Heart,
+        title: "Personalized Care",
+        description: "We listen. Every cut, color, and treatment is tailored to your unique style and needs."
+    },
+    {
+        icon: Award,
+        title: "Professional Stylists",
+        description: "Our team is constantly trained on the latest techniques to deliver top-quality results."
+    },
+    {
+        icon: Smile,
+        title: "Comfortable Environment",
+        description: "Relax and unwind in our modern, clean, and friendly salon space."
+    },
+    {
+        icon: Calendar,
+        title: "Easy Online Booking",
+        description: "Schedule your appointment anytime, anywhere with our simple booking system."
     }
 ];

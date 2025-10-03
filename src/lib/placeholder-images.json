@@ -13,6 +13,30 @@
       "imageHint": "haircut"
     },
     {
+      "id": "service-cut-men",
+      "description": "A man getting a stylish haircut at a salon.",
+      "imageUrl": "https://images.unsplash.com/photo-1599351431202-183063f49733?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBoYWlyY3V0fGVufDB8fHx8MTc2MDA0MjIwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "men haircut"
+    },
+    {
+      "id": "service-balayage",
+      "description": "Beautiful balayage hair with blonde highlights.",
+      "imageUrl": "https://images.unsplash.com/photo-1616353995940-4c3614a51c72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYWxheWFnZSUyMGhhaXJ8ZW58MHx8fHwxNzYwMDQyMjA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "balayage hair"
+    },
+    {
+      "id": "service-keratin",
+      "description": "Woman with smooth, shiny hair after a keratin treatment.",
+      "imageUrl": "https://images.unsplash.com/photo-1615217833006-8169aced906b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrZXJhdGluJTIwdHJlYXRtZW50fGVufDB8fHx8MTc2MDA0MjIwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "keratin treatment"
+    },
+    {
+      "id": "service-package",
+      "description": "A woman smiling, showcasing her new haircut and color.",
+      "imageUrl": "https://images.unsplash.com/photo-1522338242385-30b0a4d159d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGNsaWVudCUyMGhhaXJ8ZW58MHx8fHwxNzYwMDQyMjA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy client"
+    },
+    {
       "id": "service-treatment",
       "description": "Close-up of a nourishing hair treatment being applied.",
       "imageUrl": "https://images.unsplash.com/photo-1707979577466-2d6109c68a45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoYWlyJTIwdHJlYXRtZW50fGVufDB8fHx8MTc1OTQwOTU1OXww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -25,22 +49,34 @@
       "imageHint": "hair color"
     },
     {
-      "id": "stylist-1",
-      "description": "Portrait of a friendly and professional male stylist.",
-      "imageUrl": "https://images.unsplash.com/photo-1590540179916-15643504417f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYWxlJTIwaGFpcnN0eWxpc3R8ZW58MHx8fHwxNzU5NDc1Njk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "id": "stylist-kin",
+      "description": "Portrait of a friendly and professional male stylist named Kin.",
+      "imageUrl": "https://images.unsplash.com/photo-1590540179852-2110a54f813a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWxlJTIwaGFpcnN0eWxpc3R8ZW58MHx8fHwxNzU5NDc1Njk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "male hairstylist"
     },
     {
-      "id": "stylist-2",
-      "description": "Portrait of a confident and stylish female stylist.",
-      "imageUrl": "https://images.unsplash.com/photo-1628940225382-52b7b2cb1ea8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmVtYWxlJTIwaGFpcnN0eWxpc3R8ZW58MHx8fHwxNzU5NDc1Njk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "id": "stylist-wiwie",
+      "description": "Portrait of a confident and stylish female stylist named Wiwie.",
+      "imageUrl": "https://images.unsplash.com/photo-1613849577924-6db8fe349e70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmZW1hbGUlMjBoYWlyc3R5bGlzdHxlbnwwfHx8fDE3NTk0NzU2OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "female hairstylist"
     },
     {
-      "id": "stylist-3",
-      "description": "Portrait of an artistic and focused female stylist.",
-      "imageUrl": "https://images.unsplash.com/photo-1618005779269-3d9db3d74d89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoYWlyc3R5bGlzdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc1OTQwNjAyMnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "hairstylist portrait"
+      "id": "stylist-jun",
+      "description": "Portrait of a friendly female stylist named Jun.",
+      "imageUrl": "https://images.unsplash.com/photo-1578769888759-d7a3dc1f7f45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmZW1hbGUlMjBoYWlyc3R5bGlzdHxlbnwwfHx8fDE3NTk0NzU2OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female hairstylist"
+    },
+    {
+      "id": "stylist-weitai",
+      "description": "Portrait of the salon director, Wei Tai.",
+      "imageUrl": "https://images.unsplash.com/photo-1674882632140-832a3e650c41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzYWxvbiUyMGRpcmVjdG9yfGVufDB8fHx8MTc1OTUyNTI4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "salon director"
+    },
+    {
+      "id": "stylist-danny",
+      "description": "Portrait of a male stylist specializing in men's hair, Danny.",
+      "imageUrl": "https://images.unsplash.com/photo-1657105052497-f996284ffff8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwaGFpcnN0eWxpc3R8ZW58MHx8fHwxNzU5NDc1Njk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male hairstylist"
     },
     {
       "id": "about-salon",
@@ -51,38 +87,50 @@
     {
       "id": "gallery-cut-1",
       "description": "A sharp and modern bob haircut.",
-      "imageUrl": "https://images.unsplash.com/photo-1667128532195-a4a535c07fe4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxib2IlMjBoYWlyY3V0fGVufDB8fHx8MTc1OTQyMzUxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1616584348551-80d38da1012a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxib2IlMjBoYWlyY3V0fGVufDB8fHx8MTc1OTQyMzUxMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bob haircut"
     },
     {
       "id": "gallery-cut-2",
       "description": "Stylish long layered haircut for men.",
-      "imageUrl": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtZW4lMjBoYWlyY3V0fGVufDB8fHx8MTc1OTQ0MDM5MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1621607512022-6aecc4fed814?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZW4lMjBoYWlyY3V0fGVufDB8fHx8MTc1OTQ0MDM5MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "men haircut"
     },
     {
       "id": "gallery-color-1",
       "description": "Beautiful balayage hair coloring on long wavy hair.",
-      "imageUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiYWxheWFnZSUyMGhhaXJ8ZW58MHx8fHwxNzU5NDc1Njk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1558265246-e84a824bcd83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYWxheWFnZSUyMGhhaXJ8ZW58MHx8fHwxNzU5NDc1Njk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "balayage hair"
     },
     {
       "id": "gallery-color-2",
       "description": "Creative pastel pink hair color.",
-      "imageUrl": "https://images.unsplash.com/photo-1533103261400-4f1ebafdbea7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaW5rJTIwaGFpcnxlbnwwfHx8fDE3NTk0NzU2OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1659348448223-e0d51c69d43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwaW5rJTIwaGFpcnxlbnwwfHx8fDE3NTk0NzU2OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pink hair"
     },
     {
       "id": "gallery-treatment-1",
       "description": "Glossy, healthy hair after a keratin treatment.",
-      "imageUrl": "https://images.unsplash.com/photo-1556229165-8aa0ceaa93a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzaGlueSUyMGhhaXJ8ZW58MHx8fHwxNzU5NDc1Njk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1667242003572-96caaf8ac5c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzaGlueSUyMGhhaXJ8ZW58MHx8fHwxNzU5NDc1Njk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "shiny hair"
     },
     {
       "id": "gallery-treatment-2",
       "description": "Before and after scalp treatment, showing a healthier scalp.",
-      "imageUrl": "https://images.unsplash.com/photo-1605389196941-c3c6595528c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoZWFsdGh5JTIwc2NhbHB8ZW58MHx8fHwxNzU5NDc1Njk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1529707921822-b347af813758?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoZWFsdGh5JTIwc2NhbHB8ZW58MHx8fHwxNzU5NDc1Njk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "healthy scalp"
+    },
+    {
+      "id": "gallery-color-3",
+      "description": "Vibrant copper hair color.",
+      "imageUrl": "https://images.unsplash.com/photo-1671390394805-27ad9af270dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb3BwZXIlMjBoYWlyfGVufDB8fHx8MTc1OTUyNTI4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "copper hair"
+    },
+    {
+      "id": "gallery-cut-3",
+      "description": "Woman with long layers and curtain bangs.",
+      "imageUrl": "https://images.unsplash.com/photo-1608768390044-51e2681f9c2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjdXJ0YWluJTIwYmFuZ3N8ZW58MHx8fHwxNzU5NDEzNjA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "curtain bangs"
     },
     {
       "id": "blog-1",
