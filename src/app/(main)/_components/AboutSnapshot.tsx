@@ -11,8 +11,8 @@ export function AboutSnapshot() {
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="container max-w-7xl">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+        <div className="grid md:grid-cols-2 gap-12 items-stretch">
+          <div className="flex flex-col justify-center">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
               Our Story
             </h2>
@@ -22,11 +22,11 @@ export function AboutSnapshot() {
             <p className="mt-6 text-muted-foreground">
               Founded in 2020, TWT Hair Studio was born from a simple idea: to create a welcoming space where artistry and hair care converge. Located in the heart of Petaling Jaya, we are a passionate team of stylists committed to providing personalized services that cater to the unique needs of each client. We believe that a great haircut is more than just a style—it's a form of self-expression and confidence, and we're dedicated to helping you find yours.
             </p>
-            <Button asChild size="lg" variant="outline" className="mt-8">
+            <Button asChild size="lg" variant="outline" className="mt-8 self-start">
               <Link href="/about">Learn More About Us <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
           </div>
-          <div className="relative h-96 w-full">
+          <div className="relative min-h-[400px] w-full">
             {aboutImage && (
               <Image
                 src={aboutImage.imageUrl}
