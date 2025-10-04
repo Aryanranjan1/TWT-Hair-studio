@@ -58,7 +58,7 @@ const VerticalCarousel = () => {
                             alt={image.description}
                             fill
                             className={cn(
-                                'object-cover transition-transform duration-500 ease-in-out',
+                                'object-cover w-full h-full transition-transform duration-500 ease-in-out',
                                 index === selectedIndex ? 'scale-100' : 'scale-110'
                             )}
                             sizes="50vw"
