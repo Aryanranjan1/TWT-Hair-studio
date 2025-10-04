@@ -32,6 +32,12 @@ export function GalleryPreview() {
   return (
     <ReactLenis root>
         <section className='text-foreground w-full bg-background py-16 sm:py-24'>
+            <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Transformations</h2>
+                <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+                    Scroll down to see our work
+                </p>
+            </div>
           <div className='grid grid-cols-12 gap-2 container max-w-7xl'>
             <div className='grid gap-2 col-span-4'>
               {gallerySet1.map((image) => (
