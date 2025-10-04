@@ -15,7 +15,7 @@ export function LocationSnapshot() {
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="container max-w-7xl">
-        <div className="grid md:grid-cols-2 gap-12 items-stretch">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="flex flex-col">
             <h2 className="text-3xl font-headline font-bold">Visit Us & Get in Touch</h2>
             <p className="mt-4 text-muted-foreground">
@@ -67,8 +67,12 @@ export function LocationSnapshot() {
               </Link>
             )}
           </div>
-          <div className="bg-secondary p-8 rounded-lg flex flex-col justify-center">
-            <LeadCaptureForm />
+          <div>
+            <div className="sticky top-32">
+                <div className="bg-secondary p-8 rounded-lg">
+                    <LeadCaptureForm />
+                </div>
+            </div>
           </div>
         </div>
       </div>
