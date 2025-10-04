@@ -4,30 +4,30 @@
 
 @layer base {
   :root {
-    --background: 40 30% 97%; /* Sandy off-white */
-    --foreground: 30 8% 20%; /* Dark, desaturated brown */
-    --card: 40 30% 94%; /* Light sand */
-    --card-foreground: 30 8% 20%;
-    --popover: 40 30% 94%;
-    --popover-foreground: 30 8% 20%;
-    --primary: 35 20% 50%; /* Muted sandy brown */
-    --primary-foreground: 40 30% 98%; /* Warm white */
-    --secondary: 40 20% 92%; /* Light grayish beige */
-    --secondary-foreground: 30 8% 20%;
-    --muted: 40 20% 92%;
-    --muted-foreground: 30 8% 45%;
-    --accent: 35 25% 88%; /* Soft beige */
-    --accent-foreground: 30 8% 20%;
+    --background: 0 0% 100%; /* White */
+    --foreground: 240 1% 21%; /* Dark Gray/Charcoal - #353535 */
+    --card: 0 0% 85%; /* Light Gray - #d9d9d9 */
+    --card-foreground: 240 1% 21%;
+    --popover: 0 0% 85%;
+    --popover-foreground: 240 1% 21%;
+    --primary: 184 31% 34%; /* Muted Teal Green - #3c6d71 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 85%; /* Light Gray - #d9d9d9 */
+    --secondary-foreground: 240 1% 21%;
+    --muted: 0 0% 85%;
+    --muted-foreground: 240 1% 41%;
+    --accent: 184 31% 44%; /* Lighter Teal for hover */
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 40 20% 88%;
-    --input: 40 20% 92%;
-    --ring: 35 20% 50%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --border: 0 0% 80%;
+    --input: 0 0% 90%;
+    --ring: 184 31% 34%;
+    --chart-1: 206 43% 27%; /* Dark Teal Blue - #284a63 */
+    --chart-2: 184 31% 34%;
+    --chart-3: 0 0% 50%;
+    --chart-4: 184 31% 54%;
+    --chart-5: 206 43% 47%;
     --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -39,30 +39,30 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 30 8% 10%; /* Very dark charcoal brown */
-    --foreground: 40 10% 80%; /* Soft, light warm gray */
-    --card: 30 8% 13%; /* Darker charcoal */
-    --card-foreground: 40 10% 80%;
-    --popover: 30 8% 13%;
-    --popover-foreground: 40 10% 80%;
-    --primary: 35 25% 70%; /* Lighter, muted sandy brown */
-    --primary-foreground: 30 5% 15%; /* Dark for contrast on primary */
-    --secondary: 30 8% 18%; /* Dark gray-brown */
-    --secondary-foreground: 40 10% 80%;
-    --muted: 30 8% 18%;
-    --muted-foreground: 40 10% 60%;
-    --accent: 30 8% 22%;
-    --accent-foreground: 40 10% 90%;
+    --background: 240 1% 21%; /* Dark Gray/Charcoal - #353535 */
+    --foreground: 0 0% 85%; /* Light Gray - #d9d9d9 */
+    --card: 240 1% 25%; /* Slightly lighter dark gray */
+    --card-foreground: 0 0% 85%;
+    --popover: 240 1% 25%;
+    --popover-foreground: 0 0% 85%;
+    --primary: 184 31% 44%; /* Lighter Teal Green for dark mode */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 1% 28%;
+    --secondary-foreground: 0 0% 85%;
+    --muted: 240 1% 28%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 184 31% 54%; /* Brighter Teal for hover */
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 30 8% 22%;
-    --input: 30 8% 18%;
-    --ring: 35 25% 70%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --border: 0 0% 35%;
+    --input: 0 0% 28%;
+    --ring: 184 31% 44%;
+    --chart-1: 206 43% 37%; /* Dark Teal Blue - #284a63 (adjusted) */
+    --chart-2: 184 31% 44%;
+    --chart-3: 0 0% 60%;
+    --chart-4: 184 31% 64%;
+    --chart-5: 206 43% 57%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
