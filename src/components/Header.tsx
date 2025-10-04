@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, Scissors } from 'lucide-react';
+import { Menu, Scissors, Instagram, Facebook } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -26,12 +26,12 @@ export function Header() {
       <div className="container flex h-[100px] max-w-7xl items-center justify-between">
         {/* Left side: Navigation for desktop */}
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium w-1/3">
-          {navLinks.slice(0, 3).map(({ href, label }) => (
+          {navLinks.slice(0, 2).map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               className={cn(
-                'transition-colors hover:text-white text-slate-200',
+                'transition-colors hover:text-white text-slate-300',
                 pathname === href ? 'text-white font-semibold' : ''
               )}
             >
@@ -51,8 +51,7 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="pr-0 bg-background">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-6" onClick={() => setSheetOpen(false)}>
-                <Scissors className="h-6 w-6 text-primary" />
-                <span className="font-bold font-headline inline-block">TWT Hair Studio</span>
+                <span className="font-bold font-headline inline-block text-2xl tracking-widest">TWT</span>
               </Link>
               <div className="flex flex-col space-y-3">
                 {navLinks.map(({ href, label }) => (
@@ -61,7 +60,7 @@ export function Header() {
                     href={href}
                     onClick={() => setSheetOpen(false)}
                     className={cn(
-                        'transition-colors hover:text-primary p-2 rounded-l-md',
+                        'transition-colors hover:text-primary p-2 rounded-l-md text-lg',
                         pathname === href ? 'bg-secondary text-primary font-semibold' : 'text-foreground'
                       )}
                   >
@@ -79,33 +78,32 @@ export function Header() {
         {/* Center: Logo */}
         <div className="flex justify-center w-1/3">
             <Link href="/" className="flex items-center space-x-2 text-white">
-                <Scissors className="h-6 w-6" />
-                <span className="font-bold font-headline inline-block">TWT Hair Studio</span>
+                 <span className="font-bold font-headline inline-block text-2xl tracking-widest">TWT</span>
             </Link>
         </div>
 
         {/* Right side: Navigation for desktop */}
         <nav className="hidden md:flex items-center justify-end space-x-6 text-sm font-medium w-1/3">
-          {navLinks.slice(3).map(({ href, label }) => (
+          {navLinks.slice(2).map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               className={cn(
-                'transition-colors hover:text-white text-slate-200',
+                'transition-colors hover:text-white text-slate-300',
                 pathname === href ? 'text-white font-semibold' : ''
               )}
             >
               {label}
             </Link>
           ))}
-           <Button asChild className="rounded-full">
+           <Button asChild variant="outline" className="rounded-full">
             <Link href="/booking">Book Now</Link>
           </Button>
         </nav>
 
         {/* Right side: Mobile booking button */}
         <div className="flex md:hidden w-1/3 justify-end">
-             <Button asChild size="sm">
+             <Button asChild size="sm" variant="outline" className="rounded-full">
                 <Link href="/booking">Book Now</Link>
             </Button>
         </div>

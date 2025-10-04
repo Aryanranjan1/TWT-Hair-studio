@@ -35,7 +35,7 @@ export default {
         'caption': '1.4',
       },
       fontFamily: {
-        body: ['PT Sans', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif'],
         headline: ['Playfair Display', 'serif'],
         code: ['monospace'],
       },
