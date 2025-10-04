@@ -14,6 +14,7 @@ import { cn } from '@/lib/utils';
 export function FeaturedServices() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true, stopOnMouseEnter: true }));
 
   const handleSelect = useCallback(() => {
@@ -33,7 +34,6 @@ export function FeaturedServices() {
     };
   }, [api, handleSelect]);
 
-  // We need enough services to create a looping effect if desired
   const featured = [...services, ...services].slice(0, 10);
 
   return (
@@ -59,21 +59,28 @@ export function FeaturedServices() {
           }}
           className="w-full"
           onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
+          onMouseLeave={() => {
+            setHoveredIndex(null);
+            plugin.current.reset();
+          }}
         >
           <CarouselContent>
             {featured.map((service, index) => {
               const image = PlaceHolderImages.find((p) => p.id === service.image);
+              const isPopped = hoveredIndex !== null ? hoveredIndex === index : current === index;
+
               return (
                 <CarouselItem
                   key={`${service.id}-${index}`}
                   className="basis-1/2 md:basis-1/3 lg:basis-1/4 flex items-center justify-center"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <Link href="/services" className="group shrink-0">
                     <div
                       className={cn(
                         'relative w-[280px] h-[280px] rounded-full overflow-hidden shadow-lg transition-transform duration-300 ease-in-out',
-                        index === current ? 'scale-100' : 'scale-75 opacity-60'
+                        isPopped ? 'scale-100' : 'scale-75 opacity-60'
                       )}
                     >
                       {image && (
