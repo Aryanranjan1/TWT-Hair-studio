@@ -31,9 +31,9 @@ export function FeaturedStylists() {
               <div key={stylist.id} className="group overflow-hidden">
                 <Link href="/about">
                   {image && (
-                    <div className="relative h-96 w-full">
+                    <div className="relative h-[480px] w-full">
                       <Image
-                        className="h-full w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl"
+                        className="h-full w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0"
                         src={image.imageUrl}
                         alt={`Portrait of ${stylist.name}`}
                         fill
