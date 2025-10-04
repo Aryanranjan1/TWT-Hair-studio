@@ -3,14 +3,18 @@
 import Link from 'next/link';
 import { Instagram, Facebook, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { LeadCaptureForm } from './LeadCaptureForm';
 
 export function LocationSnapshot() {
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="container max-w-7xl">
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 className="text-3xl font-headline font-bold">Visit Us</h2>
+            <h2 className="text-3xl font-headline font-bold">Visit Us & Get in Touch</h2>
+            <p className="mt-4 text-muted-foreground">
+              We're conveniently located in Petaling Jaya. Whether you have a question or are ready to book, reach out to us. We'd love to hear from you.
+            </p>
             <div className="mt-6 space-y-4 text-muted-foreground">
               <p className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 mt-1 shrink-0 text-primary" />
@@ -39,8 +43,8 @@ export function LocationSnapshot() {
               </Button>
             </div>
           </div>
-          <div className="bg-muted rounded-lg aspect-video flex items-center justify-center">
-            <p className="text-muted-foreground">Google Map Embed</p>
+          <div className="bg-secondary p-8 rounded-lg">
+            <LeadCaptureForm />
           </div>
         </div>
       </div>
