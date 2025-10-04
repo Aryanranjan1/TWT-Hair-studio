@@ -74,12 +74,12 @@ const VerticalCarousel = () => {
                     ))}
                 </div>
             </div>
-             <div className="absolute top-1/2 right-4 -translate-y-1/2 flex flex-col gap-y-2">
+             <div className="absolute top-1/2 right-4 -translate-y-1/2 flex flex-col gap-y-4">
                 {serviceImages.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => scrollTo(index)}
-                        className="p-0 m-0 h-8 w-1 rounded-full bg-white/40 hover:bg-white/80 transition-colors"
+                        className="p-0 m-0 h-12 w-2 rounded-full bg-white/40 hover:bg-white/80 transition-colors"
                     >
                         <div
                             className={cn(
