@@ -15,7 +15,7 @@ export function LocationSnapshot() {
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="container max-w-7xl">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-12 items-stretch">
           <div className="flex flex-col">
             <h2 className="text-3xl font-headline font-bold">Visit Us & Get in Touch</h2>
             <p className="mt-4 text-muted-foreground">
@@ -51,7 +51,7 @@ export function LocationSnapshot() {
 
             {mapImage && (
               <Link href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="mt-8 block flex-grow">
-                <div className="h-full aspect-w-16 aspect-h-9 relative rounded-lg overflow-hidden shadow-lg group">
+                <div className="h-full aspect-w-16 aspect-h-9 relative rounded-lg overflow-hidden shadow-lg group min-h-[300px]">
                   <Image
                     src={mapImage.imageUrl}
                     alt="Map showing TWT location"
