@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Scissors, Paintbrush, Sparkles } from 'lucide-react';
@@ -31,8 +31,12 @@ const snapshotServices = [
 ];
 
 const VerticalCarousel = () => {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, axis: 'y' }, [Autoplay({ delay: 2500 })]);
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, axis: 'y' }, [Autoplay({ delay: 7000 })]);
     const [selectedIndex, setSelectedIndex] = useState(0);
+
+    const scrollTo = useCallback((index: number) => {
+        emblaApi?.scrollTo(index);
+    }, [emblaApi]);
 
     useEffect(() => {
         if (!emblaApi) return;
@@ -40,30 +44,50 @@ const VerticalCarousel = () => {
             setSelectedIndex(emblaApi.selectedScrollSnap());
         };
         emblaApi.on('select', onSelect);
+        onSelect();
         return () => { emblaApi.off('select', onSelect) };
     }, [emblaApi]);
 
     const serviceImages = services
         .map(s => PlaceHolderImages.find(p => p.id === s.image))
-        .filter((img): img is NonNullable<typeof img> => !!img);
+        .filter((img): img is NonNullable<typeof img> => !!img)
+        .slice(0, 3); // Limit to 3 images for the 3 dashes
 
     return (
-        <div className="h-full w-full overflow-hidden" ref={emblaRef}>
-            <div className="flex flex-col h-full">
-                {serviceImages.map((image, index) => (
-                    <div key={index} className="flex-[0_0_100%] min-h-0 relative">
-                        <Image
-                            src={image.imageUrl}
-                            alt={image.description}
-                            fill
+        <div className="h-full w-full relative">
+            <div className="h-full w-full overflow-hidden" ref={emblaRef}>
+                <div className="flex flex-col h-full">
+                    {serviceImages.map((image, index) => (
+                        <div key={index} className="flex-[0_0_100%] min-h-0 relative">
+                            <Image
+                                src={image.imageUrl}
+                                alt={image.description}
+                                fill
+                                className={cn(
+                                    'object-cover w-full h-full transition-transform duration-500 ease-in-out',
+                                    index === selectedIndex ? 'scale-100' : 'scale-110'
+                                )}
+                                sizes="50vw"
+                                data-ai-hint={image.imageHint}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+             <div className="absolute top-1/2 right-4 -translate-y-1/2 flex flex-col gap-y-2">
+                {serviceImages.map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => scrollTo(index)}
+                        className="p-0 m-0 h-8 w-1 rounded-full bg-white/40 hover:bg-white/80 transition-colors"
+                    >
+                        <div
                             className={cn(
-                                'object-cover w-full h-full transition-transform duration-500 ease-in-out',
-                                index === selectedIndex ? 'scale-100' : 'scale-110'
+                                'w-full h-full rounded-full transition-all duration-500',
+                                index === selectedIndex ? 'bg-white' : 'bg-transparent'
                             )}
-                            sizes="50vw"
-                            data-ai-hint={image.imageHint}
                         />
-                    </div>
+                    </button>
                 ))}
             </div>
         </div>
