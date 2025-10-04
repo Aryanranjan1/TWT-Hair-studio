@@ -32,9 +32,11 @@ export function BookingCTA() {
                     <Button asChild size="lg" className="mt-8">
                     <Link href="/booking">Book Your Appointment Now</Link>
                     </Button>
-                    <p className="mt-4 text-sm text-muted-foreground">
-                    Instant confirmation via Fresha.
-                    </p>
+                    <div className="mt-4 bg-muted/50 border border-border rounded-md px-3 py-1 inline-block">
+                        <p className="text-xs text-muted-foreground">
+                        Instant confirmation via Fresha.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
