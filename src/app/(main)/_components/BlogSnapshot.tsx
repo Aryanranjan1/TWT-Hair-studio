@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Instagram, Facebook, Youtube } from 'lucide-react';
@@ -12,7 +12,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
 
 import { blogPosts, stylists } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -20,7 +19,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent }from '@/components/ui/card';
 
 export function BlogSnapshot() {
-  const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true }));
   const eventImages = [
       PlaceHolderImages.find(p => p.id === 'gallery-cut-1'),
       PlaceHolderImages.find(p => p.id === 'gallery-color-1'),
@@ -47,10 +45,7 @@ export function BlogSnapshot() {
             
             <div className="md:col-span-1">
                 <Carousel
-                  plugins={[plugin.current]}
                   className="w-full"
-                  onMouseEnter={plugin.current.stop}
-                  onMouseLeave={plugin.current.reset}
                   opts={{ loop: true }}
                 >
                   <CarouselContent>

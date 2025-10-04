@@ -1,49 +1,16 @@
 
 'use client';
 
-import React, { MouseEvent, useRef, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 
 export function AboutSnapshot() {
   const aboutImage = PlaceHolderImages.find(p => p.id === 'about-salon');
-  const [rotate, setRotate] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-  const imageRef = useRef<HTMLDivElement>(null);
-
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    if (!imageRef.current) return;
-
-    const rect = imageRef.current.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-
-    const xPct = mouseX / width - 0.5;
-    const yPct = mouseY / height - 0.5;
-
-    const maxRotate = 10;
-    setRotate({
-      x: yPct * -maxRotate,
-      y: xPct * maxRotate,
-    });
-  };
-
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-    setRotate({ x: 0, y: 0 });
-  };
 
   return (
     <section className="py-16 sm:py-24 bg-background">
@@ -65,19 +32,10 @@ export function AboutSnapshot() {
           </div>
           <div 
             className="relative min-h-[400px] w-full" 
-            style={{ perspective: '1000px' }}
-            onMouseMove={handleMouseMove}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            ref={imageRef}
           >
             {aboutImage && (
               <div 
                 className="w-full h-full"
-                style={{
-                  transform: `rotateX(${rotate.x}deg) rotateY(${rotate.y}deg) scale3d(${isHovering ? 1.05 : 1}, ${isHovering ? 1.05 : 1}, 1)`,
-                  transition: 'transform 0.1s ease-out'
-                }}
               >
                 <Image
                   src={aboutImage.imageUrl}
@@ -95,4 +53,3 @@ export function AboutSnapshot() {
     </section>
   );
 }
-

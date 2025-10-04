@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, ArrowUp, ArrowDown } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay';
 
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { services } from '@/lib/data';
@@ -14,7 +13,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const VerticalCarousel = () => {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, axis: 'y' }, [Autoplay({ delay: 7000 })]);
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, axis: 'y' });
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     const scrollTo = useCallback((index: number) => {

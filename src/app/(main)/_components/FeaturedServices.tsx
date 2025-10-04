@@ -8,15 +8,12 @@ import { services } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Carousel, type CarouselApi, CarouselContent, CarouselItem } from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
 import { cn } from '@/lib/utils';
-import { Motion } from '@/components/ui/motion';
 
 export function FeaturedServices() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true }));
 
   const handleSelect = useCallback(() => {
     if (!api) return;
@@ -41,28 +38,25 @@ export function FeaturedServices() {
     <section className="bg-background text-foreground py-16 sm:py-24 overflow-hidden">
       <div className="container max-w-7xl mb-[50px]">
         <div className="text-center max-w-2xl mx-auto">
-          <Motion as="h2" variant='fade-in' className="text-sm font-bold uppercase tracking-widest text-primary">
+          <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
             Featured Hairstyles
-          </Motion>
-          <Motion as="p" variant='zoom-in' delay={0.1} className="mt-4 text-2xl md:text-3xl font-headline">
+          </h2>
+          <p className="mt-4 text-2xl md:text-3xl font-headline">
             Discover services designed to nurture your style, from precision cuts to creative coloring.
-          </Motion>
+          </p>
         </div>
       </div>
 
-      <Motion as="div" variant="fade-in" delay={0.3} className="mt-16">
+      <div className="mt-16">
         <Carousel
           setApi={setApi}
-          plugins={[plugin.current]}
           opts={{
             align: 'center',
             loop: true,
           }}
           className="w-full"
-          onMouseEnter={plugin.current.stop}
           onMouseLeave={() => {
             setHoveredIndex(null);
-            plugin.current.reset();
           }}
         >
           <CarouselContent>
@@ -107,7 +101,7 @@ export function FeaturedServices() {
             })}
           </CarouselContent>
         </Carousel>
-      </Motion>
+      </div>
 
     </section>
   );

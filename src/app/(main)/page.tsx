@@ -15,11 +15,9 @@ import { BookingCTA } from './_components/BookingCTA';
 import { BlogSnapshot } from './_components/BlogSnapshot';
 import { LocationSnapshot } from './_components/LocationSnapshot';
 import { GalleryPreview } from './_components/GalleryPreview';
-import { Motion } from '@/components/ui/motion';
 
 function Hero() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'new-hero');
-  const promoImage = PlaceHolderImages.find(p => p.id === 'promo-image');
 
   return (
     <section className="relative w-full min-h-screen bg-background text-foreground">
@@ -39,12 +37,12 @@ function Hero() {
         <div className="container max-w-7xl h-full flex items-center justify-between">
           {/* Main content - Logo */}
           <div className="absolute bottom-16 left-4 sm:left-6 lg:left-[50px] text-white">
-            <Motion as="h1" variant='fade-in' style={{ fontFamily: 'Jost, sans-serif' }} className="text-[15vw] md:text-[10vw] lg:text-[12rem] font-thin tracking-wider leading-none">
+            <h1 style={{ fontFamily: 'Jost, sans-serif' }} className="text-[15vw] md:text-[10vw] lg:text-[12rem] font-thin tracking-wider leading-none">
               TWT
-            </Motion>
-            <Motion as="p" variant='fade-in' delay={0.2} className="text-xl md:text-2xl lg:text-3xl font-light tracking-widest -mt-4 text-center" style={{ fontFamily: 'Jost, sans-serif' }}>
+            </h1>
+            <p className="text-xl md:text-2xl lg:text-3xl font-light tracking-widest -mt-4 text-center" style={{ fontFamily: 'Jost, sans-serif' }}>
               HAIR STUDIO
-            </Motion>
+            </p>
           </div>
         </div>
       </div>
