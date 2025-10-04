@@ -74,8 +74,8 @@ export function Motion<T extends keyof typeof animationVariants>({
   variant,
   className,
   delay = 0,
-  duration = 0.4,
-  once = true,
+  duration = 0.5,
+  once = false,
   amount = 0.1,
   as,
   ...props
