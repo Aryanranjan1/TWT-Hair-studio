@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useRef } from 'react';
@@ -124,7 +125,7 @@ export function BlogSnapshot() {
                  </div>
             </Card>
 
-            <Card className="lg:col-span-1 p-0 relative rounded-lg overflow-hidden text-white flex flex-col justify-between">
+            <Card className="md:col-span-2 lg:col-span-1 p-0 relative rounded-lg overflow-hidden text-white flex flex-col justify-between">
                 {onlineActivitiesImage && (
                     <Image
                         src={onlineActivitiesImage.imageUrl}
@@ -136,17 +137,11 @@ export function BlogSnapshot() {
                     />
                 )}
                 <div className="absolute inset-0 bg-black/50"/>
-                <div className="relative p-6 flex flex-col h-full">
-                    <div className="flex justify-between text-sm">
-                        <span>Webinars</span>
-                        <span>Live streams</span>
-                    </div>
-                    <div className="mt-auto">
-                        <h4 className="font-headline text-xl font-semibold">READY FOR A TRANSFORMATION?</h4>
-                        <Button asChild variant="outline" className="bg-transparent text-white border-white mt-4 hover:bg-white hover:text-black">
-                            <Link href="/booking">Book Your Slot <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                        </Button>
-                    </div>
+                <div className="relative p-6 flex flex-col h-full justify-end">
+                    <h4 className="font-headline text-xl font-semibold">READY FOR A TRANSFORMATION?</h4>
+                    <Button asChild variant="outline" className="bg-transparent text-white border-white mt-4 hover:bg-white hover:text-black self-start">
+                        <Link href="/booking">Book Your Slot <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    </Button>
                 </div>
             </Card>
 
