@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Motion } from '@/components/ui/motion';
 
 export function BookingCTA() {
   const ctaImage = PlaceHolderImages.find(p => p.id === 'about-salon');
@@ -23,7 +24,7 @@ export function BookingCTA() {
       <div className="absolute inset-0 bg-background/70" />
       <div className="relative container max-w-7xl">
         <div className="grid md:grid-cols-2">
-            <div className="md:col-start-2">
+            <Motion variant='slide-in-up' className="md:col-start-2">
                 <div className="bg-background/80 backdrop-blur-sm p-8 rounded-lg shadow-lg">
                     <h2 className="text-3xl md:text-5xl font-headline font-bold">Your Good Hair Day Starts Here.</h2>
                     <p className="mt-4 text-muted-foreground">
@@ -38,7 +39,7 @@ export function BookingCTA() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </Motion>
         </div>
       </div>
     </section>

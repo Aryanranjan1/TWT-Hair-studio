@@ -7,6 +7,7 @@ import { Instagram, Facebook, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LeadCaptureForm } from './LeadCaptureForm';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Motion } from '@/components/ui/motion';
 
 export function LocationSnapshot() {
   const mapImage = PlaceHolderImages.find(p => p.id === 'contact-map');
@@ -16,7 +17,7 @@ export function LocationSnapshot() {
     <section className="py-16 sm:py-24 bg-background">
       <div className="container max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-stretch">
-          <div className="flex flex-col">
+          <Motion variant='slide-in-left' className="flex flex-col">
             <h2 className="text-3xl font-headline font-bold">Visit Us & Get in Touch</h2>
             <p className="mt-4 text-muted-foreground">
               We're conveniently located in Petaling Jaya. Whether you have a question or are ready to book, reach out to us. We'd love to hear from you.
@@ -66,14 +67,14 @@ export function LocationSnapshot() {
                 </div>
               </Link>
             )}
-          </div>
-          <div>
+          </Motion>
+          <Motion variant='slide-in-right'>
             <div className="sticky top-32">
                 <div className="bg-secondary p-8 rounded-lg">
                     <LeadCaptureForm />
                 </div>
             </div>
-          </div>
+          </Motion>
         </div>
       </div>
     </section>
