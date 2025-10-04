@@ -34,17 +34,20 @@ function Hero() {
       )}
       <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/10" />
 
-      <div className="relative h-screen flex items-center">
+      <div className="relative h-screen flex items-end">
         <div className="container max-w-7xl h-full flex items-center justify-between">
           {/* Main content - Logo */}
-          <div className="flex-1 flex justify-center text-white">
+          <div className="absolute bottom-16 left-4 sm:left-6 lg:left-[50px] text-white">
             <h1 style={{ fontFamily: 'Jost, sans-serif' }} className="text-[15vw] md:text-[10vw] lg:text-[12rem] font-thin tracking-wider leading-none">
               TWT
             </h1>
+            <p className="text-xl md:text-2xl lg:text-3xl font-light tracking-widest -mt-4 ml-2" style={{ fontFamily: 'Jost, sans-serif' }}>
+              HAIR STUDIO
+            </p>
           </div>
 
           {/* Right sidebar */}
-          <div className="hidden lg:flex flex-col space-y-4 w-[380px] h-[calc(100vh-200px)] max-h-[700px] bg-[#EAE8E3]/90 dark:bg-[#252322]/90 backdrop-blur-sm rounded-3xl p-6 text-foreground">
+          <div className="hidden lg:flex flex-col space-y-4 w-[380px] h-[calc(100vh-200px)] max-h-[700px] bg-[#EAE8E3]/90 dark:bg-[#252322]/90 backdrop-blur-sm rounded-3xl p-6 text-foreground ml-auto mb-16">
             <div className="flex-1 flex flex-col justify-center">
               <h2 className="text-2xl font-light tracking-wide text-center" style={{ fontFamily: 'Jost, sans-serif' }}>Shop at TWT</h2>
               <p className="mt-4 text-sm font-light text-center leading-relaxed text-muted-foreground">
@@ -121,4 +124,3 @@ export default function HomePage() {
     </>
   );
 }
-
