@@ -75,8 +75,8 @@ export function ServicesSnapshot() {
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="container max-w-7xl">
-        <div className="grid md:grid-cols-2 gap-0 items-center bg-secondary rounded-lg overflow-hidden shadow-lg h-[600px]">
-          <div className="p-8 md:p-12 h-full flex flex-col justify-center">
+        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+          <div className="bg-secondary rounded-lg shadow-lg p-8 md:p-12 flex flex-col justify-center">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
                 Our Expertise
             </h2>
@@ -100,7 +100,7 @@ export function ServicesSnapshot() {
               <Link href="/services">Explore All Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
           </div>
-          <div className="relative h-full w-full">
+          <div className="relative h-[600px] w-full bg-secondary rounded-lg shadow-lg overflow-hidden">
             <VerticalCarousel />
           </div>
         </div>
