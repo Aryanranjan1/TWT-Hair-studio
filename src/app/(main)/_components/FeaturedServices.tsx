@@ -86,10 +86,11 @@ export function FeaturedServices() {
                           data-ai-hint={image.imageHint}
                         />
                       )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                      <h3 className="absolute bottom-8 left-1/2 -translate-x-1/2 w-full text-center text-lg font-headline text-white">
-                        {service.name}
-                      </h3>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent flex items-center justify-center p-4">
+                        <h3 className="text-center text-lg font-headline text-white">
+                          {service.name}
+                        </h3>
+                      </div>
                     </div>
                   </Link>
                 </CarouselItem>
