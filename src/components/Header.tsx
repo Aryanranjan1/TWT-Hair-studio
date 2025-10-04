@@ -23,13 +23,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-[100px] max-w-7xl items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Scissors className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline inline-block">TWT Hair Studio</span>
-        </Link>
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          {navLinks.map(({ href, label }) => (
+      <div className="container flex h-[100px] max-w-7xl items-center justify-between">
+        {/* Left side: Navigation for desktop */}
+        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium w-1/3">
+          {navLinks.slice(0, 3).map(({ href, label }) => (
             <Link
               key={href}
               href={href}
@@ -42,19 +39,18 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild className="hidden md:inline-flex rounded-full">
-            <Link href="/booking">Book Now</Link>
-          </Button>
+        
+        {/* Left side: Mobile menu trigger */}
+        <div className="flex md:hidden w-1/3">
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" className="md:hidden">
+              <Button variant="ghost">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="pr-0">
-              <Link href="/" className="mr-6 flex items-center space-x-2 mb-6">
+              <Link href="/" className="mr-6 flex items-center space-x-2 mb-6" onClick={() => setSheetOpen(false)}>
                 <Scissors className="h-6 w-6 text-primary" />
                 <span className="font-bold font-headline inline-block">TWT Hair Studio</span>
               </Link>
@@ -79,6 +75,41 @@ export function Header() {
             </SheetContent>
           </Sheet>
         </div>
+
+        {/* Center: Logo */}
+        <div className="flex justify-center w-1/3">
+            <Link href="/" className="flex items-center space-x-2">
+                <Scissors className="h-6 w-6 text-primary" />
+                <span className="font-bold font-headline inline-block">TWT Hair Studio</span>
+            </Link>
+        </div>
+
+        {/* Right side: Navigation for desktop */}
+        <nav className="hidden md:flex items-center justify-end space-x-6 text-sm font-medium w-1/3">
+          {navLinks.slice(3).map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={cn(
+                'transition-colors hover:text-primary',
+                pathname === href ? 'text-primary' : 'text-muted-foreground'
+              )}
+            >
+              {label}
+            </Link>
+          ))}
+           <Button asChild className="rounded-full">
+            <Link href="/booking">Book Now</Link>
+          </Button>
+        </nav>
+
+        {/* Right side: Mobile booking button */}
+        <div className="flex md:hidden w-1/3 justify-end">
+             <Button asChild size="sm">
+                <Link href="/booking">Book Now</Link>
+            </Button>
+        </div>
+
       </div>
     </header>
   );
