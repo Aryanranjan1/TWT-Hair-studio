@@ -29,7 +29,7 @@ export function BlogSnapshot() {
 
   const latestPost = blogPosts[0];
   const authorStylist = stylists[2];
-  const onlineActivitiesImage = PlaceHolderImages.find(p => p.id === 'stylist-weitai');
+  const onlineActivitiesImage = PlaceHolderImages.find(p => p.id === 'services-snapshot');
 
 
   return (
@@ -129,7 +129,7 @@ export function BlogSnapshot() {
                 {onlineActivitiesImage && (
                     <Image
                         src={onlineActivitiesImage.imageUrl}
-                        alt="Stylist"
+                        alt="A woman with beautifully styled hair"
                         fill
                         className="object-cover"
                         sizes="(max-width: 1024px) 100vw, 33vw"
