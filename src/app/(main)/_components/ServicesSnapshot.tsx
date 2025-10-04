@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Scissors, Paintbrush, Sparkles, ArrowUp, ArrowDown } from 'lucide-react';
+import { ArrowRight, ArrowUp, ArrowDown } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
@@ -11,24 +11,6 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-
-const snapshotServices = [
-    {
-        icon: Scissors,
-        title: "Precision Cuts",
-        description: "Tailored to your face shape and lifestyle."
-    },
-    {
-        icon: Paintbrush,
-        title: "Creative Coloring",
-        description: "From subtle balayage to vibrant fashion colors."
-    },
-    {
-        icon: Sparkles,
-        title: "Restorative Treatments",
-        description: "For ultimate health and shine."
-    }
-];
 
 const VerticalCarousel = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, axis: 'y' }, [Autoplay({ delay: 7000 })]);
@@ -124,19 +106,9 @@ export function ServicesSnapshot() {
             <p className="mt-4 text-3xl md:text-4xl font-headline font-bold text-foreground">
                 A Glimpse of Our Services
             </p>
-            <div className="mt-8 space-y-6">
-              {snapshotServices.map((service) => (
-                <div key={service.title} className="flex items-start gap-4">
-                  <div className="bg-primary/10 text-primary p-2 rounded-full">
-                    <service.icon className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg text-foreground">{service.title}</h3>
-                    <p className="text-muted-foreground">{service.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <p className="mt-8 text-muted-foreground">
+                Step into a world of transformation where our expert stylists combine artistry with the latest techniques. Whether you're seeking a subtle refresh or a complete reinvention, our comprehensive menu of services is designed to cater to your every need. Discover the perfect treatment to elevate your look and spirit.
+            </p>
             <Button asChild size="lg" variant="outline" className="mt-10">
               <Link href="/services">Explore All Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
