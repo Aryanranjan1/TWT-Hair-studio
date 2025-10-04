@@ -43,7 +43,7 @@ export function FeaturedServices() {
           <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
             Featured Hairstyles
           </h2>
-          <p className="mt-4 text-3xl md:text-4xl font-headline">
+          <p className="mt-4 text-2xl md:text-3xl font-headline">
             Discover services designed to nurture your style, from precision cuts to creative coloring.
           </p>
         </div>
