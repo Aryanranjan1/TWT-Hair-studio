@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "new-hero",
-      "description": "A beautiful woman with long, flowing blonde hair against a textured gray background, looking to the side.",
-      "imageUrl": "https://images.unsplash.com/photo-1559227514-606d502a6c26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmbG93aW5nJTIwaGFpcnxlbnwwfHx8fDE3NTk1NDUyNzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "flowing hair"
+      "description": "A stylish woman with wavy hair looking over her shoulder.",
+      "imageUrl": "https://images.unsplash.com/photo-1615783963489-c5332cf16335?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxoYWlyJTIwc3R5bGV8ZW58MHx8fHwxNzYwMzgyMzIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "styled hair"
     },
     {
       "id": "promo-image",
@@ -33,7 +33,7 @@
     {
       "id": "service-cut",
       "description": "Stylist cutting a client's hair with precision.",
-      "imageUrl": "https://images.unsplash.com/photo-1559599101-f09722fb4948?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxN3x8d29tZW4lMjBoYWlyY3V0fGVufDB8fHx8MTc1OTU0MDYwNnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1559599101-f09722fb4948?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxN3x8d29tZW4lMjBoYWlyY3V0fGVufDB8fHx8MTc1OTU0MDYwNnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "haircut"
     },
     {
@@ -51,13 +51,13 @@
     {
       "id": "service-keratin",
       "description": "Woman with smooth, shiny hair after a keratin treatment.",
-      "imageUrl": "https://images.unsplash.com/photo-1748462846797-c73395de15ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxrZXJhdGlufGVufDB8fHx8MTc1OTU0MDc3NXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1748462846797-c73395de15ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxrZXJhdGlufGVufDB8fHx8MTc1OTU0MDc3NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "keratin treatment"
     },
     {
       "id": "service-package",
       "description": "A woman smiling, showcasing her new haircut and color.",
-      "imageUrl": "https://images.unsplash.com/photo-1747398690600-ffe8ecda9df1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxoYWlyJTIwc3RyYWlnaHRlbmluZ3xlbnwwfHx8fDE3NTk1NDA4MzB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1747398690600-ffe8ecda9df1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxoYWlyJTIwc3RyYWlnaHRlbmluZ3xlbnwwfHx8fDE3NTk1NDA4MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "happy client"
     },
     {
