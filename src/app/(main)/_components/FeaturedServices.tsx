@@ -64,7 +64,7 @@ export function FeaturedServices() {
                   <Link href="/services" className="group shrink-0">
                     <div
                       className={cn(
-                        'relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg transition-transform duration-300 ease-in-out',
+                        'relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg transition-transform duration-300 ease-in-out',
                         index === current ? 'scale-110' : 'scale-75 opacity-60'
                       )}
                     >
