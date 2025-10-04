@@ -84,7 +84,7 @@ export function BlogSnapshot() {
             </Motion>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             <Motion variant='pop-in' delay={0.1}>
             <Card className="lg:col-span-1 p-6 flex flex-col h-full">
                 <h4 className="font-headline text-xl font-semibold">From our Journal</h4>
@@ -126,8 +126,8 @@ export function BlogSnapshot() {
             </Card>
             </Motion>
 
-            <Motion variant='pop-in' delay={0.3} className='h-full'>
-            <Card className="md:col-span-2 lg:col-span-1 p-0 relative rounded-lg overflow-hidden text-white flex flex-col justify-between h-full">
+            <Motion variant='pop-in' delay={0.3} className='h-full md:col-span-2'>
+            <Card className="p-0 relative rounded-lg overflow-hidden text-white flex flex-col justify-between h-full min-h-[300px]">
                 {onlineActivitiesImage && (
                     <Image
                         src={onlineActivitiesImage.imageUrl}
