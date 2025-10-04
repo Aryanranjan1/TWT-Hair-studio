@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useEffect, useState, useCallback } from 'react';
@@ -113,7 +114,7 @@ export function ServicesSnapshot() {
               <Link href="/services">Explore All Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
           </div>
-          <div className="relative aspect-[4/5] min-h-[530px] w-full bg-secondary rounded-lg shadow-lg overflow-hidden">
+          <div className="relative aspect-[4/5] w-full bg-secondary rounded-lg shadow-lg overflow-hidden">
             <VerticalCarousel />
           </div>
         </div>
