@@ -84,9 +84,9 @@ export function BlogSnapshot() {
             </Motion>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             <Motion variant='pop-in' delay={0.1}>
-            <Card className="lg:col-span-1 p-6 flex flex-col h-full">
+            <Card className="p-6 flex flex-col h-full">
                 <h4 className="font-headline text-xl font-semibold">From our Journal</h4>
                 <p className="mt-4 text-muted-foreground flex-grow">
                     "{latestPost.excerpt}"
@@ -107,7 +107,7 @@ export function BlogSnapshot() {
             </Motion>
 
             <Motion variant='pop-in' delay={0.2}>
-            <Card className="lg:col-span-1 p-6 flex flex-col justify-center h-full">
+            <Card className="p-6 flex flex-col justify-center h-full">
                  <h4 className="font-headline text-xl font-semibold">Connect with us on social media.</h4>
                  <p className="mt-4 text-muted-foreground">
                     Network online and stay on top of updates, new styles, and beauty trends.
@@ -125,27 +125,28 @@ export function BlogSnapshot() {
                  </div>
             </Card>
             </Motion>
-
-            <Motion variant='pop-in' delay={0.3} className='h-full md:col-span-2'>
-            <Card className="p-0 relative rounded-lg overflow-hidden text-white flex flex-col justify-between h-full min-h-[300px]">
-                {onlineActivitiesImage && (
-                    <Image
-                        src={onlineActivitiesImage.imageUrl}
-                        alt="A woman with beautifully styled hair"
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 33vw"
-                        data-ai-hint={onlineActivitiesImage.imageHint}
-                    />
-                )}
-                <div className="absolute inset-0 bg-black/50"/>
-                <div className="relative p-6 flex flex-col h-full justify-end">
-                    <h4 className="font-headline text-xl font-semibold">READY FOR A TRANSFORMATION?</h4>
-                    <Button asChild variant="outline" className="bg-transparent text-white border-white mt-4 hover:bg-white hover:text-black self-start">
-                        <Link href="/booking">Book Your Slot <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                    </Button>
-                </div>
-            </Card>
+        </div>
+        <div className="mt-8">
+            <Motion variant='pop-in' delay={0.3} className='h-full'>
+                <Card className="p-0 relative rounded-lg overflow-hidden text-white flex flex-col justify-between h-full min-h-[300px]">
+                    {onlineActivitiesImage && (
+                        <Image
+                            src={onlineActivitiesImage.imageUrl}
+                            alt="A woman with beautifully styled hair"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 1024px) 100vw, 33vw"
+                            data-ai-hint={onlineActivitiesImage.imageHint}
+                        />
+                    )}
+                    <div className="absolute inset-0 bg-black/50"/>
+                    <div className="relative p-6 flex flex-col h-full justify-end">
+                        <h4 className="font-headline text-xl font-semibold">READY FOR A TRANSFORMATION?</h4>
+                        <Button asChild variant="outline" className="bg-transparent text-white border-white mt-4 hover:bg-white hover:text-black self-start">
+                            <Link href="/booking">Book Your Slot <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                        </Button>
+                    </div>
+                </Card>
             </Motion>
         </div>
         </Motion>
