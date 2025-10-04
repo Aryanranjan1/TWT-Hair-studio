@@ -99,11 +99,11 @@ const VerticalCarousel = () => {
                 ))}
             </div>
             <div className="absolute bottom-4 right-4 flex flex-col gap-y-2">
-                <Button variant="ghost" className="h-10 w-10 rounded-full bg-black/20 text-white hover:bg-black/40 hover:text-white" onClick={scrollPrev}>
+                <Button variant="ghost" className="h-12 w-10 rounded-full bg-black/20 text-white hover:bg-black/40 hover:text-white" onClick={scrollPrev}>
                     <ChevronUp className="h-6 w-6" />
                     <span className="sr-only">Previous Slide</span>
                 </Button>
-                <Button variant="ghost" className="h-10 w-10 rounded-full bg-black/20 text-white hover:bg-black/40 hover:text-white" onClick={scrollNext}>
+                <Button variant="ghost" className="h-12 w-10 rounded-full bg-black/20 text-white hover:bg-black/40 hover:text-white" onClick={scrollNext}>
                     <ChevronDown className="h-6 w-6" />
                     <span className="sr-only">Next Slide</span>
                 </Button>
