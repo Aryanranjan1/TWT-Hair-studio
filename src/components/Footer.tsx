@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Scissors, Instagram, Phone, Mail, MapPin } from 'lucide-react';
+import { Instagram, Facebook, Phone, Mail, MapPin } from 'lucide-react';
 import { NewsletterForm } from './NewsletterForm';
 
 const socialLinks = [
@@ -7,6 +7,11 @@ const socialLinks = [
     name: 'Instagram',
     icon: Instagram,
     href: 'https://instagram.com',
+  },
+  {
+    name: 'Facebook',
+    icon: Facebook,
+    href: 'https://facebook.com',
   },
   {
     name: 'WhatsApp',
@@ -20,6 +25,7 @@ const footerLinks = [
     { href: '/services', label: 'Services' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/about', label: 'About' },
+    { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
     { href: '/booking', label: 'Book Now' },
 ];
@@ -28,13 +34,15 @@ export function Footer() {
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container max-w-7xl py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="md:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-flex items-center space-x-2">
               <span style={{ fontFamily: 'Jost, sans-serif' }} className="text-2xl font-light tracking-wider">TWT</span>
             </Link>
-            <p className="text-sm text-muted-foreground">Good Hair Day, Every Day.</p>
-            <div className="flex space-x-4">
+            <p className="mt-4 text-sm text-muted-foreground">
+              TWT is a premier hair salon in Petaling Jaya, dedicated to providing exceptional hair care and styling in a welcoming atmosphere. Our expert stylists are passionate about the art of hair and are committed to helping you achieve your desired look.
+            </p>
+            <div className="mt-4 flex space-x-4">
               {socialLinks.map((item) => (
                 <Link key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                   <span className="sr-only">{item.name}</span>
@@ -76,7 +84,7 @@ export function Footer() {
 
           <div>
             <h3 className="text-lg font-headline font-semibold">Stay Updated</h3>
-            <p className="mt-4 text-sm textmuted-foreground">Get the latest trends, tips, and promotions straight to your inbox.</p>
+            <p className="mt-4 text-sm text-muted-foreground">Get the latest trends, tips, and promotions straight to your inbox.</p>
             <NewsletterForm />
           </div>
         </div>
