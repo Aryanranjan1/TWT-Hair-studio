@@ -108,11 +108,6 @@ export function FeaturedServices() {
         </Carousel>
       </div>
 
-      <div className="mt-12 text-center">
-        <Button asChild variant="outline" size="lg">
-          <Link href="/services">View All Services</Link>
-        </Button>
-      </div>
     </section>
   );
 }
