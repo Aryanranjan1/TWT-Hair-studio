@@ -44,7 +44,7 @@ export function FeaturedServices() {
           <Motion as="h2" variant='fade-in' className="text-sm font-bold uppercase tracking-widest text-primary">
             Featured Hairstyles
           </Motion>
-          <Motion as="p" variant='slide-in-up' delay={0.1} className="mt-4 text-2xl md:text-3xl font-headline">
+          <Motion as="p" variant='zoom-in' delay={0.1} className="mt-4 text-2xl md:text-3xl font-headline">
             Discover services designed to nurture your style, from precision cuts to creative coloring.
           </Motion>
         </div>
