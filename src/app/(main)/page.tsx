@@ -41,7 +41,7 @@ function Hero() {
             <h1 style={{ fontFamily: 'Jost, sans-serif' }} className="text-[15vw] md:text-[10vw] lg:text-[12rem] font-thin tracking-wider leading-none">
               TWT
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl font-light tracking-widest -mt-4 ml-2" style={{ fontFamily: 'Jost, sans-serif' }}>
+            <p className="text-xl md:text-2xl lg:text-3xl font-light tracking-widest -mt-4 text-center" style={{ fontFamily: 'Jost, sans-serif' }}>
               HAIR STUDIO
             </p>
           </div>
