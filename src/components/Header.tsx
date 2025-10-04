@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, Scissors, Instagram, Facebook } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -31,8 +31,8 @@ export function Header() {
               key={href}
               href={href}
               className={cn(
-                'transition-colors hover:text-white text-slate-300',
-                pathname === href ? 'text-white font-semibold' : ''
+                'transition-colors hover:text-primary text-foreground/80',
+                pathname === href ? 'text-primary font-semibold' : ''
               )}
             >
               {label}
@@ -44,7 +44,7 @@ export function Header() {
         <div className="flex md:hidden w-1/3">
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10">
+              <Button variant="ghost" className="text-foreground hover:text-primary hover:bg-accent">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle Menu</span>
               </Button>
@@ -68,7 +68,7 @@ export function Header() {
                   </Link>
                 ))}
               </div>
-              <Button asChild className="w-full mt-6">
+              <Button asChild className="w-full mt-6 bg-white text-black hover:bg-gray-200">
                 <Link href="/booking" onClick={() => setSheetOpen(false)}>Book Now</Link>
               </Button>
             </SheetContent>
@@ -77,7 +77,7 @@ export function Header() {
 
         {/* Center: Logo */}
         <div className="flex justify-center w-1/3">
-            <Link href="/" className="flex items-center space-x-2 text-white">
+            <Link href="/" className="flex items-center space-x-2 text-foreground">
                  <span className="font-bold font-headline inline-block text-2xl tracking-widest">TWT</span>
             </Link>
         </div>
@@ -89,21 +89,21 @@ export function Header() {
               key={href}
               href={href}
               className={cn(
-                'transition-colors hover:text-white text-slate-300',
-                pathname === href ? 'text-white font-semibold' : ''
+                'transition-colors hover:text-primary text-foreground/80',
+                pathname === href ? 'text-primary font-semibold' : ''
               )}
             >
               {label}
             </Link>
           ))}
-           <Button asChild variant="outline" className="rounded-full">
+           <Button asChild variant="outline" className="rounded-full bg-white text-black hover:bg-gray-200 hover:text-black">
             <Link href="/booking">Book Now</Link>
           </Button>
         </nav>
 
         {/* Right side: Mobile booking button */}
         <div className="flex md:hidden w-1/3 justify-end">
-             <Button asChild size="sm" variant="outline" className="rounded-full">
+             <Button asChild size="sm" variant="outline" className="rounded-full bg-white text-black hover:bg-gray-200 hover:text-black">
                 <Link href="/booking">Book Now</Link>
             </Button>
         </div>
