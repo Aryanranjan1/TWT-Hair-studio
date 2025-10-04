@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Scissors } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Book Your Appointment',
@@ -8,31 +7,28 @@ export const metadata: Metadata = {
 };
 
 export default function BookingPage() {
+  // Replace this with your actual Fresha booking widget URL
+  const freshaUrl = "https://www.fresha.com/a/twt-hair-studio-petaling-jaya-casa-tropicana-nii0gej9/booking?dpp=1";
+
   return (
     <div className="flex flex-col min-h-screen bg-secondary">
-      <header className="p-4 border-b">
-        <div className="container max-w-5xl mx-auto flex justify-center">
+      <header className="p-4 border-b bg-background">
+        <div className="container max-w-7xl mx-auto flex justify-center">
             <Link href="/" className="inline-flex items-center space-x-2">
                 <span className="text-lg font-bold font-headline" style={{ fontFamily: 'Jost, sans-serif' }}>TWT</span>
             </Link>
         </div>
       </header>
-      <main className="flex-1 flex flex-col items-center justify-center p-4">
-        <div className="w-full max-w-5xl bg-background rounded-lg shadow-2xl overflow-hidden">
-          <div className="p-4 bg-gray-100 dark:bg-gray-800 border-b">
-            <h1 className="text-xl font-headline font-bold text-center">Book Your Appointment</h1>
-          </div>
-          <div className="p-4 sm:p-8 aspect-video flex flex-col items-center justify-center text-center bg-muted/40">
-            <h2 className="text-2xl font-semibold">Fresha Booking System</h2>
-            <p className="mt-2 text-muted-foreground">Our booking widget would be embedded here.</p>
-            <p className="mt-4 text-sm text-muted-foreground max-w-md">For this demonstration, the booking system is simulated. On a live website, the Fresha booking interface would load directly in this frame for a seamless experience.</p>
-            <Link href="https://www.fresha.com/" target='_blank' rel='noopener noreferrer' className="mt-6 text-sm font-semibold text-primary hover:underline">
-              Learn more about Fresha
-            </Link>
-          </div>
+      <main className="flex-1 flex flex-col items-center justify-center p-0 sm:p-4">
+        <div className="w-full max-w-7xl h-[calc(100vh-81px)] sm:h-[calc(100vh-32px)] sm:max-h-[800px] bg-background sm:rounded-lg shadow-2xl overflow-hidden">
+          <iframe
+            src={freshaUrl}
+            title="Book an Appointment"
+            className="w-full h-full border-0"
+          />
         </div>
-        <p className="mt-8 text-sm text-muted-foreground">
-          Having trouble? <Link href="/contact" className="underline hover:text-primary">Contact us directly</Link>.
+        <p className="mt-8 text-sm text-muted-foreground text-center px-4 pb-4">
+          Having trouble with the booking widget? <Link href="/contact" className="underline hover:text-primary">Contact us directly</Link>.
         </p>
       </main>
     </div>
