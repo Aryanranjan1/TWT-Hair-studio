@@ -38,7 +38,7 @@ export function FeaturedServices() {
 
   return (
     <section className="bg-background text-foreground py-16 sm:py-24 overflow-hidden">
-      <div className="container max-w-7xl">
+      <div className="container max-w-7xl mb-[50px]">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
             Featured Hairstyles
