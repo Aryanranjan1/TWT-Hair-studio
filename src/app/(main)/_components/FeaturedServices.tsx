@@ -37,7 +37,7 @@ export function FeaturedServices() {
 
   return (
     <section className="bg-background text-foreground py-16 sm:py-24 overflow-hidden">
-      <div className="container max-w-7xl mb-[50px]">
+      <div className="container max-w-7xl mb-12">
         <Motion variant="fade-in" className="text-center max-w-2xl mx-auto">
           <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
             Featured Hairstyles
@@ -70,7 +70,7 @@ export function FeaturedServices() {
               return (
                 <CarouselItem
                   key={`${service.id}-${index}`}
-                  className="basis-1/2 md:basis-1/3 lg:basis-1/4 flex items-center justify-center"
+                  className="basis-4/5 md:basis-1/3 lg:basis-1/4 flex items-center justify-center"
                   onMouseEnter={() => setHoveredIndex(index)}
                 >
                   <div className="group shrink-0">
