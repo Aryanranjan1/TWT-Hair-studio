@@ -18,7 +18,7 @@ export default function ServicesPage() {
   return (
     <div className="py-16 sm:py-24">
       <div className="container max-w-7xl">
-        <div className="text-center">
+        <div className="text-center mt-[100px]">
           <h1 className="text-4xl md:text-5xl font-headline font-bold">Our Services</h1>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
             From classic cuts to creative coloring and restorative treatments, we offer a full range of services to meet your hair needs. All prices are indicative and may vary based on hair length and thickness.
