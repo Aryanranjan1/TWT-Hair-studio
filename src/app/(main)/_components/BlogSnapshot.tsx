@@ -1,10 +1,9 @@
-
 'use client';
 
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Instagram, Facebook, Rss } from 'lucide-react';
+import { ArrowRight, Instagram, Facebook, Youtube } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -14,92 +13,143 @@ import {
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 
-import { blogPosts } from '@/lib/data';
+import { blogPosts, stylists } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent }from '@/components/ui/card';
 
 export function BlogSnapshot() {
   const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true }));
+  const eventImages = [
+      PlaceHolderImages.find(p => p.id === 'gallery-cut-1'),
+      PlaceHolderImages.find(p => p.id === 'gallery-color-1'),
+      PlaceHolderImages.find(p => p.id === 'gallery-treatment-1')
+  ].filter(Boolean);
+
+  const latestPost = blogPosts[0];
+  const authorStylist = stylists[2];
+  const onlineActivitiesImage = PlaceHolderImages.find(p => p.id === 'stylist-weitai');
+
 
   return (
     <section className="py-16 sm:py-24 bg-background text-foreground">
       <div className="container max-w-7xl">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
-                    From the Journal
+        <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className='md:col-span-2 text-left mb-8'>
+                <h2 className="text-4xl md:text-5xl font-headline font-bold">
+                    JOIN THE <span className="text-primary">COMMUNITY</span>
                 </h2>
-                <p className="mt-4 text-3xl md:text-4xl font-headline font-bold">
-                    Stay inspired with our latest hair tips, trends, and salon news.
+                <p className="mt-4 text-muted-foreground max-w-2xl">
+                    Connect and grow with thousands of style enthusiasts and professionals in the beauty industry.
                 </p>
             </div>
-            <div className='text-right'>
-                <Button asChild size="lg" variant="outline">
-                    <Link href="/blog">View All Posts <ArrowRight className="ml-2 h-5 w-5" /></Link>
-                </Button>
+            
+            <div className="md:col-span-1">
+                <Carousel
+                  plugins={[plugin.current]}
+                  className="w-full"
+                  onMouseEnter={plugin.current.stop}
+                  onMouseLeave={plugin.current.reset}
+                  opts={{ loop: true }}
+                >
+                  <CarouselContent>
+                    {eventImages.map((image, index) => (
+                      <CarouselItem key={index}>
+                        <Card className="overflow-hidden">
+                            <div className="relative aspect-video">
+                                <Image
+                                src={image!.imageUrl}
+                                alt={image!.description}
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                data-ai-hint={image!.imageHint}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-6 flex flex-col justify-end">
+                                    <h3 className="text-white font-headline text-2xl">Style with Confidence</h3>
+                                    <p className="text-white/80 text-sm mt-2">Explore our latest work and events.</p>
+                                </div>
+                            </div>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
+                  <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
+                </Carousel>
+            </div>
+
+            <div className="md:col-span-1 flex flex-col justify-center h-full">
+                <h3 className="text-2xl md:text-3xl font-headline font-bold">
+                    We participate in style expos and organize special events to engage with our community in person.
+                </h3>
             </div>
         </div>
 
-        <Carousel
-          plugins={[plugin.current]}
-          className="w-full mt-12"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
-          opts={{ loop: true }}
-        >
-          <CarouselContent>
-            {blogPosts.map((post) => {
-              const image = PlaceHolderImages.find((p) => p.id === post.image);
-              return (
-                <CarouselItem key={post.id} className="md:basis-1/2 lg:basis-1/3">
-                  <Link href={`/blog/${post.slug}`} className="group">
-                    <Card className="overflow-hidden">
-                      <CardHeader className="p-0">
-                        {image && (
-                          <div className="relative aspect-video">
-                            <Image
-                              src={image.imageUrl}
-                              alt={post.title}
-                              fill
-                              className="object-cover group-hover:scale-105 transition-transform duration-300"
-                              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                              data-ai-hint={image.imageHint}
-                            />
-                          </div>
-                        )}
-                      </CardHeader>
-                      <CardContent className="p-6">
-                        <h3 className="font-headline text-xl font-semibold group-hover:text-primary transition-colors">{post.title}</h3>
-                        <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{post.excerpt}</p>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </CarouselItem>
-              );
-            })}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2 hidden md:inline-flex" />
-          <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2 hidden md:inline-flex" />
-        </Carousel>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="lg:col-span-1 p-6 flex flex-col">
+                <h4 className="font-headline text-xl font-semibold">From our Journal</h4>
+                <p className="mt-4 text-muted-foreground flex-grow">
+                    "{latestPost.excerpt}"
+                </p>
+                <div className="flex items-center gap-4 mt-6">
+                    {authorStylist && (
+                        <Image src={PlaceHolderImages.find(p => p.id === authorStylist.image)!.imageUrl} alt={authorStylist.name} width={40} height={40} className="rounded-full object-cover" />
+                    )}
+                    <div>
+                        <p className="font-semibold">{authorStylist.name}</p>
+                        <p className="text-sm text-muted-foreground">TWT Stylist</p>
+                    </div>
+                </div>
+                <Button asChild variant="outline" className="mt-6 self-start">
+                    <Link href={`/blog/${latestPost.slug}`}>Read now <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
+            </Card>
 
-        <div className="mt-16 bg-secondary p-8 md:p-12 rounded-lg">
-            <h2 className="text-3xl font-headline font-bold text-center">Join Our Social Circle</h2>
-            <p className="mt-4 max-w-2xl mx-auto text-center text-muted-foreground">
-                Connect with us on social media to stay updated on the latest styles, promotions, and behind-the-scenes moments at TWT.
-            </p>
-            <div className="mt-8 flex justify-center gap-4">
-                 <Button asChild size="lg">
-                    <Link href="https://instagram.com" target="_blank">
-                        <Instagram className="mr-2 h-5 w-5" /> Instagram
-                    </Link>
-                </Button>
-                 <Button asChild size="lg" variant="outline">
-                    <Link href="https://facebook.com" target="_blank">
-                        <Facebook className="mr-2 h-5 w-5" /> Facebook
-                    </Link>
-                </Button>
-            </div>
+            <Card className="lg:col-span-1 p-6 flex flex-col justify-center">
+                 <h4 className="font-headline text-xl font-semibold">Connect with us on social media.</h4>
+                 <p className="mt-4 text-muted-foreground">
+                    Network online and stay on top of updates, new styles, and beauty trends.
+                 </p>
+                 <div className="flex gap-4 mt-6">
+                    <Button asChild variant="outline" size="icon">
+                        <Link href="https://instagram.com" target="_blank"><Instagram /></Link>
+                    </Button>
+                     <Button asChild variant="outline" size="icon">
+                        <Link href="https://facebook.com" target="_blank"><Facebook /></Link>
+                    </Button>
+                     <Button asChild variant="outline" size="icon">
+                        <Link href="https://youtube.com" target="_blank"><Youtube /></Link>
+                    </Button>
+                 </div>
+            </Card>
+
+            <Card className="lg:col-span-1 p-0 relative rounded-lg overflow-hidden text-white flex flex-col justify-between">
+                {onlineActivitiesImage && (
+                    <Image
+                        src={onlineActivitiesImage.imageUrl}
+                        alt="Stylist"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 33vw"
+                        data-ai-hint={onlineActivitiesImage.imageHint}
+                    />
+                )}
+                <div className="absolute inset-0 bg-black/50"/>
+                <div className="relative p-6 flex flex-col h-full">
+                    <div className="flex justify-between text-sm">
+                        <span>Webinars</span>
+                        <span>Live streams</span>
+                    </div>
+                    <div className="mt-auto">
+                        <h4 className="font-headline text-xl font-semibold">READY FOR A TRANSFORMATION?</h4>
+                        <Button asChild variant="outline" className="bg-transparent text-white border-white mt-4 hover:bg-white hover:text-black">
+                            <Link href="/booking">Book Your Slot <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                        </Button>
+                    </div>
+                </div>
+            </Card>
+
         </div>
       </div>
     </section>
