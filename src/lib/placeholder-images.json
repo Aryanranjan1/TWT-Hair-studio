@@ -21,25 +21,25 @@
     {
       "id": "service-balayage",
       "description": "Beautiful balayage hair with blonde highlights.",
-      "imageUrl": "https://images.unsplash.com/photo-1616353995940-4c3614a51c72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYWxheWFnZSUyMGhhaXJ8ZW58MHx8fHwxNzYwMDQyMjA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1638640983932-dea21424691d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb2xvdXIlMjBoYWlyJTIwfGVufDB8fHx8MTc1OTU0MDc1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "balayage hair"
     },
     {
       "id": "service-keratin",
       "description": "Woman with smooth, shiny hair after a keratin treatment.",
-      "imageUrl": "https://images.unsplash.com/photo-1615217833006-8169aced906b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrZXJhdGluJTIwdHJlYXRtZW50fGVufDB8fHx8MTc2MDA0MjIwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1748462846797-c73395de15ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxrZXJhdGlufGVufDB8fHx8MTc1OTU0MDc3NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "keratin treatment"
     },
     {
       "id": "service-package",
       "description": "A woman smiling, showcasing her new haircut and color.",
-      "imageUrl": "https://images.unsplash.com/photo-1522338242385-30b0a4d159d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGNsaWVudCUyMGhhaXJ8ZW58MHx8fHwxNzYwMDQyMjA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1747398690600-ffe8ecda9df1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxoYWlyJTIwc3RyYWlnaHRlbmluZ3xlbnwwfHx8fDE3NTk1NDA4MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "happy client"
     },
     {
       "id": "service-treatment",
       "description": "Close-up of a nourishing hair treatment being applied.",
-      "imageUrl": "https://images.unsplash.com/photo-1605499245595-58d34b86c735?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1715866549135-e3bc3c6148a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzY2FscCUyMHRyZWF0bWVudHxlbnwwfHx8fDE3NTk1NDA4MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "hair treatment"
     },
     {
