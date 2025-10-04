@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "new-hero",
-      "description": "A stylish woman with wavy hair looking over her shoulder.",
-      "imageUrl": "https://images.unsplash.com/photo-1559227514-606d502a6c26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmbG93aW5nJTIwaGFpcnxlbnwwfHx8fDE3NTk1NDUyNzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "flowing hair"
+      "description": "A stylish woman in a white hat looking thoughtfully away.",
+      "imageUrl": "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "stylish woman"
     },
     {
       "id": "promo-image",
@@ -51,7 +51,7 @@
     {
       "id": "service-keratin",
       "description": "Woman with smooth, shiny hair after a keratin treatment.",
-      "imageUrl": "https://images.unsplash.com/photo-1748462846797-c73395de15ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxrZXJhdGlufGVufDB8fHx8MTc1OTU0MDc3NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1748462846797-c73395de15ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxrZXJhdGlufGVufDB8fHx8MTc1OTU0MDc3NXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "keratin treatment"
     },
     {
@@ -117,7 +117,7 @@
     {
       "id": "gallery-cut-2",
       "description": "Stylish long layered haircut for men.",
-      "imageUrl": "https://images.unsplash.com/photo-1621607512022-6aecc4fed814?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZW4lMjBoYWlyY3V0fGVufDB8fHx8MTc1OTQ0MDM5MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1621607512022-6aecc4fed814?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZW4lMjBoYWlyY3V0fGVufDB8fHx8fDE3NTk0NDAzOTF8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "men haircut"
     },
     {
@@ -165,7 +165,7 @@
     {
       "id": "blog-2",
       "description": "A woman with beautiful, trendy wavy hair.",
-      "imageUrl": "https://images.unsplash.com/photo-1662457966566-18c4f1c16dd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoYWlyJTIwdHJlbmRzfGVufDB8fHx8MTc1OTQ3NTY5OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1662457966566-18c4f1c16dd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoYWlyJTIwdHJlbmRzfGVufDB8fHx8fDE3NTk0NzU2OTl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "hair trends"
     },
     {
