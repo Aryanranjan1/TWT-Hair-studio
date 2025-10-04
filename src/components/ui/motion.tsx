@@ -9,67 +9,54 @@ const animationVariants = {
   'fade-in': {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
-    exit: { opacity: 0 },
   },
   'slide-in-up': {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: 20 },
   },
   'slide-in-down': {
     initial: { opacity: 0, y: -20 },
     animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -20 },
   },
   'slide-in-left': {
     initial: { opacity: 0, x: -20 },
     animate: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: -20 },
   },
   'slide-in-right': {
     initial: { opacity: 0, x: 20 },
     animate: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: 20 },
   },
   'zoom-in': {
     initial: { opacity: 0, scale: 0.95 },
     animate: { opacity: 1, scale: 1 },
-    exit: { opacity: 0, scale: 0.95 },
   },
   'zoom-out': {
     initial: { opacity: 0, scale: 1.05 },
     animate: { opacity: 1, scale: 1 },
-    exit: { opacity: 0, scale: 1.05 },
   },
   'flip-in-x': {
     initial: { opacity: 0, rotateX: -90 },
     animate: { opacity: 1, rotateX: 0 },
-    exit: { opacity: 0, rotateX: -90 },
   },
   'flip-in-y': {
     initial: { opacity: 0, rotateY: -90 },
     animate: { opacity: 1, rotateY: 0 },
-    exit: { opacity: 0, rotateY: -90 },
   },
   'pop-in': {
     initial: { opacity: 0, scale: 0.8 },
     animate: { opacity: 1, scale: 1 },
-    exit: { opacity: 0, scale: 0.8 },
   },
   'hop-in': {
     initial: { opacity: 0, y: -40, scale: 0.9 },
     animate: { opacity: 1, y: 0, scale: 1 },
-    exit: { opacity: 0, y: -40, scale: 0.9 },
   },
   'slide-in-diag-1': {
     initial: { opacity: 0, x: -30, y: -30 },
     animate: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: -30, y: -30 },
   },
   'slide-in-diag-2': {
     initial: { opacity: 0, x: 30, y: -30 },
     animate: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: 30, y: -30 },
   },
 };
 
@@ -87,9 +74,9 @@ export function Motion<T extends keyof typeof animationVariants>({
   variant,
   className,
   delay = 0,
-  duration = 0.5,
-  once = false,
-  amount = 0.2,
+  duration = 0.4,
+  once = true,
+  amount = 0.1,
   as,
   ...props
 }: MotionProps<T>) {
@@ -100,15 +87,11 @@ export function Motion<T extends keyof typeof animationVariants>({
   const variants: Variants = {
     hidden: {
       ...selectedVariant.initial,
-      transition: { duration, delay, ease: 'easeInOut' },
+      transition: { duration, delay, ease: 'easeOut' },
     },
     visible: {
       ...selectedVariant.animate,
-      transition: { duration, delay, ease: 'easeInOut' },
-    },
-    exit: {
-      ...selectedVariant.exit,
-      transition: { duration, delay, ease: 'easeInOut' },
+      transition: { duration, delay, ease: 'easeOut' },
     },
   };
   
@@ -119,7 +102,6 @@ export function Motion<T extends keyof typeof animationVariants>({
       ref={ref}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
-      exit="exit"
       variants={variants}
       className={cn(className)}
       {...props}
