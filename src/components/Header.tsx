@@ -40,7 +40,7 @@ export function Header() {
 
   return (
     <header className="absolute top-0 z-50 w-full text-white bg-gradient-to-b from-black/30 to-transparent">
-      <div className="container flex h-[100px] max-w-7xl items-center justify-between">
+      <div className="container flex h-[100px] max-w-7xl items-center justify-between mx-auto">
         {/* Center: Logo for mobile */}
         <div className="flex justify-start w-1/3 md:hidden">
             <Link href="/" className="flex items-center space-x-2">

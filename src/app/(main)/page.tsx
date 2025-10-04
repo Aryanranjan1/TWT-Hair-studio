@@ -35,7 +35,7 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/10" />
 
       <div className="relative h-screen flex items-end">
-        <div className="container max-w-7xl h-full flex items-center justify-between">
+        <div className="container max-w-7xl mx-auto h-full flex items-center justify-between">
           {/* Main content - Logo */}
           <Motion variant="fade-in" className="absolute bottom-16 left-4 sm:left-6 lg:left-[50px] text-white">
             <h1 style={{ fontFamily: 'Jost, sans-serif' }} className="text-[15vw] md:text-[10vw] lg:text-[12rem] font-thin tracking-wider leading-none">
@@ -56,7 +56,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <div className="container max-w-7xl">
+      <div className="container max-w-7xl mx-auto">
         <div style={{ marginTop: '50px', marginBottom: '50px' }}>
           <FeaturedServices />
         </div>
