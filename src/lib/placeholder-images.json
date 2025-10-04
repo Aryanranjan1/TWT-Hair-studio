@@ -45,7 +45,7 @@
     {
       "id": "service-cut-men",
       "description": "A man getting a stylish haircut at a salon.",
-      "imageUrl": "https://images.unsplash.com/photo-1578390432942-d323db577792?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZW4lMjBoYWlyY3V0fGVufDB8fHx8MTc1OTU0MDYzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1578390432942-d323db577792?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZW4lMjBoYWlyY3V0fGVufDB8fHx8fDE3NTk1NDA2MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "men haircut"
     },
     {
@@ -81,13 +81,13 @@
     {
       "id": "stylist-kin",
       "description": "Portrait of a friendly and professional male stylist named Kin.",
-      "imageUrl": "https://images.unsplash.com/photo-1590540179852-2110a54f813a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWxlJTIwaGFpcnN0eWxpc3R8ZW58MHx8fHwxNzU5NDc1Njk5fDA&ixlibrb-4.1.0&q=80&w=1080",
-      "imageHint": "male hairstylist"
+      "imageUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8Z2lybHxlbnwwfHx8fDE3NTk1NjA2NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female hairstylist"
     },
     {
       "id": "stylist-wiwie",
       "description": "Portrait of a confident and stylish female stylist named Wiwie.",
-      "imageUrl": "https://images.unsplash.com/photo-1613849577924-6db8fe349e70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmZW1hbGUlMjBoYWlyc3R5bGlzdHxlbnwwfHx8fDE3NTk0NzU2OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnaXJsfGVufDB8fHx8MTc1OTU2MDY0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "female hairstylist"
     },
     {
@@ -177,7 +177,7 @@
     {
       "id": "blog-3",
       "description": "Person examining their hair in the mirror.",
-      "imageUrl": "https://images.unsplash.com/photo-1717160675489-7779f2c91999?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYWlyJTIwY2FyZXxlbnwwfHx8fDE3NTk0NzU2OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1717160675489-7779f2c91999?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYWlyJTIwY2FyZXxlbnwwfHx8fDE3NTk0NzU2OTl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "hair care"
     },
     {
