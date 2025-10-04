@@ -79,7 +79,7 @@ const VerticalCarousel = () => {
                     <button
                         key={index}
                         onClick={() => scrollTo(index)}
-                        className="p-0 m-0 h-12 w-2 rounded-full bg-white/40 hover:bg-white/80 transition-colors"
+                        className="p-0 m-0 h-10 w-2 rounded-full bg-white/40 hover:bg-white/80 transition-colors"
                     >
                         <div
                             className={cn(
