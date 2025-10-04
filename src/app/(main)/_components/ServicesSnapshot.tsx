@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Scissors, Paintbrush, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
+import { ArrowRight, Scissors, Paintbrush, Sparkles, ArrowUp, ArrowDown } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
@@ -98,13 +98,13 @@ const VerticalCarousel = () => {
                     </button>
                 ))}
             </div>
-            <div className="absolute bottom-4 right-4 flex gap-x-2">
+            <div className="absolute bottom-4 right-4 flex flex-col gap-y-2">
                 <Button variant="ghost" className="h-12 w-24 rounded-full bg-black/20 text-white hover:bg-black/40 hover:text-white" onClick={scrollPrev}>
-                    <ChevronUp className="h-6 w-6" />
+                    <ArrowUp className="h-6 w-6" />
                     <span className="sr-only">Previous Slide</span>
                 </Button>
                 <Button variant="ghost" className="h-12 w-24 rounded-full bg-black/20 text-white hover:bg-black/40 hover:text-white" onClick={scrollNext}>
-                    <ChevronDown className="h-6 w-6" />
+                    <ArrowDown className="h-6 w-6" />
                     <span className="sr-only">Next Slide</span>
                 </Button>
             </div>
