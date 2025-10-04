@@ -7,6 +7,12 @@
       "imageHint": "stylist working"
     },
     {
+      "id": "hero-image-2",
+      "description": "A woman with stylishly cut and colored hair, looking confidently at the camera in a modern setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1580489233802-9a572c47012c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxoYWlyJTIwbW9kZWx8ZW58MHx8fHwxNzYwMzkyNTA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hair model"
+    },
+    {
       "id": "services-snapshot",
       "description": "A woman with beautifully styled hair, looking thoughtful and elegant.",
       "imageUrl": "https://images.unsplash.com/photo-1615783963489-c5332cf16335?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxoYWlyJTIwc3R5bGV8ZW58MHx8fHwxNzYwMzgyMzIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -75,7 +81,7 @@
     {
       "id": "stylist-weitai",
       "description": "Portrait of the salon director, Wei Tai.",
-      "imageUrl": "https://images.unsplash.com/photo-1674882632140-832a3e650c41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzYWxvbiUyMGRpcmVjdG9yfGVufDB8fHx8MTc1OTUyNTI4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1674882632140-832a3e650c41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzYWxvbiUyMGRpcmVjdG9yfGVufDB8fHx8MTc1OTUyNTI4N3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "salon director"
     },
     {
