@@ -86,16 +86,36 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <FeaturedServices />
-      <AboutSnapshot />
-      <ValuePropositions />
-      <ServicesSnapshot />
-      <GalleryPreview />
-      <FeaturedStylists />
-      <Testimonials />
-      <BookingCTA />
-      <BlogSnapshot />
-      <LocationSnapshot />
+      <div style={{ marginTop: '50px', marginBottom: '50px' }}>
+        <FeaturedServices />
+      </div>
+      <div style={{ marginTop: '50px', marginBottom: '50px' }}>
+        <AboutSnapshot />
+      </div>
+      <div style={{ marginTop: '50px', marginBottom: '50px' }}>
+        <ValuePropositions />
+      </div>
+      <div style={{ marginTop: '50px', marginBottom: '50px' }}>
+        <ServicesSnapshot />
+      </div>
+      <div style={{ marginTop: '50px', marginBottom: '50px' }}>
+        <GalleryPreview />
+      </div>
+      <div style={{ marginTop: '50px', marginBottom: '50px' }}>
+        <FeaturedStylists />
+      </div>
+      <div style={{ marginTop: '50px', marginBottom: '50px' }}>
+        <Testimonials />
+      </div>
+      <div style={{ marginTop: '50px', marginBottom: '50px' }}>
+        <BookingCTA />
+      </div>
+      <div style={{ marginTop: '50px', marginBottom: '50px' }}>
+        <BlogSnapshot />
+      </div>
+      <div style={{ marginTop: '50px', marginBottom: '50px' }}>
+        <LocationSnapshot />
+      </div>
     </>
   );
 }
