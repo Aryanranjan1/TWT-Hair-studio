@@ -33,7 +33,7 @@ function Hero() {
           {/* Main content - Logo */}
           <div className="flex-1 flex justify-center text-white">
             <h1 style={{ fontFamily: 'Jost, sans-serif' }} className="text-[15vw] md:text-[10vw] lg:text-[12rem] font-thin tracking-wider leading-none">
-              SHEAR
+              TWT
             </h1>
           </div>
 
