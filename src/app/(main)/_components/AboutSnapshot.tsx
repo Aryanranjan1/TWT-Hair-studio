@@ -8,6 +8,7 @@ import { ArrowRight } from 'lucide-react';
 
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
+import { Motion } from '@/components/ui/motion';
 
 export function AboutSnapshot() {
   const aboutImage = PlaceHolderImages.find(p => p.id === 'about-salon');
@@ -16,7 +17,7 @@ export function AboutSnapshot() {
     <section className="py-16 sm:py-24 bg-background">
       <div className="container max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-stretch">
-          <div className="flex flex-col justify-center">
+          <Motion variant="slide-in-left" className="flex flex-col justify-center">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
               Our Story
             </h2>
@@ -29,8 +30,9 @@ export function AboutSnapshot() {
             <Button asChild size="lg" variant="outline" className="mt-8 self-start">
               <Link href="/about">Learn More About Us <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
-          </div>
-          <div 
+          </Motion>
+          <Motion 
+            variant="slide-in-right"
             className="relative min-h-[400px] w-full" 
           >
             {aboutImage && (
@@ -47,7 +49,7 @@ export function AboutSnapshot() {
                 />
               </div>
             )}
-          </div>
+          </Motion>
         </div>
       </div>
     </section>

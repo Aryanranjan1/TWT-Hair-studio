@@ -15,6 +15,7 @@ import { BookingCTA } from './_components/BookingCTA';
 import { BlogSnapshot } from './_components/BlogSnapshot';
 import { LocationSnapshot } from './_components/LocationSnapshot';
 import { GalleryPreview } from './_components/GalleryPreview';
+import { Motion } from '@/components/ui/motion';
 
 function Hero() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'new-hero');
@@ -36,14 +37,14 @@ function Hero() {
       <div className="relative h-screen flex items-end">
         <div className="container max-w-7xl h-full flex items-center justify-between">
           {/* Main content - Logo */}
-          <div className="absolute bottom-16 left-4 sm:left-6 lg:left-[50px] text-white">
+          <Motion variant="fade-in" className="absolute bottom-16 left-4 sm:left-6 lg:left-[50px] text-white">
             <h1 style={{ fontFamily: 'Jost, sans-serif' }} className="text-[15vw] md:text-[10vw] lg:text-[12rem] font-thin tracking-wider leading-none">
               TWT
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl font-light tracking-widest -mt-4 text-center" style={{ fontFamily: 'Jost, sans-serif' }}>
               HAIR STUDIO
             </p>
-          </div>
+          </Motion>
         </div>
       </div>
     </section>
