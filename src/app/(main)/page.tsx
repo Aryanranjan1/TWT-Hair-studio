@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -30,9 +31,6 @@ function Hero() {
         <div className='flex flex-col sm:flex-row gap-4 mt-8'>
             <Button asChild size="lg" variant="outline">
                 <Link href="/booking">Book Your Appointment</Link>
-            </Button>
-            <Button asChild size="lg" variant="ghost" className="text-white hover:bg-white/10 hover:text-white">
-                <Link href="/services">View Services</Link>
             </Button>
         </div>
       </div>
