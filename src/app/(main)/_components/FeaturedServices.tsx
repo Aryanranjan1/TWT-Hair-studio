@@ -76,30 +76,32 @@ export function FeaturedServices() {
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  <Link href="/services" className="group shrink-0">
-                    <div
-                      className={cn(
-                        'relative w-[280px] h-[280px] rounded-full overflow-hidden shadow-lg transition-transform duration-300 ease-in-out',
-                        isPopped ? 'scale-100' : 'scale-75 opacity-60'
-                      )}
-                    >
-                      {image && (
-                        <Image
-                          src={image.imageUrl}
-                          alt={service.name}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                          data-ai-hint={image.imageHint}
-                        />
-                      )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent flex items-center justify-center p-4">
-                        <h3 className="text-center text-lg font-headline text-white">
-                          {service.name}
-                        </h3>
+                  <div className="group shrink-0">
+                    <Link href="/services">
+                      <div
+                        className={cn(
+                          'relative w-[280px] h-[280px] rounded-full overflow-hidden shadow-lg transition-transform duration-300 ease-in-out',
+                          isPopped ? 'scale-100' : 'scale-75 opacity-60'
+                        )}
+                      >
+                        {image && (
+                          <Image
+                            src={image.imageUrl}
+                            alt={service.name}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                            data-ai-hint={image.imageHint}
+                          />
+                        )}
+                        <div className="absolute inset-0 bg-black/60 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <h3 className="text-center text-lg font-headline text-white">
+                            {service.name}
+                          </h3>
+                        </div>
                       </div>
-                    </div>
-                  </Link>
+                    </Link>
+                  </div>
                 </CarouselItem>
               );
             })}
