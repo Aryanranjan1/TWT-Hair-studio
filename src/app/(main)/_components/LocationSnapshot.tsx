@@ -10,11 +10,13 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function LocationSnapshot() {
   const mapImage = PlaceHolderImages.find(p => p.id === 'contact-map');
+  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Casa+Tropicana+PJU+3+Petaling+Jaya+Selangor+Malaysia";
+
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="container max-w-7xl">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div>
+        <div className="grid md:grid-cols-2 gap-12 items-stretch">
+          <div className="flex flex-col">
             <h2 className="text-3xl font-headline font-bold">Visit Us & Get in Touch</h2>
             <p className="mt-4 text-muted-foreground">
               We're conveniently located in Petaling Jaya. Whether you have a question or are ready to book, reach out to us. We'd love to hear from you.
@@ -48,19 +50,24 @@ export function LocationSnapshot() {
             </div>
 
             {mapImage && (
-              <div className="mt-8 aspect-[16/9] relative rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src={mapImage.imageUrl}
-                  alt="Map showing TWT location"
-                  fill
-                  className="w-full h-full object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  data-ai-hint={mapImage.imageHint}
-                />
-              </div>
+              <Link href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="mt-8 block flex-grow">
+                <div className="h-full aspect-w-16 aspect-h-9 relative rounded-lg overflow-hidden shadow-lg group">
+                  <Image
+                    src={mapImage.imageUrl}
+                    alt="Map showing TWT location"
+                    fill
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    data-ai-hint={mapImage.imageHint}
+                  />
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p className="text-white font-semibold">Click to open map</p>
+                  </div>
+                </div>
+              </Link>
             )}
           </div>
-          <div className="bg-secondary p-8 rounded-lg">
+          <div className="bg-secondary p-8 rounded-lg flex flex-col justify-center">
             <LeadCaptureForm />
           </div>
         </div>
