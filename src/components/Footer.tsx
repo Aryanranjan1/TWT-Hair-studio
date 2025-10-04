@@ -18,10 +18,9 @@ const socialLinks = [
 const footerLinks = [
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
+    { href: '/gallery', label: 'Gallery' },
     { href: '/about', label: 'About' },
-    { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
-    { href: '/faq', label: 'FAQ' },
     { href: '/booking', label: 'Book Now' },
 ];
 
