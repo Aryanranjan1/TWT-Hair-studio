@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { FeaturedServices } from './_components/FeaturedServices';
+import { ServicesSnapshot } from './_components/ServicesSnapshot';
 
 function Hero() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-image');
@@ -39,6 +40,7 @@ export default function HomePage() {
     <>
       <Hero />
       <FeaturedServices />
+      <ServicesSnapshot />
     </>
   );
 }
