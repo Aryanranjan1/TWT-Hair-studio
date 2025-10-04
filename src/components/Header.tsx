@@ -44,7 +44,7 @@ export function Header() {
         {/* Center: Logo for mobile */}
         <div className="flex justify-start w-1/3 md:hidden">
             <Link href="/" className="flex items-center space-x-2">
-                 <span style={{ fontFamily: 'Jost, sans-serif' }} className="font-light inline-block text-3xl tracking-wider">SHEAR</span>
+                 <span style={{ fontFamily: 'Jost, sans-serif' }} className="font-light inline-block text-3xl tracking-wider">TWT</span>
             </Link>
         </div>
         
@@ -67,7 +67,7 @@ export function Header() {
         {/* Center: Logo for desktop */}
         <div className="hidden md:flex justify-center w-1/3">
             <Link href="/" className="flex items-center space-x-2">
-                 <span style={{ fontFamily: 'Jost, sans-serif' }} className="font-light inline-block text-3xl tracking-wider">SHEAR</span>
+                 <span style={{ fontFamily: 'Jost, sans-serif' }} className="font-light inline-block text-3xl tracking-wider">TWT</span>
             </Link>
         </div>
 
@@ -82,7 +82,7 @@ export function Header() {
               ))}
             </div>
            <Button asChild variant="outline" className="rounded-full bg-white/90 text-black hover:bg-white">
-            <Link href="/contact">Contact</Link>
+            <Link href="/booking">Book Now</Link>
           </Button>
 
            {/* Mobile menu trigger */}
@@ -96,7 +96,7 @@ export function Header() {
               </SheetTrigger>
               <SheetContent side="right" className="pr-0 bg-background text-foreground">
                 <Link href="/" className="mr-6 flex items-center space-x-2 mb-6" onClick={() => setSheetOpen(false)}>
-                  <span style={{ fontFamily: 'Jost, sans-serif' }} className="font-light inline-block text-3xl tracking-wider">SHEAR</span>
+                  <span style={{ fontFamily: 'Jost, sans-serif' }} className="font-light inline-block text-3xl tracking-wider">TWT</span>
                 </Link>
                 <div className="flex flex-col space-y-3">
                   {navLinks.map(({ href, label }) => (
