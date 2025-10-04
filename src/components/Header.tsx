@@ -38,7 +38,7 @@ export function Header() {
     <header className="absolute top-0 z-50 w-full">
       <div className="container flex h-[100px] max-w-7xl items-center justify-between">
         {/* Left side: Navigation for desktop */}
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium w-1/3">
+        <nav className="hidden md:flex items-center space-x-4 text-sm font-medium w-1/3">
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
