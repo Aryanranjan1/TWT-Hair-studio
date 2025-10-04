@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Scissors, Paintbrush, Sparkles } from 'lucide-react';
+import { ArrowRight, Scissors, Paintbrush, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
@@ -36,6 +36,14 @@ const VerticalCarousel = () => {
 
     const scrollTo = useCallback((index: number) => {
         emblaApi?.scrollTo(index);
+    }, [emblaApi]);
+
+    const scrollPrev = useCallback(() => {
+        emblaApi?.scrollPrev();
+      }, [emblaApi]);
+    
+    const scrollNext = useCallback(() => {
+        emblaApi?.scrollNext();
     }, [emblaApi]);
 
     useEffect(() => {
@@ -89,6 +97,16 @@ const VerticalCarousel = () => {
                         />
                     </button>
                 ))}
+            </div>
+            <div className="absolute bottom-4 right-4 flex flex-col gap-y-2">
+                <Button variant="outline" size="icon" className="rounded-full bg-black/30 text-white hover:bg-black/50 border-white/50" onClick={scrollPrev}>
+                    <ChevronUp className="h-5 w-5" />
+                    <span className="sr-only">Previous Slide</span>
+                </Button>
+                <Button variant="outline" size="icon" className="rounded-full bg-black/30 text-white hover:bg-black/50 border-white/50" onClick={scrollNext}>
+                    <ChevronDown className="h-5 w-5" />
+                    <span className="sr-only">Next Slide</span>
+                </Button>
             </div>
         </div>
     );
