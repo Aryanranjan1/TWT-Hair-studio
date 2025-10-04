@@ -31,7 +31,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link href="/" className="inline-flex items-center space-x-2">
-              <span style={{ fontFamily: 'Jost, sans-serif' }} className="text-2xl font-light tracking-wider">SHEAR</span>
+              <span style={{ fontFamily: 'Jost, sans-serif' }} className="text-2xl font-light tracking-wider">TWT</span>
             </Link>
             <p className="text-sm text-muted-foreground">Good Hair Day, Every Day.</p>
             <div className="flex space-x-4">
@@ -81,7 +81,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-border pt-8">
-          <p className="text-sm text-muted-foreground text-center">&copy; {new Date().getFullYear()} SHEAR Online. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground text-center">&copy; {new Date().getFullYear()} TWT Online. All rights reserved.</p>
         </div>
       </div>
     </footer>

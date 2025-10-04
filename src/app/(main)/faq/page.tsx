@@ -13,7 +13,7 @@ import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'FAQ',
-  description: 'Find answers to frequently asked questions about SHEAR, including our services, booking process, pricing, and policies.',
+  description: 'Find answers to frequently asked questions about TWT, including our services, booking process, pricing, and policies.',
 };
 
 export default function FAQPage() {

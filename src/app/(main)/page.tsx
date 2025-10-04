@@ -40,9 +40,9 @@ function Hero() {
           {/* Right sidebar */}
           <div className="hidden lg:flex flex-col space-y-4 w-[380px] h-[calc(100vh-200px)] max-h-[700px] bg-[#EAE8E3]/90 dark:bg-[#252322]/90 backdrop-blur-sm rounded-3xl p-6 text-foreground">
             <div className="flex-1 flex flex-col justify-center">
-              <h2 className="text-2xl font-light tracking-wide text-center" style={{ fontFamily: 'Jost, sans-serif' }}>Shop at SHEAR</h2>
+              <h2 className="text-2xl font-light tracking-wide text-center" style={{ fontFamily: 'Jost, sans-serif' }}>Shop at TWT</h2>
               <p className="mt-4 text-sm font-light text-center leading-relaxed text-muted-foreground">
-                Embark on a journey to stunning style and well-groomed confidence with our thoughtfully curated selection of premium hair care products at the SHEAR Online Boutique. Immerse yourself in the world of luxurious self-care, where each item is meticulously crafted to elevate your hairstyling ritual.
+                Embark on a journey to stunning style and well-groomed confidence with our thoughtfully curated selection of premium hair care products at the TWT Online Boutique. Immerse yourself in the world of luxurious self-care, where each item is meticulously crafted to elevate your hairstyling ritual.
               </p>
             </div>
             
@@ -61,7 +61,7 @@ function Hero() {
                 <p className="text-lg font-light">Limited Time!</p>
                 <h3 className="text-4xl font-medium" style={{ fontFamily: 'Jost, sans-serif' }}>Enjoy 35% Off!</h3>
                 <p className="mt-2 text-xs font-light max-w-xs">
-                  Elevate your hairstyling with SHEAR. Use code STYLE35 at checkout for an exclusive 35% discount.
+                  Elevate your hairstyling with TWT. Use code STYLE35 at checkout for an exclusive 35% discount.
                 </p>
                 <Button asChild variant="outline" className="mt-4 bg-transparent text-white border-white rounded-full hover:bg-white hover:text-black">
                   <Link href="/shop">Shop Now</Link>

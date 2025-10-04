@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with SHEAR. Find our address, phone number, and location in Petaling Jaya. Book your appointment or send us an inquiry.',
+  description: 'Get in touch with TWT. Find our address, phone number, and location in Petaling Jaya. Book your appointment or send us an inquiry.',
 };
 
 const contactDetails = [
@@ -28,14 +28,14 @@ const contactDetails = [
   {
     icon: Mail,
     title: 'Email',
-    value: 'hello@shear.com',
-    href: 'mailto:hello@shear.com',
+    value: 'hello@twt.com',
+    href: 'mailto:hello@twt.com',
     isLink: true,
   },
   {
     icon: ParkingCircle,
     title: 'Parking',
-    value: 'Visitor parking is available in the Casa Tropicana condominium. Inform security you are visiting SHEAR.',
+    value: 'Visitor parking is available in the Casa Tropicana condominium. Inform security you are visiting TWT Hair Studio.',
     isLink: false,
   },
 ];
@@ -79,7 +79,7 @@ export default function ContactPage() {
             <div className="aspect-[16/6] rounded-lg overflow-hidden shadow-lg">
               <Image
                 src={mapImage.imageUrl}
-                alt="Map showing SHEAR location"
+                alt="Map showing TWT location"
                 width={1200}
                 height={500}
                 className="w-full h-full object-cover"

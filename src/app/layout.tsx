@@ -5,11 +5,11 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: {
-    default: 'SHEAR | Professional Hair Salon in Petaling Jaya',
-    template: '%s | SHEAR',
+    default: 'TWT | Professional Hair Salon in Petaling Jaya',
+    template: '%s | TWT',
   },
-  description: 'SHEAR is a mid-range unisex salon in Petaling Jaya, Malaysia, offering professional hair cuts, treatments, and coloring services. Book your appointment today!',
-  keywords: ['Hair salon Petaling Jaya', 'Scalp treatment Tropicana', 'Unisex hair salon Malaysia', 'SHEAR'],
+  description: 'TWT is a mid-range unisex salon in Petaling Jaya, Malaysia, offering professional hair cuts, treatments, and coloring services. Book your appointment today!',
+  keywords: ['Hair salon Petaling Jaya', 'Scalp treatment Tropicana', 'Unisex hair salon Malaysia', 'TWT'],
 };
 
 export default function RootLayout({

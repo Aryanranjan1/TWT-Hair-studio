@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about SHEAR\'s story, our values, and meet the talented team of stylists dedicated to providing the best hair care in Petaling Jaya.',
+  description: 'Learn about TWT\'s story, our values, and meet the talented team of stylists dedicated to providing the best hair care in Petaling Jaya.',
 };
 
 function TeamSection() {
@@ -19,7 +19,7 @@ function TeamSection() {
             <div className="container max-w-7xl">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-center">Meet Our Expert Team</h2>
                 <p className="mt-4 max-w-3xl mx-auto text-center text-muted-foreground">
-                    Our stylists are the heart of SHEAR. With years of experience and a passion for their craft, they are dedicated to making you look and feel your best.
+                    Our stylists are the heart of TWT. With years of experience and a passion for their craft, they are dedicated to making you look and feel your best.
                 </p>
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
                     {stylists.map((stylist) => {
@@ -89,7 +89,7 @@ export default function AboutPage() {
             <div>
               <h1 className="text-4xl md:text-5xl font-headline font-bold">Our Story</h1>
               <p className="mt-6 text-lg text-muted-foreground">
-                Founded in 2020, SHEAR was born from a simple idea: to create a welcoming space where artistry and hair care converge. We believe that a great haircut is more than just a style—it's a form of self-expression and confidence.
+                Founded in 2020, TWT Hair Studio was born from a simple idea: to create a welcoming space where artistry and hair care converge. We believe that a great haircut is more than just a style—it's a form of self-expression and confidence.
               </p>
               <p className="mt-4 text-muted-foreground">
                 Located in the heart of Petaling Jaya, we are a passionate team of stylists committed to providing personalized services that cater to the unique needs of each client. Our brand values are rooted in creativity, quality, and building genuine connections. We strive to stay at the forefront of hair trends and techniques while using only the best products for your hair's health.
