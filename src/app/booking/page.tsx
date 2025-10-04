@@ -20,7 +20,12 @@ export default function BookingPage() {
         </div>
       </header>
       <main className="flex-1 flex flex-col items-center justify-center p-0 sm:p-4">
-        <div className="w-full max-w-7xl h-[calc(100vh-81px)] sm:h-[calc(100vh-32px)] sm:max-h-[800px] bg-background sm:rounded-lg shadow-2xl overflow-hidden">
+        <div className="w-full max-w-7xl mx-auto">
+            <div className="bg-muted text-muted-foreground text-xs text-center py-1 rounded-t-lg">
+                Fresha Widget
+            </div>
+        </div>
+        <div className="w-full max-w-7xl h-[calc(100vh-109px)] sm:h-[calc(100vh-60px)] sm:max-h-[800px] bg-background sm:rounded-b-lg shadow-2xl overflow-hidden">
           <iframe
             src={freshaUrl}
             title="Book an Appointment"
