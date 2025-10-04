@@ -8,7 +8,6 @@ export function GalleryPreview() {
     <section className="py-16 sm:py-24 bg-secondary">
       <div className="container max-w-7xl">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Transformations</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
             See the magic we create every day in our salon.
           </p>
