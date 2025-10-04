@@ -35,35 +35,34 @@ export default function GalleryPage() {
           </TabsList>
 
           {categories.map((category) => (
-            <TabsContent key={category} value={category}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                {galleryImages
-                  .filter((img) => img.category === category)
-                  .map((galleryImage) => {
-                    const image = PlaceHolderImages.find(p => p.id === galleryImage.image);
-                    return (
-                      <Card key={galleryImage.id} className="overflow-hidden group">
-                        <CardContent className="p-0 relative aspect-[3/4]">
-                          {image && (
-                            <Image
-                              src={image.imageUrl}
-                              alt={galleryImage.description}
-                              fill
-                              className="object-cover transition-transform duration-300 group-hover:scale-105"
-                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                              data-ai-hint={image.imageHint}
-                            />
-                          )}
-                        </CardContent>
-                        <CardFooter className="p-4 flex flex-col items-start">
-                          <p className="font-medium">{galleryImage.description}</p>
-                          <Button asChild variant="link" className="p-0 h-auto mt-2 text-primary">
-                            <Link href="/booking">Book this look</Link>                          </Button>
-                        </CardFooter>
-                      </Card>
-                    );
-                  })}
-              </div>
+            <TabsContent key={category} value={category} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              {galleryImages
+                .filter((img) => img.category === category)
+                .map((galleryImage) => {
+                  const image = PlaceHolderImages.find(p => p.id === galleryImage.image);
+                  return (
+                    <Card key={galleryImage.id} className="overflow-hidden group">
+                      <CardContent className="p-0 relative aspect-[3/4]">
+                        {image && (
+                          <Image
+                            src={image.imageUrl}
+                            alt={galleryImage.description}
+                            fill
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            data-ai-hint={image.imageHint}
+                          />
+                        )}
+                      </CardContent>
+                      <CardFooter className="p-4 flex flex-col items-start">
+                        <p className="font-medium">{galleryImage.description}</p>
+                        <Button asChild variant="link" className="p-0 h-auto mt-2 text-primary">
+                          <Link href="/booking">Book this look</Link>
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  );
+                })}
             </TabsContent>
           ))}
         </Tabs>
