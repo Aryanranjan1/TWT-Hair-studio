@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-image",
-      "description": "A stylish woman with beautifully styled hair, seen from the back, in a modern salon.",
-      "imageUrl": "https://images.unsplash.com/photo-1605980625969-513c0d1f0c8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzYWxvbiUyMGhhaXJ8ZW58MHx8fHwxNzU5NDc1Njk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "salon hair"
+      "description": "A stylist blow-drying a client's hair in a modern salon, creating a sense of action and expertise.",
+      "imageUrl": "https://images.unsplash.com/photo-1560066982-32a7625104a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdHlsaXN0JTIwYXQlMjB3b3JrfGVufDB8fHx8MTc2MDExODc0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stylist working"
     },
     {
       "id": "service-cut",
