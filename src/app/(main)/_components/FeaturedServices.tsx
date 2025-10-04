@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Carousel, type CarouselApi, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import { cn } from '@/lib/utils';
+import { Motion } from '@/components/ui/motion';
 
 export function FeaturedServices() {
   const [api, setApi] = useState<CarouselApi>();
@@ -40,16 +41,16 @@ export function FeaturedServices() {
     <section className="bg-background text-foreground py-16 sm:py-24 overflow-hidden">
       <div className="container max-w-7xl mb-[50px]">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
+          <Motion as="h2" variant='fade-in' className="text-sm font-bold uppercase tracking-widest text-primary">
             Featured Hairstyles
-          </h2>
-          <p className="mt-4 text-2xl md:text-3xl font-headline">
+          </Motion>
+          <Motion as="p" variant='slide-in-up' delay={0.1} className="mt-4 text-2xl md:text-3xl font-headline">
             Discover services designed to nurture your style, from precision cuts to creative coloring.
-          </p>
+          </Motion>
         </div>
       </div>
 
-      <div className="mt-16">
+      <Motion as="div" variant="fade-in" delay={0.3} className="mt-16">
         <Carousel
           setApi={setApi}
           plugins={[plugin.current]}
@@ -106,7 +107,7 @@ export function FeaturedServices() {
             })}
           </CarouselContent>
         </Carousel>
-      </div>
+      </Motion>
 
     </section>
   );
