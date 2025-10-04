@@ -3,8 +3,8 @@
     {
       "id": "new-hero",
       "description": "A stylish woman with wavy hair looking over her shoulder.",
-      "imageUrl": "https://images.unsplash.com/photo-1615783963489-c5332cf16335?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxoYWlyJTIwc3R5bGV8ZW58MHx8fHwxNzYwMzgyMzIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "styled hair"
+      "imageUrl": "https://images.unsplash.com/photo-1559227514-606d502a6c26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmbG93aW5nJTIwaGFpcnxlbnwwfHx8fDE3NTk1NDUyNzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "flowing hair"
     },
     {
       "id": "promo-image",
@@ -63,13 +63,13 @@
     {
       "id": "service-treatment",
       "description": "Close-up of a nourishing hair treatment being applied.",
-      "imageUrl": "https://images.unsplash.com/photo-1715866549135-e3bc3c6148a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzY2FscCUyMHRyZWF0bWVudHxlbnwwfHx8fDE3NTk1NDA4MDd8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1715866549135-e3bc3c6148a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzY2FscCUyMHRyZWF0bWVudHxlbnwwfHx8fDE3NTk1NDA4MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "hair treatment"
     },
     {
       "id": "service-coloring",
       "description": "Vibrant and creative hair coloring work in progress.",
-      "imageUrl": "https://images.unsplash.com/photo-1658322558683-2524c9b62d04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoYWlyJTIwY29sb3J8ZW58MHx8fHwxNzU5NDQwMzkxfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1658322558683-2524c9b62d04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoYWlyJTIwY29sb3J8ZW58MHx8fHwxNzU5NDQwMzkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "hair color"
     },
     {
@@ -117,7 +117,7 @@
     {
       "id": "gallery-cut-2",
       "description": "Stylish long layered haircut for men.",
-      "imageUrl": "https://images.unsplash.com/photo-1621607512022-6aecc4fed814?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZW4lMjBoYWlyY3V0fGVufDB8fHx8MTc1OTQ0MDM5MXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1621607512022-6aecc4fed814?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZW4lMjBoYWlyY3V0fGVufDB8fHx8MTc1OTQ0MDM5MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "men haircut"
     },
     {
@@ -159,7 +159,7 @@
     {
       "id": "blog-1",
       "description": "A collection of hair care products on a shelf.",
-      "imageUrl": "https://images.unsplash.com/photo-1701976857871-a46363644519?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoYWlyJTIwcHJvZHVjdHN8ZW58MHx8fHwxNzU5NDA5NTU5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1701976857871-a46363644519?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoYWlyJTIwcHJvZHVjdHN8ZW58MHx8fHwxNzU5NDA5NTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "hair products"
     },
     {
@@ -177,7 +177,7 @@
     {
       "id": "contact-map",
       "description": "A stylized map showing the location of Petaling Jaya.",
-      "imageUrl": "https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFwfGVufDB8fHx8MTc1OTQyMzM2M3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFwfGVufDB8fHx8MTc1OTQyMzM2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "map"
     }
   ]

@@ -1,11 +1,15 @@
+
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram, Facebook, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LeadCaptureForm } from './LeadCaptureForm';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function LocationSnapshot() {
+  const mapImage = PlaceHolderImages.find(p => p.id === 'contact-map');
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="container max-w-7xl">
@@ -42,6 +46,19 @@ export function LocationSnapshot() {
                 </Link>
               </Button>
             </div>
+
+            {mapImage && (
+              <div className="mt-8 aspect-[16/9] relative rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src={mapImage.imageUrl}
+                  alt="Map showing TWT location"
+                  fill
+                  className="w-full h-full object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  data-ai-hint={mapImage.imageHint}
+                />
+              </div>
+            )}
           </div>
           <div className="bg-secondary p-8 rounded-lg">
             <LeadCaptureForm />
