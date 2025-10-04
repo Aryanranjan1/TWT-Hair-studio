@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, Instagram, Facebook, ShoppingBag } from 'lucide-react';
+import { Menu, Instagram, Facebook, Phone } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -28,9 +28,9 @@ const socialLinks = [
       href: 'https://instagram.com',
     },
     {
-      name: 'Shopping',
-      icon: ShoppingBag,
-      href: '/shop',
+      name: 'WhatsApp',
+      icon: Phone,
+      href: 'https://wa.me/60123456789',
     }
 ];
 
@@ -75,7 +75,7 @@ export function Header() {
         <div className="flex items-center justify-end space-x-4 text-sm font-medium w-1/3">
             <div className="hidden md:flex items-center space-x-4">
               {socialLinks.map((item) => (
-                  <Link key={item.name} href={item.href} target={item.name === 'Facebook' || item.name === 'Instagram' ? '_blank' : '_self'} rel="noopener noreferrer" className="text-white/80 hover:text-white">
+                  <Link key={item.name} href={item.href} target={'_blank'} rel="noopener noreferrer" className="text-white/80 hover:text-white">
                     <span className="sr-only">{item.name}</span>
                     <item.icon className="h-5 w-5" aria-hidden="true" />
                   </Link>
