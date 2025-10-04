@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -73,11 +74,6 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
             boxShadow: "3px 3px 0px hsl(var(--background))"
           }}
         />
-        <div className="flex">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className={cn("h-4 w-4", i < testimonial.rating ? (isCenter ? 'text-yellow-300 fill-yellow-300' : 'text-yellow-400 fill-yellow-400') : (isCenter ? 'text-primary-foreground/30' : 'text-gray-300'))} />
-          ))}
-        </div>
       </div>
       <h3 className={cn(
         "text-base sm:text-lg font-medium leading-tight",
