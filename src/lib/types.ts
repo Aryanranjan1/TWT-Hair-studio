@@ -50,9 +50,3 @@ export interface FAQ {
   question: string;
   answer: string;
 }
-
-export interface ValueProposition {
-  icon: string;
-  title: string;
-  description: string;
-}

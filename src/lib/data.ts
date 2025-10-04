@@ -1,4 +1,4 @@
-import type { Service, Stylist, Review, GalleryImage, BlogPost, FAQ, ValueProposition } from './types';
+import type { Service, Stylist, Review, GalleryImage, BlogPost, FAQ } from './types';
 import { Heart, Scissors, Smile, Calendar, Award } from 'lucide-react';
 
 export const services: Service[] = [
@@ -197,26 +197,3 @@ export const blogPosts: BlogPost[] = [
 ];
 
 export const faqs: FAQ[] = [];
-
-export const valuePropositions: ValueProposition[] = [
-  {
-    icon: 'Heart',
-    title: 'Personalized Care',
-    description: 'We listen. Every cut, color, and treatment is tailored to your unique style and needs.',
-  },
-  {
-    icon: 'Award',
-    title: 'Professional Stylists',
-    description: 'Our team is constantly trained on the latest techniques to deliver top-quality results.',
-  },
-  {
-    icon: 'Smile',
-    title: 'Comfortable Environment',
-    description: 'Relax and unwind in our modern, clean, and friendly salon space.',
-  },
-  {
-    icon: 'Calendar',
-    title: 'Easy Online Booking',
-    description: 'Schedule your appointment anytime, anywhere with our simple booking system.',
-  },
-];
