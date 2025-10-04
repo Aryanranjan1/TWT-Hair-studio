@@ -87,9 +87,9 @@ export default function HomePage() {
     <>
       <Hero />
       <FeaturedServices />
-      <ServicesSnapshot />
       <AboutSnapshot />
       <ValuePropositions />
+      <ServicesSnapshot />
       <FeaturedStylists />
       <GalleryPreview />
       <Testimonials />
