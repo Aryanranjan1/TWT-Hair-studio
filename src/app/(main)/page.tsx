@@ -9,7 +9,7 @@ function Hero() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-image');
 
   return (
-    <section className="relative w-full h-[80vh] min-h-[500px] text-primary-foreground">
+    <section className="relative w-full h-screen min-h-[600px] text-primary-foreground">
       {heroImage && (
         <Image
           src={heroImage.imageUrl}
@@ -20,7 +20,7 @@ function Hero() {
           data-ai-hint={heroImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
       <div className="relative h-full flex flex-col items-center justify-center text-center p-4">
         <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">
           Good Hair Day, Every Day.

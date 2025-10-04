@@ -22,7 +22,7 @@ export function Header() {
   const [isSheetOpen, setSheetOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="absolute top-0 z-50 w-full">
       <div className="container flex h-[100px] max-w-7xl items-center justify-between">
         {/* Left side: Navigation for desktop */}
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium w-1/3">
@@ -31,8 +31,8 @@ export function Header() {
               key={href}
               href={href}
               className={cn(
-                'transition-colors hover:text-primary',
-                pathname === href ? 'text-primary' : 'text-muted-foreground'
+                'transition-colors hover:text-white text-slate-200',
+                pathname === href ? 'text-white font-semibold' : ''
               )}
             >
               {label}
@@ -44,12 +44,12 @@ export function Header() {
         <div className="flex md:hidden w-1/3">
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost">
+              <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="pr-0">
+            <SheetContent side="left" className="pr-0 bg-background">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-6" onClick={() => setSheetOpen(false)}>
                 <Scissors className="h-6 w-6 text-primary" />
                 <span className="font-bold font-headline inline-block">TWT Hair Studio</span>
@@ -78,8 +78,8 @@ export function Header() {
 
         {/* Center: Logo */}
         <div className="flex justify-center w-1/3">
-            <Link href="/" className="flex items-center space-x-2">
-                <Scissors className="h-6 w-6 text-primary" />
+            <Link href="/" className="flex items-center space-x-2 text-white">
+                <Scissors className="h-6 w-6" />
                 <span className="font-bold font-headline inline-block">TWT Hair Studio</span>
             </Link>
         </div>
@@ -91,8 +91,8 @@ export function Header() {
               key={href}
               href={href}
               className={cn(
-                'transition-colors hover:text-primary',
-                pathname === href ? 'text-primary' : 'text-muted-foreground'
+                'transition-colors hover:text-white text-slate-200',
+                pathname === href ? 'text-white font-semibold' : ''
               )}
             >
               {label}
