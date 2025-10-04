@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { FeaturedServices } from './_components/FeaturedServices';
 import { ServicesSnapshot } from './_components/ServicesSnapshot';
 import { ValuePropositions } from './_components/ValuePropositions';
+import { AboutSnapshot } from './_components/AboutSnapshot';
 
 function Hero() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-image');
@@ -43,6 +44,7 @@ export default function HomePage() {
       <FeaturedServices />
       <ServicesSnapshot />
       <ValuePropositions />
+      <AboutSnapshot />
     </>
   );
 }
