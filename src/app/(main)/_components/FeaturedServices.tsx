@@ -59,12 +59,12 @@ export function FeaturedServices() {
               return (
                 <CarouselItem
                   key={`${service.id}-${index}`}
-                  className="basis-1/3 md:basis-1/5 flex items-center justify-center"
+                  className="basis-1/2 md:basis-1/3 lg:basis-1/5 flex items-center justify-center"
                 >
                   <Link href="/services" className="group shrink-0">
                     <div
                       className={cn(
-                        'relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-lg transition-transform duration-300 ease-in-out',
+                        'relative w-[320px] h-[320px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden shadow-lg transition-transform duration-300 ease-in-out',
                         index === current ? 'scale-110' : 'scale-75 opacity-60'
                       )}
                     >
@@ -74,7 +74,7 @@ export function FeaturedServices() {
                           alt={service.name}
                           fill
                           className="object-cover"
-                          sizes="(max-width: 768px) 33vw, 20vw"
+                          sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
                           data-ai-hint={image.imageHint}
                         />
                       )}
