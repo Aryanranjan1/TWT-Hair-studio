@@ -4,6 +4,8 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Autoplay from 'embla-carousel-autoplay';
+
 import { services } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
@@ -15,6 +17,10 @@ export function FeaturedServices() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const plugin = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
 
   const handleSelect = useCallback(() => {
     if (!api) return;
@@ -50,16 +56,21 @@ export function FeaturedServices() {
         </Motion>
       </div>
 
-      <Motion variant='slide-in-up' className="mt-16">
+      <Motion variant='slide-in-up'>
         <Carousel
           setApi={setApi}
+          plugins={[plugin.current]}
           opts={{
             align: 'center',
             loop: true,
           }}
           className="w-full"
-          onMouseLeave={() => {
+          onMouseEnter={() => {
+            plugin.current.stop();
             setHoveredIndex(null);
+          }}
+          onMouseLeave={() => {
+            plugin.current.reset();
           }}
         >
           <CarouselContent>
