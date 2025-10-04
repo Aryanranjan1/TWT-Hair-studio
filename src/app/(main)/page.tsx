@@ -21,18 +21,13 @@ function Hero() {
         />
       )}
       <div className="absolute inset-0 bg-black/40" />
-      <div className="relative h-full flex flex-col items-center justify-center text-center">
+      <div className="relative h-full flex flex-col items-center justify-center text-center p-4">
         <h1 className="text-7xl md:text-9xl font-headline font-light text-white tracking-wider uppercase">
           TWT
         </h1>
         <h2 className="text-xl md:text-2xl font-body text-white tracking-[0.2em] uppercase">
           Hair Studio
         </h2>
-        <div className='flex flex-col sm:flex-row gap-4 mt-8'>
-            <Button asChild size="lg" variant="outline">
-                <Link href="/booking">Book Your Appointment</Link>
-            </Button>
-        </div>
       </div>
     </section>
   );
