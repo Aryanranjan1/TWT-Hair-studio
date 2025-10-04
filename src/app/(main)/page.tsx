@@ -14,6 +14,7 @@ import { Testimonials } from './_components/Testimonials';
 import { BookingCTA } from './_components/BookingCTA';
 import { BlogSnapshot } from './_components/BlogSnapshot';
 import { LocationSnapshot } from './_components/LocationSnapshot';
+import { GalleryPreview } from './_components/GalleryPreview';
 
 function Hero() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'new-hero');
@@ -89,6 +90,7 @@ export default function HomePage() {
       <AboutSnapshot />
       <ValuePropositions />
       <ServicesSnapshot />
+      <GalleryPreview />
       <FeaturedStylists />
       <Testimonials />
       <BookingCTA />
