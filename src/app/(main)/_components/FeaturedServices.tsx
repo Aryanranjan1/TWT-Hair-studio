@@ -1,18 +1,20 @@
 
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { services } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Carousel, type CarouselApi, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 import { cn } from '@/lib/utils';
 
 export function FeaturedServices() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true, stopOnMouseEnter: true }));
 
   const handleSelect = useCallback(() => {
     if (!api) return;
@@ -23,8 +25,11 @@ export function FeaturedServices() {
     if (!api) return;
     handleSelect();
     api.on('select', handleSelect);
+    api.on('reInit', handleSelect);
+    
     return () => {
       api.off('select', handleSelect);
+      api.off('reInit', handleSelect);
     };
   }, [api, handleSelect]);
 
@@ -47,11 +52,14 @@ export function FeaturedServices() {
       <div className="mt-16">
         <Carousel
           setApi={setApi}
+          plugins={[plugin.current]}
           opts={{
             align: 'center',
             loop: true,
           }}
           className="w-full"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
         >
           <CarouselContent>
             {featured.map((service, index) => {
@@ -59,13 +67,13 @@ export function FeaturedServices() {
               return (
                 <CarouselItem
                   key={`${service.id}-${index}`}
-                  className="basis-1/2 md:basis-1/3 lg:basis-1/5 flex items-center justify-center"
+                  className="basis-1/2 md:basis-1/3 lg:basis-1/4 flex items-center justify-center"
                 >
                   <Link href="/services" className="group shrink-0">
                     <div
                       className={cn(
-                        'relative w-[320px] h-[320px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden shadow-lg transition-transform duration-300 ease-in-out',
-                        index === current ? 'scale-110' : 'scale-75 opacity-60'
+                        'relative w-[280px] h-[280px] rounded-full overflow-hidden shadow-lg transition-transform duration-300 ease-in-out',
+                        index === current ? 'scale-100' : 'scale-75 opacity-60'
                       )}
                     >
                       {image && (
@@ -74,7 +82,7 @@ export function FeaturedServices() {
                           alt={service.name}
                           fill
                           className="object-cover"
-                          sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                          sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                           data-ai-hint={image.imageHint}
                         />
                       )}
