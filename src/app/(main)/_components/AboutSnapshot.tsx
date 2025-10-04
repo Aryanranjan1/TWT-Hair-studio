@@ -1,10 +1,11 @@
 
 'use client';
 
-import React, { useState, useRef, MouseEvent } from 'react';
+import React, { MouseEvent, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -94,3 +95,4 @@ export function AboutSnapshot() {
     </section>
   );
 }
+
