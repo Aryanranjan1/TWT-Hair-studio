@@ -1,5 +1,23 @@
 import type {Config} from 'tailwindcss';
 
+const pxToRem = (px: number, base = 16) => `${px / base}rem`;
+
+const range = (start: number, end: number, step: number) => {
+  const result = [];
+  for (let i = start; i <= end; i += step) {
+    result.push(i);
+  }
+  return result;
+};
+
+// 8px grid system. 0, 8, 16, 24, ..., 128
+const spacingPx = [0, ...range(8, 128, 8)];
+const spacingRem = spacingPx.reduce((acc, px) => {
+  acc[px] = pxToRem(px);
+  return acc;
+}, {} as Record<number, string>);
+
+
 export default {
   darkMode: ['class'],
   content: [
@@ -9,6 +27,13 @@ export default {
   ],
   theme: {
     extend: {
+      spacing: spacingRem,
+      lineHeight: {
+        'display': '1.1',
+        'heading': '1.25',
+        'body': '1.5',
+        'caption': '1.4',
+      },
       fontFamily: {
         body: ['PT Sans', 'sans-serif'],
         headline: ['Playfair Display', 'serif'],
