@@ -89,7 +89,7 @@ const InteractiveImageBentoGallery: React.FC<
           className="w-full"
         >
           <div
-            className="grid grid-cols-1 md:grid-cols-4 auto-rows-fr gap-4 px-4 md:px-8"
+            className="grid grid-cols-1 md:grid-cols-4 md:grid-auto-rows-[15rem] gap-4 px-4 md:px-8"
           >
             {imageItems.map((item) => (
               <div
