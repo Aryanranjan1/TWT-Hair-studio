@@ -10,7 +10,6 @@ import { Card } from '@/components/ui/card';
 import { ServicesSnapshot } from './_components/ServicesSnapshot';
 import { ValuePropositions } from './_components/ValuePropositions';
 import { FeaturedStylists } from './_components/FeaturedStylists';
-import { GalleryPreview } from './_components/GalleryPreview';
 import { Testimonials } from './_components/Testimonials';
 import { BookingCTA } from './_components/BookingCTA';
 import { BlogSnapshot } from './_components/BlogSnapshot';
@@ -91,7 +90,6 @@ export default function HomePage() {
       <ValuePropositions />
       <ServicesSnapshot />
       <FeaturedStylists />
-      <GalleryPreview />
       <Testimonials />
       <BookingCTA />
       <BlogSnapshot />
