@@ -9,6 +9,12 @@ import { AboutSnapshot } from './_components/AboutSnapshot';
 import { Card } from '@/components/ui/card';
 import { ServicesSnapshot } from './_components/ServicesSnapshot';
 import { ValuePropositions } from './_components/ValuePropositions';
+import { FeaturedStylists } from './_components/FeaturedStylists';
+import { GalleryPreview } from './_components/GalleryPreview';
+import { Testimonials } from './_components/Testimonials';
+import { BookingCTA } from './_components/BookingCTA';
+import { BlogSnapshot } from './_components/BlogSnapshot';
+import { LocationSnapshot } from './_components/LocationSnapshot';
 
 function Hero() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'new-hero');
@@ -82,8 +88,14 @@ export default function HomePage() {
       <Hero />
       <FeaturedServices />
       <ServicesSnapshot />
-      <ValuePropositions />
       <AboutSnapshot />
+      <ValuePropositions />
+      <FeaturedStylists />
+      <GalleryPreview />
+      <Testimonials />
+      <BookingCTA />
+      <BlogSnapshot />
+      <LocationSnapshot />
     </>
   );
 }
