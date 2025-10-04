@@ -58,6 +58,30 @@ export const services: Service[] = [
     category: 'Packages',
     image: 'service-package',
   },
+  {
+    id: 'cut-3',
+    name: 'Creative Cut',
+    description: 'A unique and artistic haircut for a bold new look.',
+    price: 'RM 120+',
+    category: 'Cuts',
+    image: 'gallery-cut-1',
+  },
+  {
+    id: 'color-3',
+    name: 'Creative Color',
+    description: 'Vibrant and bold fashion colors for a standout style.',
+    price: 'RM 400+',
+    category: 'Coloring',
+    image: 'gallery-color-2',
+  },
+  {
+    id: 'treatment-3',
+    name: 'Olaplex Treatment',
+    description: 'Repairs and strengthens damaged hair bonds from the inside out.',
+    price: 'RM 250+',
+    category: 'Treatments',
+    image: 'gallery-treatment-1',
+  },
 ];
 
 export const stylists: Stylist[] = [
@@ -172,33 +196,7 @@ export const blogPosts: BlogPost[] = [
   },
 ];
 
-export const faqs: FAQ[] = [
-    {
-        id: 'faq-1',
-        question: 'What are your opening hours?',
-        answer: 'We are open Tuesday to Sunday, from 10:30 AM to 8:00 PM. We are closed on Mondays.'
-    },
-    {
-        id: 'faq-2',
-        question: 'How do I book an appointment?',
-        answer: 'The best way to book is through our "Book Now" buttons on the website, which links to our Fresha booking system. You can also call us or WhatsApp us, but online booking is fastest.'
-    },
-    {
-        id: 'faq-3',
-        question: 'Where are you located and is there parking?',
-        answer: 'We are located at Casa Tropicana, PJU 3, Petaling Jaya. There is ample visitor parking available in the condominium\'s visitor car park. Just inform the guard you are visiting TWT Hair Studio.'
-    },
-    {
-        id: 'faq-4',
-        question: 'What is your cancellation policy?',
-        answer: 'We appreciate a 24-hour notice for any cancellations or rescheduling. This allows us to offer the slot to other clients. Late cancellations or no-shows may be subject to a fee on your next booking.'
-    },
-    {
-        id: 'faq-5',
-        question: 'Can I have a consultation before booking a service?',
-        answer: 'Absolutely! We encourage consultations, especially for major color changes. You can book a "Consultation" service for free on our booking page to discuss your hair goals with a stylist.'
-    }
-];
+export const faqs: FAQ[] = [];
 
 export const valuePropositions: ValueProposition[] = [
     {

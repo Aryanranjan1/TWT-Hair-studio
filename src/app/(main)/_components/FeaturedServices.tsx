@@ -1,17 +1,38 @@
 
 'use client';
 
+import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { services } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
+import { Carousel, type CarouselApi, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import { cn } from '@/lib/utils';
 
 export function FeaturedServices() {
-  const featured = services.slice(0, 5); // Displaying first 5 services as featured
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  const handleSelect = useCallback(() => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+    handleSelect();
+    api.on('select', handleSelect);
+    return () => {
+      api.off('select', handleSelect);
+    };
+  }, [api, handleSelect]);
+
+  // We need enough services to create a looping effect if desired
+  const featured = [...services, ...services].slice(0, 10);
 
   return (
-    <section className="bg-background text-foreground py-16 sm:py-24">
+    <section className="bg-background text-foreground py-16 sm:py-24 overflow-hidden">
       <div className="container max-w-7xl">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
@@ -24,33 +45,50 @@ export function FeaturedServices() {
       </div>
 
       <div className="mt-16">
-        <div className="flex overflow-x-auto pb-8 no-scrollbar">
-          <div className="flex flex-nowrap gap-x-8 px-4 sm:px-6 lg:px-[50px]">
-            {featured.map((service) => {
+        <Carousel
+          setApi={setApi}
+          opts={{
+            align: 'center',
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
+            {featured.map((service, index) => {
               const image = PlaceHolderImages.find((p) => p.id === service.image);
               return (
-                <Link href="/services" key={service.id} className="group shrink-0">
-                  <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
-                    {image && (
-                      <Image
-                        src={image.imageUrl}
-                        alt={service.name}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        data-ai-hint={image.imageHint}
-                      />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                    <h3 className="absolute bottom-8 left-1/2 -translate-x-1/2 w-full text-center text-lg font-headline text-white">
-                      {service.name}
-                    </h3>
-                  </div>
-                </Link>
+                <CarouselItem
+                  key={`${service.id}-${index}`}
+                  className="basis-1/3 md:basis-1/5 flex items-center justify-center"
+                >
+                  <Link href="/services" className="group shrink-0">
+                    <div
+                      className={cn(
+                        'relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg transition-transform duration-300 ease-in-out',
+                        index === current ? 'scale-110' : 'scale-75 opacity-60'
+                      )}
+                    >
+                      {image && (
+                        <Image
+                          src={image.imageUrl}
+                          alt={service.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 33vw, 20vw"
+                          data-ai-hint={image.imageHint}
+                        />
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                      <h3 className="absolute bottom-8 left-1/2 -translate-x-1/2 w-full text-center text-lg font-headline text-white">
+                        {service.name}
+                      </h3>
+                    </div>
+                  </Link>
+                </CarouselItem>
               );
             })}
-          </div>
-        </div>
+          </CarouselContent>
+        </Carousel>
       </div>
 
       <div className="mt-12 text-center">

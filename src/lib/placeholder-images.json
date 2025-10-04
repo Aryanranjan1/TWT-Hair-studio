@@ -9,7 +9,7 @@
     {
       "id": "service-cut",
       "description": "Stylist cutting a client's hair with precision.",
-      "imageUrl": "https://images.unsplash.com/photo-1700760934268-8aa0ef52ce0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoYWlyY3V0fGVufDB8fHx8MTc1OTQ3NTY5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1553342048-93ae3b3b7e73?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "haircut"
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "service-treatment",
       "description": "Close-up of a nourishing hair treatment being applied.",
-      "imageUrl": "https://images.unsplash.com/photo-1707979577466-2d6109c68a45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoYWlyJTIwdHJlYXRtZW50fGVufDB8fHx8MTc1OTQwOTU1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1605499245595-58d34b86c735?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "hair treatment"
     },
     {
@@ -123,37 +123,37 @@
     {
       "id": "gallery-color-3",
       "description": "Vibrant copper hair color.",
-      "imageUrl": "https://images.unsplash.com/photo-1671390394805-27ad9af270dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb3BwZXIlMjBoYWlyfGVufDB8fHx8MTc1OTUyNTI4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1671390394805-27ad9af270dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb3BwZXIlMjBoYWlyfGVufDB8fHx8MTc1OTUyNTI4N3ww&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "copper hair"
     },
     {
       "id": "gallery-cut-3",
       "description": "Woman with long layers and curtain bangs.",
-      "imageUrl": "https://images.unsplash.com/photo-1608768390044-51e2681f9c2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjdXJ0YWluJTIwYmFuZ3N8ZW58MHx8fHwxNzU5NDEzNjA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1608768390044-51e2681f9c2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjdXJ0YWluJTIwYmFuZ3N8ZW58MHx8fHwxNzU5NDEzNjA2fDA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "curtain bangs"
     },
     {
       "id": "blog-1",
       "description": "A collection of hair care products on a shelf.",
-      "imageUrl": "https://images.unsplash.com/photo-1701976857871-a46363644519?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoYWlyJTIwcHJvZHVjdHN8ZW58MHx8fHwxNzU5NDA5NTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1701976857871-a46363644519?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoYWlyJTIwcHJvZHVjdHN8ZW58MHx8fHwxNzU5NDA5NTU5fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "hair products"
     },
     {
       "id": "blog-2",
       "description": "A woman with beautiful, trendy wavy hair.",
-      "imageUrl": "https://images.unsplash.com/photo-1662457966566-18c4f1c16dd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoYWlyJTIwdHJlbmRzfGVufDB8fHx8MTc1OTQ3NTY5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1662457966566-18c4f1c16dd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoYWlyJTIwdHJlbmRzfGVufDB8fHx8MTc1OTQ3NTY5OXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "hair trends"
     },
     {
       "id": "blog-3",
       "description": "Person examining their hair in the mirror.",
-      "imageUrl": "https://images.unsplash.com/photo-1717160675489-7779f2c91999?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYWlyJTIwY2FyZXxlbnwwfHx8fDE3NTk0NzU2OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1717160675489-7779f2c91999?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYWlyJTIwY2FyZXxlbnwwfHx8fDE3NTk0NzU2OTl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "hair care"
     },
     {
       "id": "contact-map",
       "description": "A stylized map showing the location of Petaling Jaya.",
-      "imageUrl": "https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFwfGVufDB8fHx8MTc1OTQyMzM2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFwfGVufDB8fHx8MTc1OTQyMzM2M3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "map"
     }
   ]
