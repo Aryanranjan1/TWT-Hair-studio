@@ -31,9 +31,7 @@ export function ValuePropositions() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat) => (
             <div key={stat.value} className="text-center flex flex-col items-center">
-                <div className="text-primary bg-primary/10 p-3 rounded-full">
-                    <stat.icon className="h-8 w-8" />
-                </div>
+                <stat.icon className="h-12 w-12 text-primary" />
                 <p className="mt-4 text-xl font-bold">{stat.value}</p>
                 <p className="text-sm text-muted-foreground">{stat.description}</p>
             </div>
