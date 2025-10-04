@@ -15,7 +15,7 @@ export function FeaturedServices() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true, stopOnMouseEnter: true }));
+  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true }));
 
   const handleSelect = useCallback(() => {
     if (!api) return;
@@ -74,7 +74,6 @@ export function FeaturedServices() {
                   key={`${service.id}-${index}`}
                   className="basis-1/2 md:basis-1/3 lg:basis-1/4 flex items-center justify-center"
                   onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <div className="group shrink-0">
                     <Link href="/services">
