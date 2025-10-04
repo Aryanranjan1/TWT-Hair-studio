@@ -9,13 +9,13 @@
     {
       "id": "service-cut",
       "description": "Stylist cutting a client's hair with precision.",
-      "imageUrl": "https://images.unsplash.com/photo-1553342048-93ae3b3b7e73?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1559599101-f09722fb4948?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxN3x8d29tZW4lMjBoYWlyY3V0fGVufDB8fHx8MTc1OTU0MDYwNnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "haircut"
     },
     {
       "id": "service-cut-men",
       "description": "A man getting a stylish haircut at a salon.",
-      "imageUrl": "https://images.unsplash.com/photo-1599351431202-183063f49733?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBoYWlyY3V0fGVufDB8fHx8MTc2MDA0MjIwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1578390432942-d323db577792?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZW4lMjBoYWlyY3V0fGVufDB8fHx8MTc1OTU0MDYzMnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "men haircut"
     },
     {
@@ -153,7 +153,7 @@
     {
       "id": "contact-map",
       "description": "A stylized map showing the location of Petaling Jaya.",
-      "imageUrl": "https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFwfGVufDB8fHx8MTc1OTQyMzM2M3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFwfGVufDB8fHx8MTc1OTQyMzM2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "map"
     }
   ]
