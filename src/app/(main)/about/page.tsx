@@ -27,14 +27,16 @@ function TeamSection() {
                         return (
                             <div key={stylist.id} className="text-center">
                                 {image && (
-                                    <Image
-                                        src={image.imageUrl}
-                                        alt={`Portrait of ${stylist.name}`}
-                                        width={400}
-                                        height={400}
-                                        className="rounded-lg object-cover aspect-square mx-auto shadow-lg"
-                                        data-ai-hint={image.imageHint}
-                                    />
+                                    <div className="relative aspect-square mx-auto w-full max-w-sm">
+                                        <Image
+                                            src={image.imageUrl}
+                                            alt={`Portrait of ${stylist.name}`}
+                                            fill
+                                            className="rounded-lg object-cover shadow-lg"
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                            data-ai-hint={image.imageHint}
+                                        />
+                                    </div>
                                 )}
                                 <h3 className="mt-6 text-2xl font-headline font-semibold">{stylist.name}</h3>
                                 <p className="mt-1 text-primary font-medium">{stylist.specialty}</p>
@@ -98,14 +100,14 @@ export default function AboutPage() {
                 <Link href="/booking">Join Our Story <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
             </div>
-            <div>
+            <div className="relative aspect-video">
               {aboutImage && (
                 <Image
                   src={aboutImage.imageUrl}
                   alt={aboutImage.description}
-                  width={800}
-                  height={600}
-                  className="rounded-lg shadow-xl"
+                  fill
+                  className="rounded-lg shadow-xl object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   data-ai-hint={aboutImage.imageHint}
                 />
               )}

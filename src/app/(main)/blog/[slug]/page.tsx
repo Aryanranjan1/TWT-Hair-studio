@@ -53,15 +53,17 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </header>
 
           {image && (
-            <Image
-              src={image.imageUrl}
-              alt={post.title}
-              width={1200}
-              height={675}
-              className="rounded-lg object-cover aspect-video mb-12 shadow-lg"
-              priority
-              data-ai-hint={image.imageHint}
-            />
+            <div className="relative aspect-video mb-12">
+              <Image
+                src={image.imageUrl}
+                alt={post.title}
+                fill
+                className="rounded-lg object-cover shadow-lg"
+                priority
+                sizes="100vw"
+                data-ai-hint={image.imageHint}
+              />
+            </div>
           )}
 
           <div

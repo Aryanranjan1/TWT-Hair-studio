@@ -33,14 +33,16 @@ export default function BlogPage() {
                 <article key={post.id} className="group">
                   <Link href={`/blog/${post.slug}`}>
                     {image && (
-                      <Image
-                        src={image.imageUrl}
-                        alt={post.title}
-                        width={800}
-                        height={500}
-                        className="rounded-lg object-cover aspect-video mb-6 shadow-md group-hover:shadow-xl transition-shadow"
-                        data-ai-hint={image.imageHint}
-                      />
+                      <div className="relative aspect-video mb-6">
+                        <Image
+                          src={image.imageUrl}
+                          alt={post.title}
+                          fill
+                          className="rounded-lg object-cover shadow-md group-hover:shadow-xl transition-shadow"
+                          sizes="(max-width: 1024px) 100vw, 66vw"
+                          data-ai-hint={image.imageHint}
+                        />
+                      </div>
                     )}
                     <div className="flex items-center text-sm text-muted-foreground">
                         <time dateTime={post.date}>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>

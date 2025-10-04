@@ -36,14 +36,14 @@ export default function ServicesPage() {
                     const image = PlaceHolderImages.find(p => p.id === service.image);
                     return (
                         <Card key={service.id} className="flex flex-col">
-                            <CardHeader className="p-0">
+                            <CardHeader className="p-0 relative aspect-[3/2] w-full">
                                 {image && (
                                 <Image
                                     src={image.imageUrl}
                                     alt={service.name}
-                                    width={600}
-                                    height={400}
-                                    className="object-cover aspect-[3/2] rounded-t-lg"
+                                    fill
+                                    className="object-cover rounded-t-lg"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     data-ai-hint={image.imageHint}
                                 />
                                 )}

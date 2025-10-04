@@ -76,13 +76,13 @@ export default function ContactPage() {
         <div className="mt-16">
           <h2 className="text-3xl font-headline font-bold text-center mb-8">Our Location</h2>
           {mapImage && (
-            <div className="aspect-[16/6] rounded-lg overflow-hidden shadow-lg">
+            <div className="aspect-[16/6] relative rounded-lg overflow-hidden shadow-lg">
               <Image
                 src={mapImage.imageUrl}
                 alt="Map showing TWT location"
-                width={1200}
-                height={500}
+                fill
                 className="w-full h-full object-cover"
+                sizes="100vw"
                 data-ai-hint={mapImage.imageHint}
               />
             </div>

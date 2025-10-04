@@ -43,14 +43,14 @@ export default function GalleryPage() {
                     const image = PlaceHolderImages.find(p => p.id === galleryImage.image);
                     return (
                       <Card key={galleryImage.id} className="overflow-hidden group">
-                        <CardContent className="p-0">
+                        <CardContent className="p-0 relative aspect-[3/4]">
                           {image && (
                             <Image
                               src={image.imageUrl}
                               alt={galleryImage.description}
-                              width={600}
-                              height={800}
-                              className="object-cover aspect-[3/4] transition-transform duration-300 group-hover:scale-105"
+                              fill
+                              className="object-cover transition-transform duration-300 group-hover:scale-105"
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                               data-ai-hint={image.imageHint}
                             />
                           )}
