@@ -29,7 +29,7 @@ export function BlogSnapshot() {
 
   const latestPost = blogPosts[0];
   const authorStylist = stylists[2];
-  const onlineActivitiesImage = PlaceHolderImages.find(p => p.id === 'services-snapshot');
+  const onlineActivitiesImage = PlaceHolderImages.find(p => p.id === 'transformation-cta');
 
 
   return (
