@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with TWT Hair Studio. Find our address, phone number, and location in Petaling Jaya. Book your appointment or send us an inquiry.',
+  description: 'Get in touch with SHEAR. Find our address, phone number, and location in Petaling Jaya. Book your appointment or send us an inquiry.',
 };
 
 const contactDetails = [
@@ -28,14 +28,14 @@ const contactDetails = [
   {
     icon: Mail,
     title: 'Email',
-    value: 'hello@twthairstudio.com',
-    href: 'mailto:hello@twthairstudio.com',
+    value: 'hello@shear.com',
+    href: 'mailto:hello@shear.com',
     isLink: true,
   },
   {
     icon: ParkingCircle,
     title: 'Parking',
-    value: 'Visitor parking is available in the Casa Tropicana condominium. Inform security you are visiting TWT Hair Studio.',
+    value: 'Visitor parking is available in the Casa Tropicana condominium. Inform security you are visiting SHEAR.',
     isLink: false,
   },
 ];
@@ -44,7 +44,7 @@ export default function ContactPage() {
   const mapImage = PlaceHolderImages.find(p => p.id === 'contact-map');
 
   return (
-    <div className="py-16 sm:py-24">
+    <div className="py-16 sm:py-24 pt-48">
       <div className="container max-w-7xl">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold">Get In Touch</h1>
@@ -79,7 +79,7 @@ export default function ContactPage() {
             <div className="aspect-[16/6] rounded-lg overflow-hidden shadow-lg">
               <Image
                 src={mapImage.imageUrl}
-                alt="Map showing TWT Hair Studio location"
+                alt="Map showing SHEAR location"
                 width={1200}
                 height={500}
                 className="w-full h-full object-cover"

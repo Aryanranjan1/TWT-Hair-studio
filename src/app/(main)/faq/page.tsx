@@ -13,12 +13,12 @@ import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'FAQ',
-  description: 'Find answers to frequently asked questions about TWT Hair Studio, including our services, booking process, pricing, and policies.',
+  description: 'Find answers to frequently asked questions about SHEAR, including our services, booking process, pricing, and policies.',
 };
 
 export default function FAQPage() {
   return (
-    <div className="py-16 sm:py-24">
+    <div className="py-16 sm:py-24 pt-48">
       <div className="container max-w-4xl">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold">Frequently Asked Questions</h1>

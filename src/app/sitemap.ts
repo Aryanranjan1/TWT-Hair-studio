@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { blogPosts } from '@/lib/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = 'https://twthairstudio.com'; // Replace with your actual domain
+  const siteUrl = 'https://shear.com'; // Replace with your actual domain
 
   const staticRoutes = [
     '',
@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/faq',
     '/booking',
+    '/shop',
   ].map((route) => ({
     url: `${siteUrl}${route}`,
     lastModified: new Date().toISOString(),

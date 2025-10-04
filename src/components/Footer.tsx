@@ -31,8 +31,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link href="/" className="inline-flex items-center space-x-2">
-              <Scissors className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold font-headline">TWT Hair Studio</span>
+              <span style={{ fontFamily: 'Jost, sans-serif' }} className="text-2xl font-light tracking-wider">SHEAR</span>
             </Link>
             <p className="text-sm text-muted-foreground">Good Hair Day, Every Day.</p>
             <div className="flex space-x-4">
@@ -77,12 +76,12 @@ export function Footer() {
 
           <div>
             <h3 className="text-lg font-headline font-semibold">Stay Updated</h3>
-            <p className="mt-4 text-sm text-muted-foreground">Get the latest trends, tips, and promotions straight to your inbox.</p>
+            <p className="mt-4 text-sm textmuted-foreground">Get the latest trends, tips, and promotions straight to your inbox.</p>
             <NewsletterForm />
           </div>
         </div>
         <div className="mt-12 border-t border-border pt-8">
-          <p className="text-sm text-muted-foreground text-center">&copy; {new Date().getFullYear()} TWT Hair Studio Online. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground text-center">&copy; {new Date().getFullYear()} SHEAR Online. All rights reserved.</p>
         </div>
       </div>
     </footer>

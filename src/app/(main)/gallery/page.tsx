@@ -18,7 +18,7 @@ const categories: GalleryCategory[] = ['Cuts', 'Coloring', 'Treatments'];
 
 export default function GalleryPage() {
   return (
-    <div className="py-16 sm:py-24">
+    <div className="py-16 sm:py-24 pt-48">
       <div className="container max-w-7xl">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold">Our Work</h1>
@@ -58,8 +58,7 @@ export default function GalleryPage() {
                         <CardFooter className="p-4 flex flex-col items-start">
                           <p className="font-medium">{galleryImage.description}</p>
                           <Button asChild variant="link" className="p-0 h-auto mt-2 text-primary">
-                            <Link href="/booking">Book this look</Link>
-                          </Button>
+                            <Link href="/booking">Book this look</Link>                          </Button>
                         </CardFooter>
                       </Card>
                     );

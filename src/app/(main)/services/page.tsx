@@ -8,8 +8,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 export const metadata: Metadata = {
-  title: 'Services &amp; Pricing',
-  description: 'Explore our full range of hair services at TWT Hair Studio, including cuts, treatments, coloring, and packages. Find pricing information and book your service online.',
+  title: 'Services & Pricing',
+  description: 'Explore our full range of hair services at SHEAR, including cuts, treatments, coloring, and packages. Find pricing information and book your service online.',
 };
 
 const categories: ServiceCategory[] = ['Cuts', 'Coloring', 'Treatments', 'Packages'];
