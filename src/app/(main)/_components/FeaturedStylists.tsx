@@ -8,6 +8,7 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { stylists } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Motion } from '@/components/ui/motion';
 
 export function FeaturedStylists() {
   const featuredStylists = stylists.slice(0, 3);
@@ -16,19 +17,24 @@ export function FeaturedStylists() {
     <section className="py-16 sm:py-24 bg-background">
       <div className="container max-w-7xl">
         <div className="md:flex md:items-center md:justify-between">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold">
+          <Motion as="h2" variant="slide-in-left" className="text-3xl md:text-4xl font-headline font-bold">
             Meet Our Stylists
-          </h2>
-          <p className="mt-4 max-w-xl text-muted-foreground md:mt-0">
+          </Motion>
+          <Motion as="p" variant="slide-in-right" className="mt-4 max-w-xl text-muted-foreground md:mt-0">
             Our talented team of passionate stylists is ready to bring your hair goals to life.
-          </p>
+          </Motion>
         </div>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
           {featuredStylists.map((stylist, index) => {
             const image = PlaceHolderImages.find(p => p.id === stylist.image);
             return (
-              <div key={stylist.id} className="group overflow-hidden">
+              <Motion
+                key={stylist.id}
+                variant="hop-and-pop"
+                delay={index * 0.1}
+                className="group overflow-hidden"
+              >
                 <Link href="/about">
                   {image && (
                     <div className="relative h-[480px] w-full">
@@ -64,17 +70,19 @@ export function FeaturedStylists() {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </Motion>
             );
           })}
         </div>
 
         <div className="mt-16 text-center">
-          <Button asChild size="lg" variant="outline">
-            <Link href="/about">
-              Meet The Full Team <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+          <Motion asChild variant="hop-and-pop">
+            <Button asChild size="lg" variant="outline">
+              <Link href="/about">
+                Meet The Full Team <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </Motion>
         </div>
       </div>
     </section>
