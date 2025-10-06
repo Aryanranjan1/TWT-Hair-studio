@@ -38,7 +38,7 @@ export const useScrollAnimate = <T extends HTMLElement>(options: AnimationOption
           trigger: element,
           start: 'top 85%', // Animation starts when the top of the element is 85% from the top of the viewport
           end: 'bottom 15%', // Animation can reverse when element leaves the viewport
-          toggleActions: 'play reverse play reverse', // Play on enter, reverse on leave
+          toggleActions: 'play none none none', // Play on enter, do nothing on leave, enter back, or leave back
           ...triggerOptions,
         },
       });
