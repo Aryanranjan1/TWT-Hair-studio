@@ -11,8 +11,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Initialize Lenis for smooth scrolling
     const lenis = new Lenis({
-      lerp: 0.07, // Lower value for smoother, less resistant scroll
-      duration: 1.5,
+      lerp: 0.1, // Higher value for more responsive, less delayed scroll
       smoothTouch: false, // Prevents interference with touch scrolling
       touchMultiplier: 2,
     });
