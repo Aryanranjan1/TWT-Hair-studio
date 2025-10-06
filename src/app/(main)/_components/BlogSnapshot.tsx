@@ -1,7 +1,7 @@
 
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Instagram, Facebook, Youtube } from 'lucide-react';
@@ -17,6 +17,7 @@ import { blogPosts, stylists } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent }from '@/components/ui/card';
+import { useScrollAnimate } from '@/hooks/useScrollAnimate';
 
 export function BlogSnapshot() {
   const eventImages = [
@@ -28,14 +29,17 @@ export function BlogSnapshot() {
   const latestPost = blogPosts[0];
   const authorStylist = stylists[2];
   const onlineActivitiesImage = PlaceHolderImages.find(p => p.id === 'transformation-cta');
+  
+  const sectionRef = useRef(null);
+  useScrollAnimate(sectionRef, '.animate-item', { y: 50, opacity: 0 }, 0.2);
 
 
   return (
-    <section className="py-16 sm:py-24 bg-background text-foreground">
+    <section ref={sectionRef} className="py-16 sm:py-24 bg-background text-foreground overflow-hidden">
       <div className="container max-w-7xl">
         <div>
         <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className='md:col-span-2 text-left mb-8'>
+            <div className='md:col-span-2 text-left mb-8 animate-item'>
                 <h2 className="text-4xl md:text-5xl font-headline font-bold">
                     JOIN THE <span className="text-primary">COMMUNITY</span>
                 </h2>
@@ -44,7 +48,7 @@ export function BlogSnapshot() {
                 </p>
             </div>
             
-            <div className="md:col-span-1">
+            <div className="md:col-span-1 animate-item">
                 <Carousel
                   className="w-full"
                   opts={{ loop: true }}
@@ -76,7 +80,7 @@ export function BlogSnapshot() {
                 </Carousel>
             </div>
 
-            <div className="md:col-span-1 flex flex-col justify-center h-full">
+            <div className="md:col-span-1 flex flex-col justify-center h-full animate-item">
                 <h3 className="text-2xl md:text-3xl font-headline font-bold">
                     We participate in style expos and organize special events to engage with our community in person.
                 </h3>
@@ -84,7 +88,7 @@ export function BlogSnapshot() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
+            <div className="animate-item">
             <Card className="p-6 flex flex-col h-full">
                 <h4 className="font-headline text-xl font-semibold">From our Journal</h4>
                 <p className="mt-4 text-muted-foreground flex-grow">
@@ -105,7 +109,7 @@ export function BlogSnapshot() {
             </Card>
             </div>
 
-            <div>
+            <div className="animate-item">
             <Card className="p-6 flex flex-col justify-center h-full">
                  <h4 className="font-headline text-xl font-semibold">Connect with us on social media.</h4>
                  <p className="mt-4 text-muted-foreground">
@@ -125,7 +129,7 @@ export function BlogSnapshot() {
             </Card>
             </div>
         </div>
-        <div className="mt-8">
+        <div className="mt-8 animate-item">
             <div className='h-full'>
                 <Card className="p-0 relative rounded-lg overflow-hidden text-white flex flex-col justify-between h-full min-h-[300px]">
                     {onlineActivitiesImage && (

@@ -1,22 +1,29 @@
 
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
+import { useScrollAnimate } from '@/hooks/useScrollAnimate';
 
 export function AboutSnapshot() {
   const aboutImage = PlaceHolderImages.find(p => p.id === 'about-salon');
+  const sectionRef = useRef(null);
+
+  // Animate text content
+  useScrollAnimate(sectionRef, '.animate-text', { x: 100, opacity: 0 });
+  // Animate image
+  useScrollAnimate(sectionRef, '.animate-image', { x: -100, opacity: 0 });
 
   return (
-    <section className="py-16 sm:py-24 bg-background">
+    <section ref={sectionRef} className="py-16 sm:py-24 bg-background overflow-hidden">
       <div className="container max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-stretch">
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center animate-text">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
               Our Story
             </h2>
@@ -31,7 +38,7 @@ export function AboutSnapshot() {
             </Button>
           </div>
           <div 
-            className="relative min-h-[400px] w-full" 
+            className="relative min-h-[400px] w-full animate-image" 
           >
             {aboutImage && (
               <div 

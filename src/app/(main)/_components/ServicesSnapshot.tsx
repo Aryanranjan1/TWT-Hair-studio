@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, ArrowUp, ArrowDown } from 'lucide-react';
@@ -11,6 +11,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { useScrollAnimate } from '@/hooks/useScrollAnimate';
 
 const VerticalCarousel = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, axis: 'y' });
@@ -95,11 +96,15 @@ const VerticalCarousel = () => {
 };
 
 export function ServicesSnapshot() {
+  const sectionRef = useRef(null);
+  useScrollAnimate(sectionRef, '.animate-text', { x: -100, opacity: 0 });
+  useScrollAnimate(sectionRef, '.animate-carousel', { x: 100, opacity: 0 });
+  
   return (
-    <section className="py-16 sm:py-24 bg-background">
+    <section ref={sectionRef} className="py-16 sm:py-24 bg-background overflow-hidden">
       <div className="container max-w-7xl">
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
-          <div className="bg-secondary rounded-lg shadow-lg p-8 md:p-12 flex flex-col justify-center">
+          <div className="bg-secondary rounded-lg shadow-lg p-8 md:p-12 flex flex-col justify-center animate-text">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
                 Our Expertise
             </h2>
@@ -113,7 +118,7 @@ export function ServicesSnapshot() {
               <Link href="/">Explore All Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
           </div>
-          <div className="relative aspect-[4/5] w-full bg-secondary rounded-lg shadow-lg overflow-hidden">
+          <div className="relative aspect-[4/5] w-full bg-secondary rounded-lg shadow-lg overflow-hidden animate-carousel">
             <VerticalCarousel />
           </div>
         </div>
