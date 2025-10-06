@@ -1,11 +1,12 @@
 
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { reviews } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { useScrollAnimate } from '@/hooks/useScrollAnimate';
 
 const SQRT_5000 = Math.sqrt(5000);
 
@@ -94,6 +95,10 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 export function Testimonials() {
   const [cardSize, setCardSize] = useState(365);
   const [testimonialsList, setTestimonialsList] = useState(mappedTestimonials);
+  const sectionRef = useRef(null);
+
+  useScrollAnimate(sectionRef, '.animate-title', { opacity: 0, y: 50 });
+  useScrollAnimate(sectionRef, '.animate-deck', { opacity: 0, y: 50, delay: 0.2 });
 
   const handleMove = (steps: number) => {
     const newList = [...testimonialsList];
@@ -128,16 +133,16 @@ export function Testimonials() {
   const visibleTestimonials = testimonialsList.slice(0, 5);
 
   return (
-    <section className="py-16 sm:py-24 bg-background">
+    <section ref={sectionRef} className="py-16 sm:py-24 bg-background">
        <div className="container max-w-7xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-title">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">What Our Clients Say</h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
                 Real stories from our happy customers.
             </p>
         </div>
         <div
-          className="relative w-full overflow-hidden"
+          className="relative w-full overflow-hidden animate-deck"
           style={{ height: 500 }}
         >
           {visibleTestimonials.map((testimonial, index) => {

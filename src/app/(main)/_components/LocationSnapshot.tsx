@@ -7,16 +7,22 @@ import { Instagram, Facebook, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LeadCaptureForm } from './LeadCaptureForm';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { useRef } from 'react';
+import { useScrollAnimate } from '@/hooks/useScrollAnimate';
 
 export function LocationSnapshot() {
   const mapImage = PlaceHolderImages.find(p => p.id === 'contact-map');
   const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Casa+Tropicana+PJU+3+Petaling+Jaya+Selangor+Malaysia";
+  const sectionRef = useRef(null);
+
+  useScrollAnimate(sectionRef, '.animate-left', { opacity: 0, x: -100 });
+  useScrollAnimate(sectionRef, '.animate-right', { opacity: 0, x: 100 });
 
   return (
-    <section className="py-16 sm:py-24 bg-background">
+    <section ref={sectionRef} className="py-16 sm:py-24 bg-background overflow-hidden">
       <div className="container max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-stretch">
-          <div className="flex flex-col">
+          <div className="flex flex-col animate-left">
             <h2 className="text-3xl font-headline font-bold">Visit Us & Get in Touch</h2>
             <p className="mt-4 text-muted-foreground">
               We're conveniently located in Petaling Jaya. Whether you have a question or are ready to book, reach out to us. We'd love to hear from you.
@@ -67,7 +73,7 @@ export function LocationSnapshot() {
               </Link>
             )}
           </div>
-          <div>
+          <div className="animate-right">
             <div className="sticky top-32">
                 <div className="bg-secondary p-8 rounded-lg">
                     <LeadCaptureForm />

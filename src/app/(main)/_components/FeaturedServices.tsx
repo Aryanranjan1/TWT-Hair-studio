@@ -11,11 +11,17 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Carousel, type CarouselApi, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
+import { useScrollAnimate } from '@/hooks/useScrollAnimate';
 
 export function FeaturedServices() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const sectionRef = useRef(null);
+
+  useScrollAnimate(sectionRef, '.animate-title', { opacity: 0, y: 50 });
+  useScrollAnimate(sectionRef, '.animate-carousel', { opacity: 0, y: 50 });
+
 
   const plugin = useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
@@ -41,9 +47,9 @@ export function FeaturedServices() {
   const featured = [...services, ...services].slice(0, 10);
 
   return (
-    <section className="bg-background text-foreground py-16 sm:py-24 overflow-hidden">
+    <section ref={sectionRef} className="bg-background text-foreground py-16 sm:py-24 overflow-hidden">
       <div className="container max-w-7xl mb-12">
-        <div className="text-center max-w-2xl mx-auto">
+        <div className="text-center max-w-2xl mx-auto animate-title">
           <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
             Featured Hairstyles
           </h2>
@@ -55,7 +61,7 @@ export function FeaturedServices() {
         </div>
       </div>
 
-      <div>
+      <div className="animate-carousel">
         <Carousel
           setApi={setApi}
           plugins={[plugin.current]}
