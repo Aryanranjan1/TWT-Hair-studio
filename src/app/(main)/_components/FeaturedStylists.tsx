@@ -9,13 +9,16 @@ import { useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { stylists } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { useScrollAnimate } from '@/hooks/useScrollAnimate';
 
 
 export function FeaturedStylists() {
   const featuredStylists = stylists.slice(0, 3);
+  const sectionRef = useRef(null);
+  useScrollAnimate(sectionRef, '.stylist-card-anim');
   
   return (
-    <section className="py-16 sm:py-24 bg-background">
+    <section ref={sectionRef} className="py-16 sm:py-24 bg-background">
       <div className="container max-w-7xl">
         <div className="md:flex md:items-center md:justify-between">
           <h2 className="text-3xl md:text-4xl font-headline font-bold">
@@ -33,7 +36,7 @@ export function FeaturedStylists() {
             return (
               <div
                 key={stylist.id}
-                className="group overflow-hidden"
+                className="group overflow-hidden stylist-card-anim"
               >
                 <Link href="/">
                   {image && (
