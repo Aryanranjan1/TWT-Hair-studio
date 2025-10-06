@@ -1,5 +1,10 @@
+
+'use client';
+
 import InteractiveImageBentoGallery, { type ImageItem } from "@/components/ui/bento-gallery"
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { useScrollAnimate } from "@/hooks/useScrollAnimate";
+import { useRef } from "react";
 
 // Helper function to find an image and handle cases where it might not be found
 const findImage = (id: string) => PlaceHolderImages.find(p => p.id === id) || { imageUrl: '', description: 'Image not found', imageHint: '' };
@@ -57,13 +62,18 @@ const imageItems: ImageItem[] = [
 
 
 export function GalleryPreview() {
+  const sectionRef = useRef(null);
+  useScrollAnimate(sectionRef, '.bento-grid-anim', { opacity: 0, y: 50 }, 0.2);
+
   return (
-    <div className="w-full antialiased">
-      <InteractiveImageBentoGallery
-        imageItems={imageItems}
-        title="Our Transformations"
-        description="A showcase of our recent work. Drag to explore, click to expand."
-      />
-    </div>
+    <section ref={sectionRef} className="overflow-hidden">
+        <div className="w-full antialiased bento-grid-anim">
+            <InteractiveImageBentoGallery
+                imageItems={imageItems}
+                title="Our Transformations"
+                description="A showcase of our recent work. Drag to explore, click to expand."
+            />
+        </div>
+    </section>
   )
 }

@@ -15,10 +15,11 @@ import { useScrollAnimate } from '@/hooks/useScrollAnimate';
 export function FeaturedStylists() {
   const featuredStylists = stylists.slice(0, 3);
   const sectionRef = useRef(null);
-  useScrollAnimate(sectionRef, '.stylist-card-anim');
+  useScrollAnimate(sectionRef, 'h2, .md\\:flex > p', { opacity: 0, y: 50 }, 0.3);
+  useScrollAnimate(sectionRef, '.stylist-card-anim', { opacity: 0, y: 50, scale: 0.9 }, 0.2);
   
   return (
-    <section ref={sectionRef} className="py-16 sm:py-24 bg-background">
+    <section ref={sectionRef} className="py-16 sm:py-24 bg-background overflow-hidden">
       <div className="container max-w-7xl">
         <div className="md:flex md:items-center md:justify-between">
           <h2 className="text-3xl md:text-4xl font-headline font-bold">
