@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Instagram, Facebook, Phone, Mail, MapPin } from 'lucide-react';
 import { NewsletterForm } from './NewsletterForm';
@@ -56,7 +57,7 @@ export function Footer() {
             <h3 className="text-lg font-headline font-semibold">Quick Links</h3>
             <ul className="mt-4 space-y-2">
                 {footerLinks.map(link => (
-                    <li key={link.href}>
+                    <li key={link.label}>
                         <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary">
                             {link.label}
                         </Link>

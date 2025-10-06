@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -52,11 +53,11 @@ export function Header() {
         <nav className="hidden md:flex items-center space-x-6 text-sm font-light tracking-widest w-1/3">
           {navLinks.map(({ href, label }) => (
             <Link
-              key={href}
+              key={label}
               href={href}
               className={cn(
                 'transition-colors hover:text-white pb-1',
-                pathname === href ? 'text-white border-b border-white' : 'text-white/80'
+                pathname === href && label === 'Home' ? 'text-white border-b border-white' : 'text-white/80'
               )}
             >
               {label.toUpperCase()}
@@ -101,12 +102,12 @@ export function Header() {
                 <div className="flex flex-col space-y-3">
                   {navLinks.map(({ href, label }) => (
                     <Link
-                      key={href}
+                      key={label}
                       href={href}
                       onClick={() => setSheetOpen(false)}
                       className={cn(
                           'transition-colors hover:text-primary p-2 rounded-l-md text-lg',
-                          pathname === href ? 'bg-secondary text-primary font-semibold' : 'text-foreground'
+                          pathname === href && label === 'Home' ? 'bg-secondary text-primary font-semibold' : 'text-foreground'
                         )}
                     >
                       {label}
