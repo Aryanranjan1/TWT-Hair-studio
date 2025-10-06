@@ -16,7 +16,6 @@ import { BookingCTA } from './_components/BookingCTA';
 import { BlogSnapshot } from './_components/BlogSnapshot';
 import { LocationSnapshot } from './_components/LocationSnapshot';
 import { GalleryPreview } from './_components/GalleryPreview';
-import { useScrollAnimate } from '@/hooks/useScrollAnimate';
 import { useRef } from 'react';
 
 
@@ -57,49 +56,40 @@ function Hero() {
 
 
 export default function HomePage() {
-
-  const SectionWrapper = ({ children }: { children: React.ReactNode }) => {
-    const ref = useScrollAnimate<HTMLDivElement>({
-      from: { opacity: 0, y: 50, scale: 0.98 },
-      to: { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'power3.out' },
-    });
-    return <div ref={ref} className="py-12 md:py-16">{children}</div>;
-  };
-
   return (
     <>
       <Hero />
       <div className="container max-w-7xl mx-auto">
-        <SectionWrapper>
+        <div className="py-12 md:py-16">
           <FeaturedServices />
-        </SectionWrapper>
-        <SectionWrapper>
+        </div>
+        <div className="py-12 md:py-16">
           <AboutSnapshot />
-        </SectionWrapper>
-        <SectionWrapper>
+        </div>
+        <div className="py-12 md:py-16">
           <ValuePropositions />
-        </SectionWrapper>
-        <SectionWrapper>
+        </div>
+        <div className="py-12 md:py-16">
           <ServicesSnapshot />
-        </SectionWrapper>
-        <SectionWrapper>
+        </div>
+        <div className="py-12 md:py-16">
           <GalleryPreview />
-        </SectionWrapper>
-        <SectionWrapper>
+        </div>
+        <div className="py-12 md:py-16">
           <FeaturedStylists />
-        </SectionWrapper>
-        <SectionWrapper>
+        </div>
+        <div className="py-12 md:py-16">
           <Testimonials />
-        </SectionWrapper>
-        <SectionWrapper>
+        </div>
+        <div className="py-12 md:py-16">
           <BookingCTA />
-        </SectionWrapper>
-        <SectionWrapper>
+        </div>
+        <div className="py-12 md:py-16">
           <BlogSnapshot />
-        </SectionWrapper>
-        <SectionWrapper>
+        </div>
+        <div className="py-12 md:py-16">
           <LocationSnapshot />
-        </SectionWrapper>
+        </div>
       </div>
     </>
   );
