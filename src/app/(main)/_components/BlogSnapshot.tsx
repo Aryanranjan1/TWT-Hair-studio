@@ -17,7 +17,6 @@ import { blogPosts, stylists } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent }from '@/components/ui/card';
-import { Motion } from '@/components/ui/motion';
 
 export function BlogSnapshot() {
   const eventImages = [
@@ -34,7 +33,7 @@ export function BlogSnapshot() {
   return (
     <section className="py-16 sm:py-24 bg-background text-foreground">
       <div className="container max-w-7xl">
-        <Motion variant='fade-in'>
+        <div>
         <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className='md:col-span-2 text-left mb-8'>
                 <h2 className="text-4xl md:text-5xl font-headline font-bold">
@@ -45,7 +44,7 @@ export function BlogSnapshot() {
                 </p>
             </div>
             
-            <Motion variant='slide-in-left' className="md:col-span-1">
+            <div className="md:col-span-1">
                 <Carousel
                   className="w-full"
                   opts={{ loop: true }}
@@ -75,17 +74,17 @@ export function BlogSnapshot() {
                   <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
                   <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
                 </Carousel>
-            </Motion>
+            </div>
 
-            <Motion variant='slide-in-right' className="md:col-span-1 flex flex-col justify-center h-full">
+            <div className="md:col-span-1 flex flex-col justify-center h-full">
                 <h3 className="text-2xl md:text-3xl font-headline font-bold">
                     We participate in style expos and organize special events to engage with our community in person.
                 </h3>
-            </Motion>
+            </div>
         </div>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Motion variant='pop-in' delay={0.1}>
+            <div>
             <Card className="p-6 flex flex-col h-full">
                 <h4 className="font-headline text-xl font-semibold">From our Journal</h4>
                 <p className="mt-4 text-muted-foreground flex-grow">
@@ -104,9 +103,9 @@ export function BlogSnapshot() {
                     <Link href="/">Read now <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
             </Card>
-            </Motion>
+            </div>
 
-            <Motion variant='pop-in' delay={0.2}>
+            <div>
             <Card className="p-6 flex flex-col justify-center h-full">
                  <h4 className="font-headline text-xl font-semibold">Connect with us on social media.</h4>
                  <p className="mt-4 text-muted-foreground">
@@ -124,10 +123,10 @@ export function BlogSnapshot() {
                     </Button>
                  </div>
             </Card>
-            </Motion>
+            </div>
         </div>
         <div className="mt-8">
-            <Motion variant='pop-in' delay={0.3} className='h-full'>
+            <div className='h-full'>
                 <Card className="p-0 relative rounded-lg overflow-hidden text-white flex flex-col justify-between h-full min-h-[300px]">
                     {onlineActivitiesImage && (
                         <Image
@@ -147,9 +146,9 @@ export function BlogSnapshot() {
                         </Button>
                     </div>
                 </Card>
-            </Motion>
+            </div>
         </div>
-        </Motion>
+        </div>
       </div>
     </section>
   );

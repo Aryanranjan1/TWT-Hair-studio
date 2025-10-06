@@ -11,7 +11,6 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Carousel, type CarouselApi, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
-import { Motion } from '@/components/ui/motion';
 
 export function FeaturedServices() {
   const [api, setApi] = useState<CarouselApi>();
@@ -44,19 +43,19 @@ export function FeaturedServices() {
   return (
     <section className="bg-background text-foreground py-16 sm:py-24 overflow-hidden">
       <div className="container max-w-7xl mb-12">
-        <Motion variant="fade-in" className="text-center max-w-2xl mx-auto">
+        <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
             Featured Hairstyles
           </h2>
-          <Motion variant="zoom-in" delay={0.2}>
+          <div>
           <p className="mt-4 text-2xl md:text-3xl font-headline">
             Discover services designed to nurture your style, from precision cuts to creative coloring.
           </p>
-          </Motion>
-        </Motion>
+          </div>
+        </div>
       </div>
 
-      <Motion variant='slide-in-up'>
+      <div>
         <Carousel
           setApi={setApi}
           plugins={[plugin.current]}
@@ -115,7 +114,7 @@ export function FeaturedServices() {
             })}
           </CarouselContent>
         </Carousel>
-      </Motion>
+      </div>
 
     </section>
   );

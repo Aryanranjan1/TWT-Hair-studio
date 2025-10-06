@@ -6,7 +6,6 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { reviews } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Motion } from '@/components/ui/motion';
 
 const SQRT_5000 = Math.sqrt(5000);
 
@@ -131,13 +130,13 @@ export function Testimonials() {
   return (
     <section className="py-16 sm:py-24 bg-background">
        <div className="container max-w-7xl">
-        <Motion variant='fade-in' className="text-center mb-12">
+        <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">What Our Clients Say</h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
                 Real stories from our happy customers.
             </p>
-        </Motion>
-        <Motion variant='slide-in-up'
+        </div>
+        <div
           className="relative w-full overflow-hidden"
           style={{ height: 500 }}
         >
@@ -177,7 +176,7 @@ export function Testimonials() {
               <ChevronRight />
             </button>
           </div>
-        </Motion>
+        </div>
       </div>
     </section>
   );

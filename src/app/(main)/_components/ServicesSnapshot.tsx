@@ -11,7 +11,6 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Motion } from '@/components/ui/motion';
 
 const VerticalCarousel = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, axis: 'y' });
@@ -100,7 +99,7 @@ export function ServicesSnapshot() {
     <section className="py-16 sm:py-24 bg-background">
       <div className="container max-w-7xl">
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
-          <Motion variant='slide-in-left' className="bg-secondary rounded-lg shadow-lg p-8 md:p-12 flex flex-col justify-center">
+          <div className="bg-secondary rounded-lg shadow-lg p-8 md:p-12 flex flex-col justify-center">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
                 Our Expertise
             </h2>
@@ -113,10 +112,10 @@ export function ServicesSnapshot() {
             <Button asChild size="lg" variant="outline" className="mt-10">
               <Link href="/">Explore All Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
-          </Motion>
-          <Motion variant='slide-in-right' className="relative aspect-[4/5] w-full bg-secondary rounded-lg shadow-lg overflow-hidden">
+          </div>
+          <div className="relative aspect-[4/5] w-full bg-secondary rounded-lg shadow-lg overflow-hidden">
             <VerticalCarousel />
-          </Motion>
+          </div>
         </div>
       </div>
     </section>
