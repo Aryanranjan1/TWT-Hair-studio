@@ -40,7 +40,7 @@ function TeamSection() {
                                 )}
                                 <h3 className="mt-6 text-2xl font-headline font-semibold">{stylist.name}</h3>
                                 <p className="mt-1 text-primary font-medium">{stylist.specialty}</p>
-                                <Link href={stylist.instagram} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center text-muted-foreground hover:text-primary">
+                                <Link href={'/'} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center text-muted-foreground hover:text-primary">
                                     <Instagram className="h-4 w-4 mr-2" />
                                     <span>Follow on Instagram</span>
                                 </Link>
@@ -97,7 +97,7 @@ export default function AboutPage() {
                 Located in the heart of Petaling Jaya, we are a passionate team of stylists committed to providing personalized services that cater to the unique needs of each client. Our brand values are rooted in creativity, quality, and building genuine connections. We strive to stay at the forefront of hair trends and techniques while using only the best products for your hair's health.
               </p>
               <Button asChild size="lg" className="mt-8">
-                <Link href="/booking">Join Our Story <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                <Link href="/">Join Our Story <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
             </div>
             <div className="relative aspect-video">

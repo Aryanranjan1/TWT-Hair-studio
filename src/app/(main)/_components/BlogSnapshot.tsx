@@ -101,7 +101,7 @@ export function BlogSnapshot() {
                     </div>
                 </div>
                 <Button asChild variant="outline" className="mt-6 self-start">
-                    <Link href={`/blog/${latestPost.slug}`}>Read now <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <Link href="/">Read now <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
             </Card>
             </Motion>
@@ -114,13 +114,13 @@ export function BlogSnapshot() {
                  </p>
                  <div className="flex gap-4 mt-6">
                     <Button asChild variant="outline" size="icon">
-                        <Link href="https://instagram.com" target="_blank"><Instagram /></Link>
+                        <Link href="/" target="_blank"><Instagram /></Link>
                     </Button>
                      <Button asChild variant="outline" size="icon">
-                        <Link href="https://facebook.com" target="_blank"><Facebook /></Link>
+                        <Link href="/" target="_blank"><Facebook /></Link>
                     </Button>
                      <Button asChild variant="outline" size="icon">
-                        <Link href="https://youtube.com" target="_blank"><Youtube /></Link>
+                        <Link href="/" target="_blank"><Youtube /></Link>
                     </Button>
                  </div>
             </Card>
@@ -143,7 +143,7 @@ export function BlogSnapshot() {
                     <div className="relative p-6 flex flex-col h-full justify-end">
                         <h4 className="font-headline text-xl font-semibold">READY FOR A TRANSFORMATION?</h4>
                         <Button asChild variant="outline" className="bg-transparent text-white border-white mt-4 hover:bg-white hover:text-black self-start">
-                            <Link href="/booking">Book Your Slot <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                            <Link href="/">Book Your Slot <ArrowRight className="ml-2 h-4 w-4" /></Link>
                         </Button>
                     </div>
                 </Card>

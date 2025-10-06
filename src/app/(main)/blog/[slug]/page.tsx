@@ -81,13 +81,13 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             Our expert stylists are ready to help you achieve the hair of your dreams.
           </p>
           <Button asChild size="lg" className="mt-6">
-            <Link href="/booking">Book Your Transformation</Link>
+            <Link href="/">Book Your Transformation</Link>
           </Button>
         </div>
         
         <div className="mt-12 text-center">
             <Button asChild variant="outline">
-                <Link href="/blog">Back to Blog</Link>
+                <Link href="/">Back to Blog</Link>
             </Button>
         </div>
       </div>

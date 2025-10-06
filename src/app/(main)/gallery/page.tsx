@@ -35,7 +35,7 @@ export default function GalleryPage() {
           </TabsList>
 
           {categories.map((category) => (
-            <TabsContent key={category} value={category} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            <TabsContent key={category} value={category} className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {galleryImages
                 .filter((img) => img.category === category)
                 .map((galleryImage) => {
@@ -57,7 +57,7 @@ export default function GalleryPage() {
                       <CardFooter className="p-4 flex flex-col items-start">
                         <p className="font-medium">{galleryImage.description}</p>
                         <Button asChild variant="link" className="p-0 h-auto mt-2 text-primary">
-                          <Link href="/booking">Book this look</Link>
+                          <Link href="/">Book this look</Link>
                         </Button>
                       </CardFooter>
                     </Card>

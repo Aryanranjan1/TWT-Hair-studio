@@ -36,7 +36,7 @@ export function FeaturedStylists() {
                 delay={index * 0.1}
                 className="group overflow-hidden"
               >
-                <Link href="/about">
+                <Link href="/">
                   {image && (
                     <div className="relative h-[480px] w-full">
                       <Image
@@ -62,7 +62,7 @@ export function FeaturedStylists() {
                       {stylist.specialty}
                     </span>
                     <Link
-                      href={stylist.instagram}
+                      href={'/'}
                       target='_blank'
                       rel='noopener noreferrer'
                       className="inline-block translate-y-8 text-sm tracking-wide opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100 text-primary"
@@ -78,7 +78,7 @@ export function FeaturedStylists() {
 
         <Motion variant="fade-in" className="mt-16 text-center">
             <Button asChild size="lg" variant="outline">
-              <Link href="/about">
+              <Link href="/">
                 Meet The Full Team <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

@@ -31,7 +31,7 @@ export default function BlogPage() {
               const image = PlaceHolderImages.find(p => p.id === post.image);
               return (
                 <article key={post.id} className="group">
-                  <Link href={`/blog/${post.slug}`}>
+                  <Link href={`/`}>
                     {image && (
                       <div className="relative aspect-video mb-6">
                         <Image
@@ -69,7 +69,7 @@ export default function BlogPage() {
                 <CardContent>
                     <p className="text-muted-foreground mb-4">Inspired by what you've read? Let our experts bring your vision to life.</p>
                     <Button asChild className="w-full">
-                        <Link href="/booking">Book Your Transformation</Link>
+                        <Link href="/">Book Your Transformation</Link>
                     </Button>
                 </CardContent>
               </Card>

@@ -22,7 +22,7 @@ const contactDetails = [
     icon: Phone,
     title: 'Phone / WhatsApp',
     value: '+60 12-345 6789',
-    href: 'https://wa.me/60123456789',
+    href: '/',
     isLink: true,
   },
   {
@@ -62,7 +62,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 {detail.isLink ? (
-                  <Link href={detail.href || '#'} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors break-words">
+                  <Link href={detail.href || '#'} rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors break-words">
                     {detail.value}
                   </Link>
                 ) : (

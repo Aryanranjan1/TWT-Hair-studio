@@ -85,7 +85,7 @@ export function FeaturedServices() {
                   onMouseEnter={() => setHoveredIndex(index)}
                 >
                   <div className="group shrink-0">
-                    <Link href="/services">
+                    <Link href="/">
                       <div
                         className={cn(
                           'relative w-[280px] h-[280px] rounded-full overflow-hidden shadow-lg transition-transform duration-300 ease-in-out',

@@ -54,7 +54,7 @@ export default function ServicesPage() {
                                 <div className="flex justify-between items-center mt-4">
                                     <p className="text-lg font-semibold text-primary">{service.price}</p>
                                     <Button asChild>
-                                        <Link href="/booking">Book Now</Link>
+                                        <Link href="/">Book Now</Link>
                                     </Button>
                                 </div>
                             </CardContent>

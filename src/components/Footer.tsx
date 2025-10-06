@@ -6,28 +6,28 @@ const socialLinks = [
   {
     name: 'Instagram',
     icon: Instagram,
-    href: 'https://instagram.com',
+    href: '/',
   },
   {
     name: 'Facebook',
     icon: Facebook,
-    href: 'https://facebook.com',
+    href: '/',
   },
   {
     name: 'WhatsApp',
     icon: Phone,
-    href: 'https://wa.me/60123456789',
+    href: '/',
   },
 ];
 
 const footerLinks = [
     { href: '/', label: 'Home' },
-    { href: '/services', label: 'Services' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/about', label: 'About' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/contact', label: 'Contact' },
-    { href: '/booking', label: 'Book Now' },
+    { href: '/', label: 'Services' },
+    { href: '/', label: 'Gallery' },
+    { href: '/', label: 'About' },
+    { href: '/', label: 'Blog' },
+    { href: '/', label: 'Contact' },
+    { href: '/', label: 'Book Now' },
 ];
 
 export function Footer() {
@@ -44,7 +44,7 @@ export function Footer() {
             </p>
             <div className="mt-4 flex space-x-4">
               {socialLinks.map((item) => (
-                <Link key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                <Link key={item.name} href={item.href} rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </Link>

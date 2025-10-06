@@ -31,7 +31,7 @@ export function BookingCTA() {
                         Ready for a transformation? Our expert stylists are waiting to bring your hair vision to life.
                     </p>
                     <Button asChild size="lg" className="mt-8">
-                    <Link href="/booking">Book Your Appointment Now</Link>
+                    <Link href="/">Book Your Appointment Now</Link>
                     </Button>
                     <div className="mt-4 bg-muted/50 border border-border rounded-md px-3 py-1 inline-block">
                         <p className="text-xs text-muted-foreground">

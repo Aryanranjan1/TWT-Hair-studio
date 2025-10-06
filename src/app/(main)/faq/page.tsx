@@ -46,7 +46,7 @@ export default function FAQPage() {
             Our team is here to help. Get in touch with us for any specific inquiries.
           </p>
           <Button asChild size="lg" className="mt-6">
-            <Link href="/contact">Contact Us <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <Link href="/">Contact Us <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </Button>
         </div>
       </div>

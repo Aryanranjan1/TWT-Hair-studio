@@ -33,7 +33,7 @@ export default function BookingPage() {
           />
         </div>
         <p className="mt-8 text-sm text-muted-foreground text-center px-4 pb-4">
-          Having trouble with the booking widget? <Link href="/contact" className="underline hover:text-primary">Contact us directly</Link>.
+          Having trouble with the booking widget? <Link href="/" className="underline hover:text-primary">Contact us directly</Link>.
         </p>
       </main>
     </div>

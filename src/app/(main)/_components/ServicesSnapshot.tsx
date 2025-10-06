@@ -111,7 +111,7 @@ export function ServicesSnapshot() {
                 Step into a world of transformation where our expert stylists combine artistry with the latest techniques. Whether you're seeking a subtle refresh or a complete reinvention, our comprehensive menu of services is designed to cater to your every need. Discover the perfect treatment to elevate your look and spirit.
             </p>
             <Button asChild size="lg" variant="outline" className="mt-10">
-              <Link href="/services">Explore All Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
+              <Link href="/">Explore All Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
           </Motion>
           <Motion variant='slide-in-right' className="relative aspect-[4/5] w-full bg-secondary rounded-lg shadow-lg overflow-hidden">

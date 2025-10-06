@@ -11,26 +11,26 @@ import { useState } from 'react';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/gallery', label: 'Gallery' },
-  { href: '/about', label: 'About' },
+  { href: '/', label: 'Services' },
+  { href: '/', label: 'Gallery' },
+  { href: '/', label: 'About' },
 ];
 
 const socialLinks = [
     {
       name: 'Facebook',
       icon: Facebook,
-      href: 'https://facebook.com',
+      href: '/',
     },
     {
       name: 'Instagram',
       icon: Instagram,
-      href: 'https://instagram.com',
+      href: '/',
     },
     {
       name: 'WhatsApp',
       icon: Phone,
-      href: 'https://wa.me/60123456789',
+      href: '/',
     }
 ];
 
@@ -75,14 +75,14 @@ export function Header() {
         <div className="flex items-center justify-end space-x-4 text-sm font-medium w-1/3">
             <div className="hidden md:flex items-center space-x-4">
               {socialLinks.map((item) => (
-                  <Link key={item.name} href={item.href} target={'_blank'} rel="noopener noreferrer" className="text-white/80 hover:text-white">
+                  <Link key={item.name} href={item.href} rel="noopener noreferrer" className="text-white/80 hover:text-white">
                     <span className="sr-only">{item.name}</span>
                     <item.icon className="h-5 w-5" aria-hidden="true" />
                   </Link>
               ))}
             </div>
            <Button asChild variant="outline" className="rounded-full bg-white/90 text-black hover:bg-white">
-            <Link href="/booking">Book Now</Link>
+            <Link href="/">Book Now</Link>
           </Button>
 
            {/* Mobile menu trigger */}

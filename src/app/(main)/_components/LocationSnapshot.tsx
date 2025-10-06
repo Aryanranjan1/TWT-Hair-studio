@@ -34,24 +34,24 @@ export function LocationSnapshot() {
             </div>
             <div className="mt-6 flex space-x-4">
               <Button asChild variant="outline" size="icon">
-                <Link href="https://wa.me/60123456789" target="_blank">
+                <Link href="/" target="_blank">
                   <Phone className="h-5 w-5" /><span className="sr-only">WhatsApp</span>
                 </Link>
               </Button>
               <Button asChild variant="outline" size="icon">
-                <Link href="https://instagram.com" target="_blank">
+                <Link href="/" target="_blank">
                   <Instagram className="h-5 w-5" /><span className="sr-only">Instagram</span>
                 </Link>
               </Button>
               <Button asChild variant="outline" size="icon">
-                <Link href="https://facebook.com" target="_blank">
+                <Link href="/" target="_blank">
                   <Facebook className="h-5 w-5" /><span className="sr-only">Facebook</span>
                 </Link>
               </Button>
             </div>
 
             {mapImage && (
-              <Link href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="mt-8 block flex-grow">
+              <Link href={'/'} target="_blank" rel="noopener noreferrer" className="mt-8 block flex-grow">
                 <div className="h-full aspect-w-16 aspect-h-9 relative rounded-lg overflow-hidden shadow-lg group min-h-[300px]">
                   <Image
                     src={mapImage.imageUrl}
