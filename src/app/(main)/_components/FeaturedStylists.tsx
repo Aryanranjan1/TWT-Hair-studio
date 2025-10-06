@@ -4,36 +4,50 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import { useRef } from 'react';
+import { gsap } from 'gsap';
 
 import { Button } from '@/components/ui/button';
 import { stylists } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Motion } from '@/components/ui/motion';
+import { useScrollAnimate } from '@/hooks/useScrollAnimate';
+
 
 export function FeaturedStylists() {
   const featuredStylists = stylists.slice(0, 3);
+  const titleRef = useScrollAnimate<HTMLDivElement>({
+    from: { opacity: 0, y: 30 },
+    to: { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' },
+  });
+  const buttonRef = useScrollAnimate<HTMLDivElement>({
+    from: { opacity: 0, scale: 0.8 },
+    to: { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.7)' },
+  });
 
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="container max-w-7xl">
-        <Motion variant="slide-in-up" className="md:flex md:items-center md:justify-between">
+        <div ref={titleRef} className="md:flex md:items-center md:justify-between">
           <h2 className="text-3xl md:text-4xl font-headline font-bold">
             Meet Our Stylists
           </h2>
           <p className="mt-4 max-w-xl text-muted-foreground md:mt-0">
             Our talented team of passionate stylists is ready to bring your hair goals to life.
           </p>
-        </Motion>
+        </div>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
           {featuredStylists.map((stylist, index) => {
             const image = PlaceHolderImages.find(p => p.id === stylist.image);
-            const animationVariant = index % 2 === 0 ? 'slide-in-diag-1' : 'slide-in-diag-2';
+            const cardRef = useScrollAnimate<HTMLDivElement>({
+                from: { opacity: 0, y: 50, rotateZ: index % 2 === 0 ? -5: 5 },
+                to: { opacity: 1, y: 0, rotateZ: 0, duration: 0.6, ease: 'power3.out', delay: index * 0.1 },
+            });
+            
             return (
-              <Motion
+              <div
                 key={stylist.id}
-                variant={animationVariant}
-                delay={index * 0.1}
+                ref={cardRef}
                 className="group overflow-hidden"
               >
                 <Link href="/">
@@ -71,18 +85,18 @@ export function FeaturedStylists() {
                     </Link>
                   </div>
                 </div>
-              </Motion>
+              </div>
             );
           })}
         </div>
 
-        <Motion variant="fade-in" className="mt-16 text-center">
+        <div ref={buttonRef} className="mt-16 text-center">
             <Button asChild size="lg" variant="outline">
               <Link href="/">
                 Meet The Full Team <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-        </Motion>
+        </div>
       </div>
     </section>
   );
