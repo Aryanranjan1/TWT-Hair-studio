@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import React, { useRef } from 'react';
@@ -31,7 +32,7 @@ export function AboutSnapshot() {
               Where Artistry and Hair Care Converge
             </p>
             <p className="mt-6 text-muted-foreground">
-              Founded in 2020, TWT Hair Studio was born from a simple idea: to create a welcoming space where artistry and hair care converge. Located in the heart of Petaling Jaya, we are a passionate team of stylists committed to providing personalized services that cater to the unique needs of each client. We believe that a great haircut is more than just a style—it's a form of self-expression and confidence, and we're dedicated to helping you find yours.
+              Founded in 2020, CWT Hair Studio was born from a simple idea: to create a welcoming space where artistry and hair care converge. Located in the heart of Petaling Jaya, we are a passionate team of stylists committed to providing personalized services that cater to the unique needs of each client. We believe that a great haircut is more than just a style—it's a form of self-expression and confidence, and we're dedicated to helping you find yours.
             </p>
             <Button asChild size="lg" variant="outline" className="mt-8 self-start">
               <Link href="/">Learn More About Us <ArrowRight className="ml-2 h-5 w-5" /></Link>

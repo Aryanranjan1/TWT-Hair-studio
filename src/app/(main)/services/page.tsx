@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -9,7 +10,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'Services & Pricing',
-  description: 'Explore our full range of hair services at TWT, including cuts, treatments, coloring, and packages. Find pricing information and book your service online.',
+  description: 'Explore our full range of hair services at CWT, including cuts, treatments, coloring, and packages. Find pricing information and book your service online.',
 };
 
 const categories: ServiceCategory[] = ['Cuts', 'Coloring', 'Treatments', 'Packages'];

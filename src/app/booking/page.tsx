@@ -1,9 +1,10 @@
+
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Book Your Appointment',
-  description: 'Schedule your appointment at TWT using our fast and easy online booking system.',
+  description: 'Schedule your appointment at CWT using our fast and easy online booking system.',
 };
 
 export default function BookingPage() {
@@ -15,7 +16,7 @@ export default function BookingPage() {
       <header className="p-4 border-b bg-background">
         <div className="container max-w-7xl mx-auto flex justify-center">
             <Link href="/" className="inline-flex items-center space-x-2">
-                <span className="text-lg font-bold font-headline" style={{ fontFamily: 'Jost, sans-serif' }}>TWT</span>
+                <span className="text-lg font-bold font-headline" style={{ fontFamily: 'Jost, sans-serif' }}>CWT</span>
             </Link>
         </div>
       </header>

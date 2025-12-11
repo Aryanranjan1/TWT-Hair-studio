@@ -1,14 +1,15 @@
 
+
 'use client';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, Instagram, Facebook, Phone } from 'lucide-react';
+import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
-import { useState } from 'react';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -45,7 +46,7 @@ export function Header() {
         {/* Center: Logo for mobile */}
         <div className="flex justify-start w-1/3 md:hidden">
             <Link href="/" className="flex items-center space-x-2">
-                 <span style={{ fontFamily: 'Jost, sans-serif' }} className="font-light inline-block text-3xl tracking-wider">TWT</span>
+                 <span style={{ fontFamily: 'Jost, sans-serif' }} className="font-light inline-block text-3xl tracking-wider">CWT</span>
             </Link>
         </div>
         
@@ -68,7 +69,7 @@ export function Header() {
         {/* Center: Logo for desktop */}
         <div className="hidden md:flex justify-center w-1/3">
             <Link href="/" className="flex items-center space-x-2">
-                 <span style={{ fontFamily: 'Jost, sans-serif' }} className="font-light inline-block text-3xl tracking-wider">TWT</span>
+                 <span style={{ fontFamily: 'Jost, sans-serif' }} className="font-light inline-block text-3xl tracking-wider">CWT</span>
             </Link>
         </div>
 
@@ -97,7 +98,7 @@ export function Header() {
               </SheetTrigger>
               <SheetContent side="right" className="pr-0 bg-background text-foreground">
                 <Link href="/" className="mr-6 flex items-center space-x-2 mb-6" onClick={() => setSheetOpen(false)}>
-                  <span style={{ fontFamily: 'Jost, sans-serif' }} className="font-light inline-block text-3xl tracking-wider">TWT</span>
+                  <span style={{ fontFamily: 'Jost, sans-serif' }} className="font-light inline-block text-3xl tracking-wider">CWT</span>
                 </Link>
                 <div className="flex flex-col space-y-3">
                   {navLinks.map(({ href, label }) => (

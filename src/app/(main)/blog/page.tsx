@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,7 +12,7 @@ import BlogTitleGenerator from './_components/BlogTitleGenerator';
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Read our blog for the latest hair trends, tips, and advice from the experts at TWT.',
+  description: 'Read our blog for the latest hair trends, tips, and advice from the experts at CWT.',
 };
 
 export default function BlogPage() {
@@ -19,7 +20,7 @@ export default function BlogPage() {
     <div className="py-16 sm:py-24 pt-48">
       <div className="container max-w-7xl">
         <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold">TWT Journal</h1>
+          <h1 className="text-4xl md:text-5xl font-headline font-bold">CWT Journal</h1>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
             Your source for expert hair care advice, style inspiration, and the latest trends from our salon in Petaling Jaya.
           </p>

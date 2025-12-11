@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -13,7 +14,7 @@ import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'FAQ',
-  description: 'Find answers to frequently asked questions about TWT, including our services, booking process, pricing, and policies.',
+  description: 'Find answers to frequently asked questions about CWT, including our services, booking process, pricing, and policies.',
 };
 
 export default function FAQPage() {

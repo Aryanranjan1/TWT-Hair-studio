@@ -1,8 +1,9 @@
+
 import { MetadataRoute } from 'next';
 import { blogPosts } from '@/lib/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = 'https://twt.com'; // Replace with your actual domain
+  const siteUrl = 'https://cwt.com'; // Replace with your actual domain
 
   const staticRoutes = [
     '',

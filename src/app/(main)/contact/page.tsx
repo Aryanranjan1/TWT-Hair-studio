@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with TWT. Find our address, phone number, and location in Petaling Jaya. Book your appointment or send us an inquiry.',
+  description: 'Get in touch with CWT. Find our address, phone number, and location in Petaling Jaya. Book your appointment or send us an inquiry.',
 };
 
 const contactDetails = [
@@ -28,14 +29,14 @@ const contactDetails = [
   {
     icon: Mail,
     title: 'Email',
-    value: 'hello@twt.com',
-    href: 'mailto:hello@twt.com',
+    value: 'hello@cwt.com',
+    href: 'mailto:hello@cwt.com',
     isLink: true,
   },
   {
     icon: ParkingCircle,
     title: 'Parking',
-    value: 'Visitor parking is available in the Casa Tropicana condominium. Inform security you are visiting TWT Hair Studio.',
+    value: 'Visitor parking is available in the Casa Tropicana condominium. Inform security you are visiting CWT Hair Studio.',
     isLink: false,
   },
 ];
@@ -79,7 +80,7 @@ export default function ContactPage() {
             <div className="aspect-[16/6] relative rounded-lg overflow-hidden shadow-lg">
               <Image
                 src={mapImage.imageUrl}
-                alt="Map showing TWT location"
+                alt="Map showing CWT location"
                 fill
                 className="w-full h-full object-cover"
                 sizes="100vw"

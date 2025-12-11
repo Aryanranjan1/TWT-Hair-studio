@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import Link from 'next/link';
@@ -60,7 +61,7 @@ export function LocationSnapshot() {
                 <div className="h-full aspect-w-16 aspect-h-9 relative rounded-lg overflow-hidden shadow-lg group min-h-[300px]">
                   <Image
                     src={mapImage.imageUrl}
-                    alt="Map showing TWT location"
+                    alt="Map showing CWT location"
                     fill
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, 50vw"

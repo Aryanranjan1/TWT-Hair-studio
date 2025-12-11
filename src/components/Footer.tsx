@@ -1,4 +1,5 @@
 
+
 import Link from 'next/link';
 import { Instagram, Facebook, Phone, Mail, MapPin } from 'lucide-react';
 import { NewsletterForm } from './NewsletterForm';
@@ -38,10 +39,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="md:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-flex items-center space-x-2">
-              <span style={{ fontFamily: 'Jost, sans-serif' }} className="text-2xl font-light tracking-wider">TWT</span>
+              <span style={{ fontFamily: 'Jost, sans-serif' }} className="text-2xl font-light tracking-wider">CWT</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              TWT is a premier hair salon in Petaling Jaya, dedicated to providing exceptional hair care and styling in a welcoming atmosphere. Our expert stylists are passionate about the art of hair and are committed to helping you achieve your desired look.
+              CWT is a premier hair salon in Petaling Jaya, dedicated to providing exceptional hair care and styling in a welcoming atmosphere. Our expert stylists are passionate about the art of hair and are committed to helping you achieve your desired look.
             </p>
             <div className="mt-4 flex space-x-4">
               {socialLinks.map((item) => (
@@ -90,7 +91,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-border pt-8">
-          <p className="text-sm text-muted-foreground text-center">&copy; {new Date().getFullYear()} TWT Online. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground text-center">&copy; {new Date().getFullYear()} CWT Online. All rights reserved.</p>
         </div>
       </div>
     </footer>

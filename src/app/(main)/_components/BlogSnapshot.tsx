@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import React, { useRef } from 'react';
@@ -100,7 +101,7 @@ export function BlogSnapshot() {
                     )}
                     <div>
                         <p className="font-semibold">{authorStylist.name}</p>
-                        <p className="text-sm text-muted-foreground">TWT Stylist</p>
+                        <p className="text-sm text-muted-foreground">CWT Stylist</p>
                     </div>
                 </div>
                 <Button asChild variant="outline" className="mt-6 self-start">

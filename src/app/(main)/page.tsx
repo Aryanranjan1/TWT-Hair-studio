@@ -1,11 +1,12 @@
 
+
 'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRef } from 'react';
 
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Button } from '@/components/ui/button';
 import { FeaturedServices } from './_components/FeaturedServices';
 import { AboutSnapshot } from './_components/AboutSnapshot';
 import { ServicesSnapshot } from './_components/ServicesSnapshot';
@@ -16,7 +17,6 @@ import { BookingCTA } from './_components/BookingCTA';
 import { BlogSnapshot } from './_components/BlogSnapshot';
 import { LocationSnapshot } from './_components/LocationSnapshot';
 import { GalleryPreview } from './_components/GalleryPreview';
-import { useRef } from 'react';
 
 
 function Hero() {
@@ -44,7 +44,7 @@ function Hero() {
             className="absolute bottom-16 left-4 sm:left-6 lg:left-[50px] text-white"
           >
             <h1 style={{ fontFamily: 'Jost, sans-serif' }} className="text-[15vw] md:text-[10vw] lg:text-[12rem] font-thin tracking-wider leading-none">
-              TWT
+              CWT
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl font-light tracking-widest -mt-4 text-center" style={{ fontFamily: 'Jost, sans-serif' }}>
               HAIR STUDIO
