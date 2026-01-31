@@ -9,12 +9,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-    title: 'AI Lookbook',
-    description: 'Generate hairstyle ideas with our AI Lookbook Generator. Describe your vision and see it come to life.',
-};
 
 export default function LookbookPage() {
   const [prompt, setPrompt] = useState('');
